@@ -12,7 +12,7 @@ ajustes:
   # del límite de tiempo de GitHub; en paralelo tarda unos pocos minutos.
   hilos: 12
   # Segundos de espera por medio antes de darlo por caído.
-  timeout: 15
+  timeout: 20
   # Titulares máximos que se toman de cada medio por corrida.
   max_por_fuente: 30
 
@@ -23,7 +23,7 @@ ajustes:
   # Cuántos dominios se juntan en una sola consulta a Google Noticias.
   # Menos consultas = menos riesgo de que Google limite al panel.
   medios_por_consulta_google: 4
-  hilos_google: 3
+  hilos_google: 2
 
   # Días que el panel recuerda una liga para no mostrarla como nueva.
   dias_historial: 10
@@ -204,7 +204,8 @@ google_palabras:
 #   sitio   : dominio principal
 #   feed    : RSS ya confirmado en alguno de tus paneles (se usa tal cual)
 #   pagina  : sección que conviene leer en vez del home (policiaca/justicia)
-#   oem     : clave del diario en oem.com.mx -> oem.com.mx/<clave>/policiaca
+#   oem     : diario de la OEM (los "El Sol de…"). oem.com.mx bloquea a GitHub,
+#             así que estos se leen por Google Noticias
 #   nota    : estado conocido: muro-de-pago | bloqueado-403 | sin-titulares
 #   origen  : de dónde salió: panel-nacional | panel-bc | panel-nl |
 #             panel-sonora | dana (lista directa de Dana) |
@@ -480,7 +481,7 @@ fuentes:
   - {nombre: El Diario de Sonora, estado: Sonora, sitio: eldiariodesonora.com.mx, origen: panel-sonora}
   - {nombre: Despierta Sonora, estado: Sonora, sitio: despiertasonora.com, origen: panel-sonora}
   - {nombre: Nuevo Día, estado: Sonora, sitio: nuevodia.mx, origen: panel-sonora}
-  - {nombre: Tribuna de San Luis, estado: Sonora, sitio: tribunadesanluis.com.mx, origen: panel-sonora}
+  - {nombre: Tribuna de San Luis, estado: Sonora, sitio: oem.com.mx, oem: tribunadesanluis, origen: panel-sonora}
   - {nombre: Telemax, estado: Sonora, sitio: telemax.com.mx, origen: panel-sonora}
   - {nombre: Opinión Sonora, estado: Sonora, sitio: opinionsonora.com, origen: panel-sonora}
   - {nombre: Uniradio Sonora, estado: Sonora, sitio: uniradiosonora.com, origen: panel-sonora}
