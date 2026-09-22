@@ -29,6 +29,7 @@ import hashlib
 import json
 import re
 import sys
+import time
 import unicodedata
 from datetime import date, datetime, timedelta, timezone
 from html import unescape
@@ -230,12 +231,13 @@ def dominios_compartidos(fuentes: list[dict]) -> set[str]:
 
 
 def modo_de(fuente: dict, compartidos: set[str]) -> str:
-    if fuente.get("nota") in ("bloqueado-403", "sin-titulares"):
+    # oem.com.mx bloquea a GitHub en todas sus páginas (verificado el
+    # 22/09/2026: 36 de 36 diarios con HTTP 403). Sus diarios se leen por
+    # Google Noticias.
+    if fuente.get("oem") or fuente.get("nota") in ("bloqueado-403", "sin-titulares"):
         return "google"
     if fuente.get("feed"):
         return "feed"
-    if fuente.get("oem"):
-        return "oem"
     if fuente.get("pagina"):
         return "pagina"
     if fuente["sitio"] in compartidos:
@@ -265,8 +267,11 @@ def leer_directo(fuente: dict, modo: str, ajustes: dict, cache: dict) -> tuple[l
         if cache.get(nombre):
             return items_de_feed(pedir(cache[nombre], timeout).content, maximo), None, "rss"
 
-        home = f"https://{fuente['sitio']}/"
-        respuesta = pedir(home, timeout)
+        try:
+            respuesta = pedir(f"https://{fuente['sitio']}/", timeout)
+        except (requests.exceptions.ConnectionError, requests.exceptions.SSLError):
+            # Algunos sitios pequeños solo responden sin candado (http://).
+            respuesta = pedir(f"http://{fuente['sitio']}/", timeout)
         if nombre not in cache:
             candidatos = [rss_anunciado(respuesta.text, respuesta.url)]
             candidatos += [urljoin(respuesta.url, r) for r in ("feed/", "rss/")]
@@ -309,12 +314,16 @@ def armar_consultas(pendientes: list[dict], compartidos: set[str],
     - Dominio propio: se juntan varios en una consulta (site:a OR site:b...).
     - Dominio compartido (milenio.com, poresto.net): uno por consulta, con
       el nombre del estado, para no traer la portada nacional del grupo.
-    - Diarios OEM: se busca por la ruta del diario (oem.com.mx/elsoldepuebla).
+    - Diarios OEM: todos viven en oem.com.mx, y Google Noticias no acepta
+      rutas en site:. Se hace una consulta por estado ("site:oem.com.mx
+      Puebla") y cada nota se asigna al diario por el nombre del medio que
+      reporta Google ("El Sol de Puebla").
     """
     consultas, sueltos = [], []
+    oem_por_estado: dict[str, list[dict]] = {}
     for f in pendientes:
         if f.get("oem"):
-            consultas.append((url_google([f"oem.com.mx/{f['oem']}"], palabras), [f]))
+            oem_por_estado.setdefault(f["estado"], []).append(f)
         elif f["sitio"] in compartidos:
             termino = None if f["estado"] == "Nacional" else f["estado"]
             consultas.append((url_google([f["sitio"]], palabras, termino), [f]))
@@ -323,12 +332,32 @@ def armar_consultas(pendientes: list[dict], compartidos: set[str],
     for i in range(0, len(sueltos), por_consulta):
         grupo = sueltos[i:i + por_consulta]
         consultas.append((url_google([f["sitio"] for f in grupo], palabras), grupo))
+    for estado, grupo in oem_por_estado.items():
+        termino = None if estado in ("Nacional", "Ciudad de México") else estado
+        consultas.append((url_google(["oem.com.mx"], palabras, termino), grupo))
     return consultas
+
+
+def pedir_google(url: str, timeout: int) -> requests.Response:
+    """Consulta a Google Noticias con pausa y reintentos.
+
+    Si se le hacen muchas consultas seguidas, Google responde 429 o 503
+    ("demasiadas solicitudes"). Se espera y se reintenta hasta dos veces.
+    """
+    for espera in (0, 6, 20):
+        time.sleep(espera or 0.7)
+        try:
+            return pedir(url, timeout)
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code not in (429, 503) or espera == 20:
+                raise
+    raise RuntimeError("inalcanzable")
 
 
 def repartir_google(items: list[dict], grupo: list[dict]) -> dict[str, list]:
     """Asigna cada nota de Google al medio del grupo que la publicó."""
     por_medio: dict[str, list] = {f["nombre"]: [] for f in grupo}
+    es_oem = all(f.get("oem") for f in grupo)
     for it in items:
         # Google manda el titular como "Titular - Medio": se separa.
         if " - " in it["titulo"]:
@@ -336,6 +365,14 @@ def repartir_google(items: list[dict], grupo: list[dict]) -> dict[str, list]:
             if len(sufijo) < 50 and len(recorte) > 20:
                 it["titulo"] = recorte
         it["resumen"] = ""  # el "resumen" de Google es solo el titular repetido
+        if es_oem:
+            # Se asigna por nombre: "El Sol de Puebla" -> El Sol de Puebla.
+            medio = normalizar(it.get("origen_titulo", ""))
+            for f in grupo:
+                if medio and normalizar(f["nombre"]) in medio:
+                    por_medio[f["nombre"]].append(it)
+                    break
+            continue
         if len(grupo) == 1:
             por_medio[grupo[0]["nombre"]].append(it)
             continue
@@ -480,7 +517,7 @@ def main() -> int:
         print(f"Google Noticias: {len(consultas)} consultas para {len(pendientes)} medios")
 
         def consultar(url):
-            return items_de_feed(pedir(url, ajustes["timeout"]).content, 100)
+            return items_de_feed(pedir_google(url, ajustes["timeout"]).content, 100)
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=ajustes["hilos_google"]) as pool:
             tareas = {pool.submit(consultar, url): grupo for url, grupo in consultas}
@@ -495,9 +532,10 @@ def main() -> int:
                             f"Google: {type(e).__name__}"
                     continue
                 for nombre, notas in repartir_google(items, grupo).items():
-                    notas = notas[:ajustes["max_por_fuente"]]
-                    crudos[nombre] = [dict(it, via="google") for it in notas]
-                    reporte[nombre]["google"] = len(notas)
+                    ya = {it["url"] for it in crudos[nombre]}
+                    nuevas = [dict(it, via="google") for it in notas if it["url"] not in ya]
+                    crudos[nombre] = (crudos[nombre] + nuevas)[:ajustes["max_por_fuente"]]
+                    reporte[nombre]["google"] = len(crudos[nombre])
 
     # 3. Filtros de fecha y de palabras.
     por_nombre = {f["nombre"]: f for f in fuentes}
