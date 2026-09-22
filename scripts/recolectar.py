@@ -403,6 +403,8 @@ FECHA_EN_URL = [
     re.compile(r"/(20\d{2})-(\d{1,2})-(\d{1,2})"),            # /2026-09-22
     re.compile(r"[-_](\d{1,2})[-_](\d{1,2})[-_](20\d{2})"),   # -22-09-2026
 ]
+# Solo año y mes (/2018/09/nota), típico de WordPress.
+MES_EN_URL = re.compile(r"/(20\d{2})/(\d{1,2})/")
 
 
 def fecha_de_url(url: str) -> date | None:
@@ -416,6 +418,25 @@ def fecha_de_url(url: str) -> date | None:
         except ValueError:
             return None
     return None
+
+
+def url_es_de_otro_dia(url: str, hoy: date) -> bool:
+    """True si la dirección de la nota dice claramente que no es de hoy.
+
+    Hay medios cuyo RSS marca notas viejas con la fecha del día (visto el
+    22/09/2026: notas de 2018 de Diario El Independiente con fecha de hoy).
+    Cuando la URL trae fecha, esa manda sobre la del RSS.
+    """
+    fecha = fecha_de_url(url)
+    if fecha is not None:
+        return fecha != hoy
+    m = MES_EN_URL.search(url or "")
+    if m:
+        try:
+            return (int(m.group(1)), int(m.group(2))) != (hoy.year, hoy.month)
+        except ValueError:
+            return False
+    return False
 
 
 def filtrar_fecha(nombre: str, items: list[dict], historial: dict, hoy: date) -> list[dict]:
@@ -434,6 +455,8 @@ def filtrar_fecha(nombre: str, items: list[dict], historial: dict, hoy: date) ->
     urls = historial["urls"]
     salida = []
     for it in items:
+        if url_es_de_otro_dia(it["url"], hoy):
+            continue
         fecha = None
         if it.get("fecha"):
             fecha = datetime.fromisoformat(it["fecha"]).date()
@@ -528,8 +551,12 @@ def main() -> int:
         def consultar(url):
             return items_de_feed(pedir_google(url, ajustes["timeout"]).content, 100)
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=ajustes["hilos_google"]) as pool:
-            tareas = {pool.submit(consultar, url): grupo for url, grupo in consultas}
+        def correr_consultas(consultas):
+            with concurrent.futures.ThreadPoolExecutor(max_workers=ajustes["hilos_google"]) as pool:
+                tareas = {pool.submit(consultar, url): grupo for url, grupo in consultas}
+                procesar_google(tareas)
+
+        def procesar_google(tareas):
             for tarea in concurrent.futures.as_completed(tareas):
                 grupo = tareas[tarea]
                 try:
@@ -545,6 +572,19 @@ def main() -> int:
                     nuevas = [dict(it, via="google") for it in notas if it["url"] not in ya]
                     crudos[nombre] = (crudos[nombre] + nuevas)[:ajustes["max_por_fuente"]]
                     reporte[nombre]["google"] = len(crudos[nombre])
+
+        correr_consultas(consultas)
+
+        # Google a veces devuelve vacía una consulta agrupada (site:a OR site:b...)
+        # aunque cada medio por separado sí tenga notas. Los que quedaron en cero
+        # dentro de un grupo se consultan solos, una vez.
+        en_grupo = {f["nombre"] for _, g in consultas if len(g) > 1 and not g[0].get("oem")
+                    for f in g}
+        solos = [f for f in pendientes if f["nombre"] in en_grupo and not crudos[f["nombre"]]]
+        if solos:
+            print(f"Google Noticias: reintento individual para {len(solos)} medios")
+            correr_consultas([(url_google([f["sitio"]], config["google_palabras"]), [f])
+                              for f in solos])
 
     # 3. Filtros de fecha y de palabras.
     por_nombre = {f["nombre"]: f for f in fuentes}
