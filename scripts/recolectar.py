@@ -365,8 +365,11 @@ def repartir_google(items: list[dict], grupo: list[dict]) -> dict[str, list]:
             if len(sufijo) < 50 and len(recorte) > 20:
                 it["titulo"] = recorte
         it["resumen"] = ""  # el "resumen" de Google es solo el titular repetido
-        if es_oem:
-            # Se asigna por nombre: "El Sol de Puebla" -> El Sol de Puebla.
+        if es_oem and len(grupo) > 1:
+            # Varios diarios OEM en un grupo: se intenta por nombre. Ojo: Google
+            # suele reportar todo oem.com.mx como "El Sol de México" (verificado
+            # el 22/09/2026), por eso fuentes.yaml deja un solo diario OEM por
+            # estado y este caso casi no ocurre.
             medio = normalizar(it.get("origen_titulo", ""))
             for f in grupo:
                 if medio and normalizar(f["nombre"]) in medio:
