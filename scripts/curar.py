@@ -114,11 +114,12 @@ extradiciones, actuación de fiscalías y jueces en casos concretos.
 - politica_seguridad: estrategias y operativos de gobierno, presupuesto de seguridad, \
 nombramientos o destituciones en seguridad y fiscalías, Guardia Nacional y Fuerzas Armadas, \
 cifras oficiales, reformas penales, condiciones y depuración de policías.
-- accidentes: accidentes viales, choques, volcaduras, atropellamientos, percances de tránsito \
-con lesionados o muertos.
+- accidentes: SOLO accidentes viales o de tránsito: choques, volcaduras, atropellamientos, \
+percances de tránsito con lesionados o muertos.
 
 DESCARTA: espectáculos, series o películas de crimen, deportes (salvo violencia real), clima \
-y desastres naturales, incendios sin delito, ciberseguridad o "seguridad" de productos o \
+y desastres naturales, incendios, accidentes laborales, domésticos, caídas o ahogamientos \
+(salvo que se investigue un delito), ciberseguridad o "seguridad" de productos o \
 apps, seguridad social/IMSS, columnas de opinión, notas internacionales sin vínculo con \
 México, horóscopos y virales.
 
@@ -126,9 +127,14 @@ REGLAS:
 1. Si varias líneas cuentan el mismo hecho, devuelve una sola (la del medio más local o la \
 más clara) y pon en "repetidas" los números de las demás.
 2. "estado": la entidad donde OCURRIÓ el hecho, con su nombre corto oficial ("Ciudad de \
-México", "Estado de México", "Nuevo León", "Michoacán"...). Si el hecho es de alcance \
-nacional o no hay un estado claro, "Nacional". No asumas que el hecho ocurrió en el estado \
-del medio si el titular dice otro lugar.
+México", "Estado de México", "Nuevo León", "Michoacán"...). El estado del medio es solo una \
+pista y muchas veces es incorrecto: medios nacionales, ediciones regionales y todo lo \
+marcado "vía Google" publican notas de cualquier parte del país. Decide por el lugar que \
+menciona el titular o el extracto: si hay municipio o ciudad, el estado es el de ese \
+municipio (León -> Guanajuato, Mazatlán -> Sinaloa, Ecatepec -> Estado de México), aunque \
+el medio sea de otro estado. Nunca combines un municipio con el estado de otro. Usa el \
+estado del medio solo si el titular no menciona ningún lugar y el medio es local. Si el \
+hecho es de alcance nacional o no hay un estado claro, "Nacional".
 3. "municipio": ciudad o municipio si el titular o el extracto lo dicen; si no, "".
 4. "titulo": máximo 12 palabras. "resumen": máximo 25 palabras. SIEMPRE EN TUS PROPIAS \
 PALABRAS: nunca copies el titular ni frases textuales de la fuente. No agregues datos que \
@@ -148,7 +154,10 @@ Si ninguna línea es de seguridad: {"notas": []}"""
 def prompt_de_lote(lote: list[dict]) -> str:
     lineas = []
     for n, it in enumerate(lote, start=1):
-        linea = f"{n}. [{it['fuente']} / {it['estado_fuente']}] {it['titulo']}"
+        origen = f"{it['fuente']} / {it['estado_fuente']}"
+        if it.get("via") == "google":
+            origen += " / vía Google"
+        linea = f"{n}. [{origen}] {it['titulo']}"
         extracto = (it.get("resumen") or "").strip()
         if extracto and normalizar(extracto[:60]) not in normalizar(it["titulo"]):
             linea += f" — {extracto[:180]}"
@@ -249,6 +258,73 @@ def es_misma_historia(a: dict, b: dict) -> bool:
     if not pa or not pb:
         return False
     return len(pa & pb) / len(pa | pb) >= 0.5
+
+
+SISTEMA_REPETIDAS = """Recibes las notas de seguridad acumuladas hoy en un panel de México. \
+Cada línea trae un número, el estado y un título corto.
+
+Encuentra las que cuentan EXACTAMENTE el mismo hecho: la misma detención, el mismo ataque, \
+la misma sentencia, el mismo anuncio o la misma cifra oficial, aunque vengan con títulos \
+distintos o incluso con estados distintos (a veces un medio asignó mal el estado).
+
+NO juntes hechos parecidos pero distintos: dos homicidios distintos en la misma ciudad, dos \
+decomisos distintos, dos sentencias a personas diferentes. Si dudas, no las juntes.
+
+Responde ÚNICAMENTE con JSON válido, sin markdown: {"grupos": [[3, 17, 40], [5, 9]]}
+Solo grupos de 2 o más números. Si no hay repetidas: {"grupos": []}"""
+
+
+def juntar_repetidas(cliente, ajustes: dict, acumulado: dict) -> tuple[int, dict]:
+    """Una llamada barata: Claude ve solo los títulos cortos y agrupa repetidas.
+
+    En cada grupo se queda una nota (primero la de relevancia alta, luego la
+    más antigua) y las demás se vuelven "+N medios" en esa tarjeta.
+    """
+    notas = acumulado["notas"]
+    if len(notas) < 2:
+        return 0, {"entrada": 0, "salida": 0}
+    lineas = [f"{i}. [{n['estado']}] {n['titulo']}" for i, n in enumerate(notas, start=1)]
+    respuesta = cliente.messages.create(
+        model=ajustes["modelo"], max_tokens=2000, system=SISTEMA_REPETIDAS,
+        messages=[{"role": "user", "content": "Notas:\n" + "\n".join(lineas)}],
+    )
+    uso = {"entrada": respuesta.usage.input_tokens, "salida": respuesta.usage.output_tokens}
+    texto = "".join(b.text for b in respuesta.content if getattr(b, "type", "") == "text")
+    try:
+        grupos = json.loads(re.sub(r"^```(json)?|```$", "", texto.strip()).strip()).get("grupos", [])
+    except (ValueError, AttributeError):
+        return 0, uso
+
+    quitar: set[int] = set()
+    for grupo in grupos:
+        try:
+            indices = sorted({int(x) - 1 for x in grupo if 0 < int(x) <= len(notas)})
+        except (TypeError, ValueError):
+            continue
+        indices = [i for i in indices if i not in quitar]
+        if len(indices) < 2:
+            continue
+        miembros = [notas[i] for i in indices]
+        # Gana el estado que comparte la mayoría del grupo: si un medio lo asignó
+        # mal, los demás lo corrigen. Entre esas, la de relevancia alta y la más antigua.
+        votos: dict[str, int] = {}
+        for n in miembros:
+            if n["estado"] != "Nacional":
+                votos[n["estado"]] = votos.get(n["estado"], 0) + 1
+        mayoria = max(votos, key=votos.get) if votos else None
+        queda = min(miembros, key=lambda n: (mayoria is not None and n["estado"] != mayoria,
+                                             n["relevancia"] != "alta", n.get("agregada", "")))
+        fuentes = set(queda.get("otras_fuentes", []))
+        for n in miembros:
+            if n is queda:
+                continue
+            fuentes |= {n["fuente"], *n.get("otras_fuentes", [])}
+            if n["relevancia"] == "alta":
+                queda["relevancia"] = "alta"
+        queda["otras_fuentes"] = sorted(fuentes - {queda["fuente"]})
+        quitar.update(i for i in indices if notas[i] is not queda)
+    acumulado["notas"] = [n for i, n in enumerate(notas) if i not in quitar]
+    return len(quitar), uso
 
 
 def cargar_acumulado(hoy: str) -> dict:
@@ -418,6 +494,14 @@ def main() -> int:
                     evaluadas.update(c["id"] for c in lote)
 
             agregadas = integrar(acumulado, nuevas, ahora.isoformat(), ajustes["max_por_estado"])
+            if agregadas:
+                try:
+                    juntadas, uso = juntar_repetidas(cliente, ajustes, acumulado)
+                    tokens_in += uso["entrada"]
+                    tokens_out += uso["salida"]
+                    print(f"Repetidas: {juntadas} notas se juntaron con otra que cuenta lo mismo.")
+                except Exception as e:  # noqa: BLE001 - si falla, el panel sigue igual
+                    print(f"[aviso] no se pudo revisar repetidas: {type(e).__name__}: {e}")
             acumulado["evaluadas"] = sorted(evaluadas)
             acumulado["corridas"] += 1
             costo = tokens_in / 1e6 * 1 + tokens_out / 1e6 * 5  # tarifa de Haiku 4.5, USD
