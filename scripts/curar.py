@@ -381,6 +381,7 @@ def main() -> int:
     ahora = datetime.now(TZ)
     acumulado = cargar_acumulado(ahora.date().isoformat())
 
+    todo_fallo = None
     if not args.solo_render:
         candidatas = json.loads(CANDIDATAS.read_text(encoding="utf-8"))["items"]
         evaluadas = set(acumulado["evaluadas"])
@@ -395,7 +396,7 @@ def main() -> int:
             tam = ajustes["lote_ia"]
             lotes = [pendientes[i:i + tam] for i in range(0, len(pendientes), tam)]
 
-            nuevas, fallidos = [], 0
+            nuevas, fallidos, ultimo_error = [], 0, ""
             tokens_in = tokens_out = 0
             with concurrent.futures.ThreadPoolExecutor(max_workers=ajustes["hilos_ia"]) as pool:
                 tareas = {pool.submit(curar_lote, cliente, ajustes, lote): lote for lote in lotes}
@@ -407,6 +408,7 @@ def main() -> int:
                         # Ese lote no se marca como evaluado: se reintenta en la próxima corrida.
                         print(f"[aviso] falló un lote de {len(lote)}: {type(e).__name__}: {e}")
                         fallidos += 1
+                        ultimo_error = f"{type(e).__name__}: {e}"
                         continue
                     tokens_in += uso["entrada"]
                     tokens_out += uso["salida"]
@@ -422,6 +424,8 @@ def main() -> int:
             print(f"Claude eligió {len(nuevas)} notas de seguridad; nuevas en el panel: "
                   f"{agregadas}. Tokens: {tokens_in:,} entrada / {tokens_out:,} salida "
                   f"(~{costo:.3f} USD). Lotes fallidos: {fallidos}")
+            if fallidos == len(lotes):
+                todo_fallo = ultimo_error
 
     acumulado["actualizado"] = ahora.isoformat()
     ACUMULADO.parent.mkdir(parents=True, exist_ok=True)
@@ -431,6 +435,13 @@ def main() -> int:
     for cat, etiqueta in CATEGORIAS.items():
         print(f"  {etiqueta}: {sum(1 for n in acumulado['notas'] if n['categoria'] == cat)}")
     print(f"index.html regenerado: {len(acumulado['notas'])} notas acumuladas hoy.")
+    if todo_fallo:
+        # Sale en rojo para que se note en la pestaña Actions. Los titulares no
+        # se marcaron como evaluados: se reintentan en la siguiente corrida.
+        print("\nERROR: fallaron TODAS las llamadas a Claude, el panel no recibió notas nuevas.")
+        print(f"Motivo: {todo_fallo}")
+        print("Revisa el secreto ANTHROPIC_API_KEY, el saldo y los límites en console.anthropic.com.")
+        return 1
     return 0
 
 
