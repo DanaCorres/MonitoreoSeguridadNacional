@@ -1,370 +1,490 @@
 #!/usr/bin/env python3
 """
-Toma data/candidatas.json (salida de recolectar.py), le pide a Claude que se
-quede solo con las notas de seguridad, las clasifique y las resuma en sus
-propias palabras, y regenera index.html.
+Recolecta titulares de seguridad de todos los medios de fuentes.yaml.
 
-- Las notas se ACUMULAN durante el día en data/hoy.json y se reinician a
-  medianoche (hora del centro de México).
-- Cada titular se manda al modelo una sola vez al día: lo ya evaluado,
-  se haya quedado o no, no se vuelve a pagar en la siguiente corrida.
-- Si varios medios cuentan el mismo hecho, queda una nota con "+N medios".
+Camino de cada medio, del más confiable al de respaldo:
+  1. "feed":   RSS ya confirmado.
+  2. "oem":    sección policiaca del diario en oem.com.mx.
+  3. "pagina": una sección concreta del medio (policiaca, justicia...).
+  4. Solo "sitio": se abre el home, se busca su RSS (la etiqueta que los
+     sitios publican para los lectores de noticias, o /feed/ y /rss/) y, si
+     no hay, se leen los titulares del propio home.
+  5. Respaldo por Google Noticias: si lo anterior no trajo nada, o el medio
+     bloquea a GitHub, se busca "site:dominio + palabras de seguridad".
 
-Requiere el secreto ANTHROPIC_API_KEY (ver README).
+Después vienen dos filtros:
+  - Fecha: solo entra lo publicado hoy (hora del centro de México).
+  - Palabras clave (fuentes.yaml > filtro): solo entra lo que suena a
+    seguridad. Así Claude recibe candidatas y no la portada entera del país.
 
-    python scripts/curar.py            # corrida normal
-    python scripts/curar.py --solo-render   # rehace index.html sin llamar a Claude
+Salida:
+  data/candidatas.json     titulares que pasaron los filtros
+  data/estado_fuentes.json qué medio respondió, por qué vía y cuántas notas
 """
 
 from __future__ import annotations
 
-import argparse
 import concurrent.futures
-import html
+import hashlib
 import json
-import os
 import re
 import sys
+import time
 import unicodedata
-from datetime import datetime
+from datetime import date, datetime, timedelta, timezone
+from html import unescape
 from pathlib import Path
+from urllib.parse import parse_qsl, quote_plus, urlencode, urljoin, urlsplit, urlunsplit
 from zoneinfo import ZoneInfo
 
+import feedparser
+import requests
 import yaml
+from bs4 import BeautifulSoup
 
 RAIZ = Path(__file__).resolve().parents[1]
 CONFIG = RAIZ / "fuentes.yaml"
-CANDIDATAS = RAIZ / "data" / "candidatas.json"
-REPORTE = RAIZ / "data" / "estado_fuentes.json"
-ACUMULADO = RAIZ / "data" / "hoy.json"
-PLANTILLA = RAIZ / "templates" / "index_template.html"
-SALIDA = RAIZ / "index.html"
+DATOS = RAIZ / "data"
+CACHE_FEEDS = DATOS / "feeds_descubiertos.json"
+HISTORIAL = DATOS / "urls_vistas.json"
+SALIDA = DATOS / "candidatas.json"
+REPORTE = DATOS / "estado_fuentes.json"
 
 TZ = ZoneInfo("America/Mexico_City")
 
-MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
-         "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
-
-# Orden en que aparecen en el panel.
-CATEGORIAS = {
-    "homicidios": "Homicidios y feminicidios",
-    "crimen_organizado": "Crimen organizado",
-    "delitos": "Robos, extorsión y otros delitos",
-    "desaparecidos": "Desaparecidos y búsqueda",
-    "justicia": "Justicia y sentencias",
-    "politica_seguridad": "Política de seguridad",
-    "accidentes": "Accidentes viales",
+# Headers de navegador: varios medios rechazan a quien se anuncia como bot.
+# Solo se leen titulares públicos, igual que cualquier lector de RSS.
+NAVEGADOR = {
+    "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                   "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"),
+    "Accept": "text/html,application/xhtml+xml,application/rss+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "es-MX,es;q=0.9,en;q=0.8",
 }
 
-ESTADOS = [
-    "Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas",
-    "Chihuahua", "Ciudad de México", "Coahuila", "Colima", "Durango", "Estado de México",
-    "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "Michoacán", "Morelos", "Nayarit",
-    "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí",
-    "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán",
-    "Zacatecas",
+RASTREADORES = {"utm_source", "utm_medium", "utm_campaign", "utm_term",
+                "utm_content", "fbclid", "gclid", "cmpid", "ref"}
+
+# Secciones cuyo contenido ya es de seguridad: no pasan por el filtro de
+# palabras (una nota de la sección policiaca no necesita decir "homicidio").
+SECCION_SEGURIDAD = re.compile(r"polic|justicia|seguridad|nota-?roja|sucesos", re.I)
+
+# Enlaces del home que no son notas.
+BASURA = re.compile(
+    r"aviso de privacidad|t[eé]rminos y condiciones|pol[ií]tica de (privacidad|cookies)|"
+    r"suscr[ií]b|reg[ií]strate|inicia sesi[oó]n|contacto|qui[eé]nes somos|directorio|"
+    r"publicidad|newsletter|todos los derechos|men[uú] principal|ver m[aá]s|"
+    r"lee tambi[eé]n|leer m[aá]s|clasificados|hor[oó]scopo", re.I)
+
+
+# --------------------------------------------------------------------------
+# Utilidades
+# --------------------------------------------------------------------------
+
+def normalizar(texto: str) -> str:
+    """Minúsculas y sin acentos, para comparar palabras."""
+    texto = unicodedata.normalize("NFKD", (texto or "").lower())
+    return "".join(c for c in texto if not unicodedata.combining(c))
+
+
+def limpiar_texto(texto: str) -> str:
+    if not texto:
+        return ""
+    if "<" in texto:
+        texto = BeautifulSoup(texto, "html.parser").get_text(" ")
+    return re.sub(r"\s+", " ", unescape(texto)).strip()
+
+
+def limpiar_url(url: str) -> str:
+    """Quita parámetros de rastreo (utm_...) sin tocar los que identifican la nota."""
+    if not url:
+        return ""
+    partes = urlsplit(url.strip())
+    query = [(k, v) for k, v in parse_qsl(partes.query) if k.lower() not in RASTREADORES]
+    return urlunsplit((partes.scheme, partes.netloc, partes.path, urlencode(query), ""))
+
+
+def huella(url: str, titulo: str) -> str:
+    base = url.rstrip("/") if url else normalizar(titulo)
+    return hashlib.sha1(base.encode("utf-8")).hexdigest()[:12]
+
+
+def dominio(url: str) -> str:
+    return urlsplit(url).netloc.lower().removeprefix("www.")
+
+
+def parece_nota(texto: str) -> bool:
+    """Filtro mínimo para scraping: descarta menús, avisos y botones."""
+    if not 25 <= len(texto) <= 220:
+        return False
+    if BASURA.search(texto) or len(texto.split()) < 5 or texto.isupper():
+        return False
+    return True
+
+
+def pedir(url: str, timeout: int) -> requests.Response:
+    r = requests.get(url, headers=NAVEGADOR, timeout=timeout)
+    r.raise_for_status()
+    # Si el sitio no declara su codificación, requests asume la antigua
+    # ISO-8859-1 y los acentos salen rotos ("PolÃ­tica"). En ese caso se
+    # detecta la codificación real a partir del contenido.
+    if (r.encoding or "").lower() in ("iso-8859-1", "latin-1") and \
+            "charset" not in r.headers.get("content-type", "").lower():
+        r.encoding = r.apparent_encoding
+    return r
+
+
+def cargar_json(ruta: Path, defecto):
+    try:
+        return json.loads(ruta.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return defecto
+
+
+def guardar_json(ruta: Path, datos) -> None:
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+    ruta.write_text(json.dumps(datos, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+# --------------------------------------------------------------------------
+# Lectura de feeds y de páginas
+# --------------------------------------------------------------------------
+
+def fecha_de_entrada(entrada) -> str | None:
+    """Fecha de publicación de una entrada de feed, en hora del centro."""
+    for campo in ("published_parsed", "updated_parsed"):
+        t = entrada.get(campo)
+        if t:
+            try:
+                return datetime(*t[:6], tzinfo=timezone.utc).astimezone(TZ).isoformat()
+            except (TypeError, ValueError):
+                pass
+    return None
+
+
+def items_de_feed(contenido: bytes, maximo: int) -> list[dict]:
+    feed = feedparser.parse(contenido)
+    items = []
+    for e in feed.entries[:maximo]:
+        titulo = limpiar_texto(e.get("title", ""))
+        url = limpiar_url(e.get("link", ""))
+        if len(titulo) < 15 or not url.startswith("http"):
+            continue
+        fuente_google = e.get("source") or {}
+        items.append({
+            "titulo": titulo,
+            "url": url,
+            "resumen": limpiar_texto(e.get("summary", ""))[:300],
+            "fecha": fecha_de_entrada(e),
+            # Solo Google Noticias trae esto: el sitio real que publicó la nota.
+            "origen_href": fuente_google.get("href", "") if hasattr(fuente_google, "get") else "",
+            "origen_titulo": fuente_google.get("title", "") if hasattr(fuente_google, "get") else "",
+        })
+    return items
+
+
+def items_de_html(html: str, base: str, maximo: int, contiene: str | None = None) -> list[dict]:
+    """Titulares de una página: los enlaces que parecen nota, del mismo sitio."""
+    soup = BeautifulSoup(html, "html.parser")
+    propio = dominio(base)
+    vistos, items = set(), []
+    for a in soup.find_all("a", href=True):
+        texto = a.get_text(" ", strip=True)
+        if not parece_nota(texto):
+            continue
+        href = limpiar_url(urljoin(base, a["href"]))
+        if not href.startswith("http") or dominio(href) != propio:
+            continue
+        if contiene and contiene not in href:
+            continue
+        clave = (href.rstrip("/"), normalizar(texto))
+        if clave[0] in vistos or clave[1] in vistos:
+            continue
+        vistos.update(clave)
+        items.append({"titulo": texto, "url": href, "resumen": "", "fecha": None})
+        if len(items) >= maximo:
+            break
+    return items
+
+
+def rss_anunciado(html: str, base: str) -> str | None:
+    """La etiqueta <link rel="alternate" type="application/rss+xml"> del home."""
+    soup = BeautifulSoup(html, "html.parser")
+    for link in soup.find_all("link", href=True):
+        tipo = (link.get("type") or "").lower()
+        rel = " ".join(link.get("rel") or []).lower()
+        if "alternate" in rel and ("rss" in tipo or "atom" in tipo):
+            href = urljoin(base, link["href"])
+            if "comments" not in href:  # WordPress anuncia también el feed de comentarios
+                return href
+    return None
+
+
+# --------------------------------------------------------------------------
+# Cómo se lee cada medio
+# --------------------------------------------------------------------------
+
+def dominios_compartidos(fuentes: list[dict]) -> set[str]:
+    """Dominios que usan varios medios de la lista (milenio.com, poresto.net...).
+
+    Para esos, leer el home traería la portada nacional del grupo, no la del
+    estado. Si no tienen página o feed propio, se leen por Google Noticias
+    con el nombre del estado.
+    """
+    conteo: dict[str, int] = {}
+    for f in fuentes:
+        conteo[f["sitio"]] = conteo.get(f["sitio"], 0) + 1
+    return {d for d, n in conteo.items() if n > 1 and d != "oem.com.mx"}
+
+
+def modo_de(fuente: dict, compartidos: set[str]) -> str:
+    # oem.com.mx bloquea a GitHub en todas sus páginas (verificado el
+    # 22/09/2026: 36 de 36 diarios con HTTP 403). Sus diarios se leen por
+    # Google Noticias.
+    if fuente.get("oem") or fuente.get("nota") in ("bloqueado-403", "sin-titulares"):
+        return "google"
+    if fuente.get("feed"):
+        return "feed"
+    if fuente.get("pagina"):
+        return "pagina"
+    if fuente["sitio"] in compartidos:
+        return "google"
+    return "sitio"
+
+
+def leer_directo(fuente: dict, modo: str, ajustes: dict, cache: dict) -> tuple[list, str | None, str]:
+    """Trae titulares del propio medio. Devuelve (items, error, via)."""
+    timeout, maximo = ajustes["timeout"], ajustes["max_por_fuente"]
+    try:
+        if modo == "feed":
+            return items_de_feed(pedir(fuente["feed"], timeout).content, maximo), None, "rss"
+
+        if modo == "oem":
+            url = f"https://oem.com.mx/{fuente['oem']}/policiaca"
+            html = pedir(url, timeout).text
+            filtro = f"/{fuente['oem']}/policiaca/"
+            return items_de_html(html, url, maximo, contiene=filtro), None, "oem"
+
+        if modo == "pagina":
+            url = fuente["pagina"]
+            return items_de_html(pedir(url, timeout).text, url, maximo), None, "pagina"
+
+        # modo "sitio": RSS ya descubierto en otra corrida, o descubrirlo ahora.
+        nombre = fuente["nombre"]
+        if cache.get(nombre):
+            return items_de_feed(pedir(cache[nombre], timeout).content, maximo), None, "rss"
+
+        try:
+            respuesta = pedir(f"https://{fuente['sitio']}/", timeout)
+        except (requests.exceptions.ConnectionError, requests.exceptions.SSLError):
+            # Algunos sitios pequeños solo responden sin candado (http://).
+            respuesta = pedir(f"http://{fuente['sitio']}/", timeout)
+        if nombre not in cache:
+            candidatos = [rss_anunciado(respuesta.text, respuesta.url)]
+            candidatos += [urljoin(respuesta.url, r) for r in ("feed/", "rss/")]
+            cache[nombre] = None
+            for candidato in filter(None, candidatos):
+                try:
+                    items = items_de_feed(pedir(candidato, min(timeout, 8)).content, maximo)
+                except Exception:  # noqa: BLE001 - un candidato que falla no es error
+                    continue
+                if len(items) >= 3:  # 1 o 2 entradas suele ser un falso positivo
+                    cache[nombre] = candidato
+                    return items, None, "rss"
+        return items_de_html(respuesta.text, respuesta.url, maximo), None, "home"
+
+    except requests.exceptions.HTTPError as e:
+        return [], f"HTTP {e.response.status_code}", modo
+    except requests.exceptions.Timeout:
+        return [], f"sin respuesta en {timeout}s", modo
+    except Exception as e:  # noqa: BLE001
+        return [], f"{type(e).__name__}", modo
+
+
+# --------------------------------------------------------------------------
+# Respaldo por Google Noticias
+# --------------------------------------------------------------------------
+
+def url_google(sitios: list[str], palabras: list[str], termino: str | None = None) -> str:
+    consulta = "(" + " OR ".join(f"site:{s}" for s in sitios) + ")"
+    if termino:
+        consulta += f' "{termino}"'
+    consulta += " (" + " OR ".join(palabras) + ") when:1d"
+    return ("https://news.google.com/rss/search?q=" + quote_plus(consulta)
+            + "&hl=es-419&gl=MX&ceid=MX:es-419")
+
+
+def armar_consultas(pendientes: list[dict], compartidos: set[str],
+                    palabras: list[str], por_consulta: int) -> list[tuple[str, list[dict]]]:
+    """Agrupa los medios pendientes en consultas a Google Noticias.
+
+    - Dominio propio: se juntan varios en una consulta (site:a OR site:b...).
+    - Dominio compartido (milenio.com, poresto.net): uno por consulta, con
+      el nombre del estado, para no traer la portada nacional del grupo.
+    - Diarios OEM: todos viven en oem.com.mx, y Google Noticias no acepta
+      rutas en site:. Se hace una consulta por estado ("site:oem.com.mx
+      Puebla") y cada nota se asigna al diario por el nombre del medio que
+      reporta Google ("El Sol de Puebla").
+    """
+    consultas, sueltos = [], []
+    oem_por_estado: dict[str, list[dict]] = {}
+    for f in pendientes:
+        if f.get("oem"):
+            oem_por_estado.setdefault(f["estado"], []).append(f)
+        elif f["sitio"] in compartidos:
+            termino = None if f["estado"] == "Nacional" else f["estado"]
+            consultas.append((url_google([f["sitio"]], palabras, termino), [f]))
+        else:
+            sueltos.append(f)
+    for i in range(0, len(sueltos), por_consulta):
+        grupo = sueltos[i:i + por_consulta]
+        consultas.append((url_google([f["sitio"] for f in grupo], palabras), grupo))
+    for estado, grupo in oem_por_estado.items():
+        termino = None if estado in ("Nacional", "Ciudad de México") else estado
+        consultas.append((url_google(["oem.com.mx"], palabras, termino), grupo))
+    return consultas
+
+
+def pedir_google(url: str, timeout: int) -> requests.Response:
+    """Consulta a Google Noticias con pausa y reintentos.
+
+    Si se le hacen muchas consultas seguidas, Google responde 429 o 503
+    ("demasiadas solicitudes"). Se espera y se reintenta hasta dos veces.
+    """
+    for espera in (0, 6, 20):
+        time.sleep(espera or 0.7)
+        try:
+            return pedir(url, timeout)
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code not in (429, 503) or espera == 20:
+                raise
+    raise RuntimeError("inalcanzable")
+
+
+def repartir_google(items: list[dict], grupo: list[dict]) -> dict[str, list]:
+    """Asigna cada nota de Google al medio del grupo que la publicó."""
+    por_medio: dict[str, list] = {f["nombre"]: [] for f in grupo}
+    es_oem = all(f.get("oem") for f in grupo)
+    for it in items:
+        # Google manda el titular como "Titular - Medio": se separa.
+        if " - " in it["titulo"]:
+            recorte, _, sufijo = it["titulo"].rpartition(" - ")
+            if len(sufijo) < 50 and len(recorte) > 20:
+                it["titulo"] = recorte
+        it["resumen"] = ""  # el "resumen" de Google es solo el titular repetido
+        if es_oem and len(grupo) > 1:
+            # Varios diarios OEM en un grupo: se intenta por nombre. Ojo: Google
+            # suele reportar todo oem.com.mx como "El Sol de México" (verificado
+            # el 22/09/2026), por eso fuentes.yaml deja un solo diario OEM por
+            # estado y este caso casi no ocurre.
+            medio = normalizar(it.get("origen_titulo", ""))
+            for f in grupo:
+                if medio and normalizar(f["nombre"]) in medio:
+                    por_medio[f["nombre"]].append(it)
+                    break
+            continue
+        if len(grupo) == 1:
+            por_medio[grupo[0]["nombre"]].append(it)
+            continue
+        href = it.get("origen_href", "")
+        for f in grupo:
+            if f["sitio"] in href:
+                por_medio[f["nombre"]].append(it)
+                break
+        # Si no se sabe de qué medio es, se descarta: no se puede asignar estado.
+    return por_medio
+
+
+# --------------------------------------------------------------------------
+# Filtros
+# --------------------------------------------------------------------------
+
+FECHA_EN_URL = [
+    re.compile(r"/(20\d{2})/(\d{1,2})/(\d{1,2})/"),          # /2026/09/22/
+    re.compile(r"/(20\d{2})-(\d{1,2})-(\d{1,2})"),            # /2026-09-22
+    re.compile(r"[-_](\d{1,2})[-_](\d{1,2})[-_](20\d{2})"),   # -22-09-2026
 ]
 
 
-def normalizar(texto: str) -> str:
-    texto = unicodedata.normalize("NFKD", (texto or "").lower())
-    return "".join(c for c in texto if not unicodedata.combining(c)).strip()
-
-
-ALIAS_ESTADOS = {normalizar(e): e for e in ESTADOS}
-ALIAS_ESTADOS.update({
-    "cdmx": "Ciudad de México", "df": "Ciudad de México", "mexico": "Estado de México",
-    "edomex": "Estado de México", "estado de mexico": "Estado de México",
-    "edo. mex.": "Estado de México", "edo. mex": "Estado de México", "edo mex": "Estado de México",
-    "ciudad de mexico (cdmx)": "Ciudad de México", "slp": "San Luis Potosí",
-    "q. roo": "Quintana Roo", "qroo": "Quintana Roo",
-    "coahuila de zaragoza": "Coahuila", "michoacan de ocampo": "Michoacán",
-    "veracruz de ignacio de la llave": "Veracruz", "queretaro de arteaga": "Querétaro",
-    "nl": "Nuevo León", "bc": "Baja California", "bcs": "Baja California Sur",
-    "nacional": "Nacional", "mexico (nacional)": "Nacional",
-})
-
-
-def estado_canonico(valor: str, respaldo: str) -> str:
-    return ALIAS_ESTADOS.get(normalizar(valor), respaldo if respaldo else "Nacional")
-
-
-# --------------------------------------------------------------------------
-# Instrucciones para el modelo
-# --------------------------------------------------------------------------
-
-SISTEMA = """Eres editor de un panel de monitoreo de SEGURIDAD en México. Recibes titulares \
-recientes de medios nacionales y locales. Cada línea trae un número, el medio, el estado que \
-cubre ese medio y el titular (a veces con un extracto).
-
-Tu trabajo: quedarte SOLO con notas de seguridad e inseguridad ocurridas en México, o que \
-involucren a grupos criminales o autoridades mexicanas en el extranjero (extradiciones, \
-juicios en EE.UU., detenciones de líderes). Clasifícalas en UNA de estas categorías:
-
-- homicidios: asesinatos, feminicidios, ataques armados con víctimas, hallazgo de cuerpos, \
-multihomicidios, cifras de homicidios.
-- crimen_organizado: cárteles, células, enfrentamientos, narcobloqueos, aseguramientos de \
-droga o armas, laboratorios, huachicol, detenciones de líderes u operadores.
-- delitos: robo, asalto, extorsión, cobro de piso, secuestro, fraude, despojo, violencia \
-sexual, trata, violencia familiar, riñas y detenciones por delitos comunes.
-- desaparecidos: personas desaparecidas o no localizadas, fichas de búsqueda, fosas, \
-colectivos y madres buscadoras, identificación de restos.
-- justicia: sentencias, vinculaciones a proceso, audiencias, juicios, liberaciones, \
-extradiciones, actuación de fiscalías y jueces en casos concretos.
-- politica_seguridad: estrategias y operativos de gobierno, presupuesto de seguridad, \
-nombramientos o destituciones en seguridad y fiscalías, Guardia Nacional y Fuerzas Armadas, \
-cifras oficiales, reformas penales, condiciones y depuración de policías.
-- accidentes: accidentes viales, choques, volcaduras, atropellamientos, percances de tránsito \
-con lesionados o muertos.
-
-DESCARTA: espectáculos, series o películas de crimen, deportes (salvo violencia real), clima \
-y desastres naturales, incendios sin delito, ciberseguridad o "seguridad" de productos o \
-apps, seguridad social/IMSS, columnas de opinión, notas internacionales sin vínculo con \
-México, horóscopos y virales.
-
-REGLAS:
-1. Si varias líneas cuentan el mismo hecho, devuelve una sola (la del medio más local o la \
-más clara) y pon en "repetidas" los números de las demás.
-2. "estado": la entidad donde OCURRIÓ el hecho, con su nombre corto oficial ("Ciudad de \
-México", "Estado de México", "Nuevo León", "Michoacán"...). Si el hecho es de alcance \
-nacional o no hay un estado claro, "Nacional". No asumas que el hecho ocurrió en el estado \
-del medio si el titular dice otro lugar.
-3. "municipio": ciudad o municipio si el titular o el extracto lo dicen; si no, "".
-4. "titulo": máximo 12 palabras. "resumen": máximo 25 palabras. SIEMPRE EN TUS PROPIAS \
-PALABRAS: nunca copies el titular ni frases textuales de la fuente. No agregues datos que \
-no estén en el titular o el extracto.
-5. "relevancia": "alta" si hay varias víctimas, funcionarios o figuras públicas, un patrón o \
-cifra, o una decisión de autoridad con impacto; "media" en los demás casos.
-6. Responde ÚNICAMENTE con JSON válido, sin markdown ni texto adicional, sin saltos de línea \
-dentro de los textos, con las comillas dobles internas escapadas.
-
-Formato exacto:
-{"notas": [{"n": 3, "categoria": "homicidios", "estado": "Sinaloa", "municipio": "Culiacán", \
-"titulo": "...", "resumen": "...", "relevancia": "alta", "repetidas": [7, 12]}]}
-
-Si ninguna línea es de seguridad: {"notas": []}"""
-
-
-def prompt_de_lote(lote: list[dict]) -> str:
-    lineas = []
-    for n, it in enumerate(lote, start=1):
-        linea = f"{n}. [{it['fuente']} / {it['estado_fuente']}] {it['titulo']}"
-        extracto = (it.get("resumen") or "").strip()
-        if extracto and normalizar(extracto[:60]) not in normalizar(it["titulo"]):
-            linea += f" — {extracto[:180]}"
-        lineas.append(linea)
-    return "Titulares:\n" + "\n".join(lineas)
-
-
-def extraer_json(texto: str) -> dict:
-    """Parsea la respuesta; si llegó cortada, la recorta al último objeto completo."""
-    texto = re.sub(r"^```(json)?|```$", "", texto.strip()).strip()
-    try:
-        return json.loads(texto)
-    except json.JSONDecodeError:
-        pass
-    ultimo = texto.rfind("}")
-    if ultimo == -1:
-        return {"notas": []}
-    recortado = texto[:ultimo + 1]
-    pila, en_cadena, escape = [], False, False
-    for ch in recortado:
-        if escape:
-            escape = False
-        elif ch == "\\":
-            escape = True
-        elif ch == '"':
-            en_cadena = not en_cadena
-        elif not en_cadena and ch in "{[":
-            pila.append(ch)
-        elif not en_cadena and ch in "}]" and pila:
-            pila.pop()
-    cierre = "".join("}" if c == "{" else "]" for c in reversed(pila))
-    try:
-        return json.loads(recortado + cierre)
-    except json.JSONDecodeError:
-        return {"notas": []}
-
-
-def curar_lote(cliente, ajustes: dict, lote: list[dict]) -> tuple[list[dict], dict]:
-    respuesta = cliente.messages.create(
-        model=ajustes["modelo"],
-        max_tokens=ajustes["max_tokens_ia"],
-        system=SISTEMA,
-        messages=[{"role": "user", "content": prompt_de_lote(lote)}],
-    )
-    texto = "".join(b.text for b in respuesta.content if getattr(b, "type", "") == "text")
-    uso = {"entrada": respuesta.usage.input_tokens, "salida": respuesta.usage.output_tokens,
-           "cortada": respuesta.stop_reason == "max_tokens"}
-
-    notas = []
-    for nota in extraer_json(texto).get("notas", []):
+def fecha_de_url(url: str) -> date | None:
+    for i, patron in enumerate(FECHA_EN_URL):
+        m = patron.search(url or "")
+        if not m:
+            continue
         try:
-            item = lote[int(nota["n"]) - 1]
-        except (KeyError, ValueError, TypeError, IndexError):
+            a, b, c = (int(x) for x in m.groups())
+            return date(c, b, a) if i == 2 else date(a, b, c)
+        except ValueError:
+            return None
+    return None
+
+
+def filtrar_fecha(nombre: str, items: list[dict], historial: dict, hoy: date) -> list[dict]:
+    """Deja solo lo de hoy.
+
+    Tres criterios: la fecha del feed; la fecha escrita en la URL; y, para lo
+    que no trae fecha (scraping), el historial de ligas ya vistas.
+
+    Arranque en frío: la primera vez que un medio sin fechas responde, todo
+    lo que trae su página se da por visto y no entra. Así el primer día no se
+    llena el panel con notas de la semana pasada; a partir de la segunda
+    corrida entra solo lo que aparece nuevo.
+    """
+    hoy_iso, ayer_iso = hoy.isoformat(), (hoy - timedelta(days=1)).isoformat()
+    primera_vez = nombre not in historial["fuentes"]
+    urls = historial["urls"]
+    salida = []
+    for it in items:
+        fecha = None
+        if it.get("fecha"):
+            fecha = datetime.fromisoformat(it["fecha"]).date()
+        fecha = fecha or fecha_de_url(it["url"])
+        if fecha is not None:
+            if fecha == hoy:
+                salida.append(it)
             continue
-        categoria = nota.get("categoria", "")
-        if categoria not in CATEGORIAS:
+        vista = urls.get(it["url"])
+        if vista and vista < hoy_iso:
             continue
-        otras = []
-        for r in nota.get("repetidas") or []:
-            try:
-                otras.append(lote[int(r) - 1]["fuente"])
-            except (ValueError, TypeError, IndexError):
-                pass
-        notas.append({
-            "id": item["id"],
-            "categoria": categoria,
-            "estado": estado_canonico(nota.get("estado", ""), item["estado_fuente"]),
-            "municipio": (nota.get("municipio") or "").strip(),
-            "titulo": (nota.get("titulo") or "").strip(),
-            "resumen": (nota.get("resumen") or "").strip(),
-            "relevancia": "alta" if nota.get("relevancia") == "alta" else "media",
-            "fuente": item["fuente"],
-            "url": item["url"],
-            "titulo_original": item["titulo"],
-            "otras_fuentes": sorted(set(otras) - {item["fuente"]}),
-        })
-    return [n for n in notas if n["titulo"]], uso
-
-
-# --------------------------------------------------------------------------
-# Acumulado del día
-# --------------------------------------------------------------------------
-
-VACIAS = set("de la el los las del en y a un una por con para al se que su sus tras sin "
-             "es son fue hay no o lo le les mas ya".split())
-
-
-def palabras(titulo: str) -> set[str]:
-    return {p for p in re.findall(r"[a-z0-9ñ]+", normalizar(titulo))
-            if len(p) > 2 and p not in VACIAS}
-
-
-def es_misma_historia(a: dict, b: dict) -> bool:
-    """Dos notas del mismo estado cuyos titulares originales se parecen mucho."""
-    if a["estado"] != b["estado"]:
-        return False
-    pa, pb = palabras(a["titulo_original"]), palabras(b["titulo_original"])
-    if not pa or not pb:
-        return False
-    return len(pa & pb) / len(pa | pb) >= 0.5
-
-
-def cargar_acumulado(hoy: str) -> dict:
-    try:
-        datos = json.loads(ACUMULADO.read_text(encoding="utf-8"))
-    except (OSError, ValueError):
-        datos = {}
-    if datos.get("fecha") != hoy:
-        if datos:
-            print(f"Nuevo día ({datos.get('fecha')} -> {hoy}): se reinicia el panel.")
-        return {"fecha": hoy, "corridas": 0, "evaluadas": [], "notas": []}
-    return datos
-
-
-def integrar(acumulado: dict, nuevas: list[dict], ahora: str, max_por_estado: int) -> int:
-    notas = acumulado["notas"]
-    por_id = {n["id"] for n in notas}
-    agregadas = 0
-    for nueva in nuevas:
-        if nueva["id"] in por_id:
+        if primera_vez:
+            urls[it["url"]] = ayer_iso
             continue
-        gemela = next((n for n in notas if es_misma_historia(n, nueva)), None)
-        if gemela:
-            fuentes = set(gemela.get("otras_fuentes", [])) | {nueva["fuente"]}
-            fuentes |= set(nueva.get("otras_fuentes", []))
-            gemela["otras_fuentes"] = sorted(fuentes - {gemela["fuente"]})
-            if nueva["relevancia"] == "alta":
-                gemela["relevancia"] = "alta"
-            continue
-        nueva["agregada"] = ahora
-        notas.append(nueva)
-        por_id.add(nueva["id"])
-        agregadas += 1
-
-    # Tope por estado: primero relevancia alta, luego lo más reciente.
-    notas.sort(key=lambda n: (n["relevancia"] == "alta", n.get("agregada", "")), reverse=True)
-    conteo: dict[str, int] = {}
-    recortadas = []
-    for n in notas:
-        conteo[n["estado"]] = conteo.get(n["estado"], 0) + 1
-        if conteo[n["estado"]] <= max_por_estado:
-            recortadas.append(n)
-    # En el panel, lo más reciente arriba.
-    recortadas.sort(key=lambda n: n.get("agregada", ""), reverse=True)
-    acumulado["notas"] = recortadas
-    return agregadas
+        salida.append(it)
+    if items:
+        historial["fuentes"].append(nombre)
+    for it in salida:
+        urls.setdefault(it["url"], hoy_iso)
+    return salida
 
 
-# --------------------------------------------------------------------------
-# Página
-# --------------------------------------------------------------------------
+def compilar_filtro(config: dict):
+    incluir = re.compile("|".join(f"(?:{p})" for p in config["filtro"]["incluir"]))
+    excluir_lista = config["filtro"].get("excluir") or []
+    excluir = re.compile("|".join(f"(?:{p})" for p in excluir_lista)) if excluir_lista else None
 
-def fecha_legible(momento: datetime) -> str:
-    return (f"{momento.day} de {MESES[momento.month - 1]} de {momento.year}, "
-            f"{momento:%H:%M} (hora del centro de México)")
+    def pasa(it: dict) -> bool:
+        texto = normalizar(f"{it['titulo']} {it.get('resumen', '')}")
+        if excluir and excluir.search(texto):
+            return False
+        return bool(incluir.search(texto))
+    return pasa
 
 
-def render(acumulado: dict, ahora: datetime) -> str:
-    e = html.escape
-    notas = acumulado["notas"]
+def ya_filtrado(fuente: dict, via: str) -> bool:
+    """Lo que viene de una sección policiaca o de Google ya es de seguridad."""
+    if via in ("oem", "google"):
+        return True
+    return via == "pagina" and bool(SECCION_SEGURIDAD.search(fuente.get("pagina", "")))
 
-    stats = "\n".join(
-        f'<div class="stat" data-cat="{cat}"><p>{e(etq)}</p>'
-        f'<p class="num">{sum(1 for n in notas if n["categoria"] == cat)}</p></div>'
-        for cat, etq in CATEGORIAS.items())
 
-    conteo_estados: dict[str, int] = {}
-    for n in notas:
-        conteo_estados[n["estado"]] = conteo_estados.get(n["estado"], 0) + 1
-    opciones = [f'<option value="">Todo el país ({len(notas)})</option>']
-    for estado in ["Nacional"] + ESTADOS:
-        if estado in conteo_estados:
-            etiqueta = "Alcance nacional" if estado == "Nacional" else estado
-            opciones.append(f'<option value="{e(estado)}">{e(etiqueta)} '
-                            f'({conteo_estados[estado]})</option>')
-
-    bloques = []
-    for cat, etiqueta in CATEGORIAS.items():
-        tarjetas = []
-        for n in (x for x in notas if x["categoria"] == cat):
-            lugar = ", ".join(p for p in (n["municipio"], n["estado"]) if p and p != "Nacional")
-            lugar = lugar or "Alcance nacional"
-            extra = ""
-            if n.get("otras_fuentes"):
-                k = len(n["otras_fuentes"])
-                extra = (f' · <span title="{e(", ".join(n["otras_fuentes"]))}">'
-                         f'+{k} medio{"s" if k > 1 else ""}</span>')
-            marca = ' <span class="alta-tag">Relevante</span>' if n["relevancia"] == "alta" else ""
-            tarjetas.append(
-                f'<div class="card {cat}" data-estado="{e(n["estado"])}">\n'
-                f'  <h3><a href="{e(n["url"])}" target="_blank" rel="noopener">'
-                f'{e(n["titulo"])}</a>{marca}</h3>\n'
-                f'  <p>{e(n["resumen"])}</p>\n'
-                f'  <p class="src">{e(n["fuente"])} · {e(lugar)}{extra}</p>\n'
-                f'</div>')
-        bloques.append(
-            f'<section data-cat="{cat}">\n<div class="section-title">'
-            f'<span class="dot {cat}-bg"></span><h2>{e(etiqueta)}</h2></div>\n'
-            + "\n".join(tarjetas)
-            + '\n<p class="vacio">Sin notas por ahora.</p>\n</section>')
-
-    reporte = {}
-    try:
-        reporte = json.loads(REPORTE.read_text(encoding="utf-8")).get("fuentes", {})
-    except (OSError, ValueError):
-        pass
-    vivas = sum(1 for r in reporte.values() if r.get("directas") or r.get("google"))
-    cobertura = f"{vivas} de {len(reporte)} medios respondieron en la última revisión." \
-        if reporte else ""
-
-    pagina = PLANTILLA.read_text(encoding="utf-8")
-    return (pagina.replace("{{FECHA}}", e(fecha_legible(ahora)))
-                  .replace("{{STATS}}", stats)
-                  .replace("{{OPCIONES}}", "\n".join(opciones))
-                  .replace("{{CARDS}}", "\n".join(bloques))
-                  .replace("{{COBERTURA}}", e(cobertura)))
+def intercalar(por_fuente: dict[str, list]) -> list[dict]:
+    """Una nota de cada medio por turno, para que ninguno acapare los lotes."""
+    mezcla = []
+    vueltas = max((len(v) for v in por_fuente.values()), default=0)
+    for i in range(vueltas):
+        for notas in por_fuente.values():
+            if i < len(notas):
+                mezcla.append(notas[i])
+    return mezcla
 
 
 # --------------------------------------------------------------------------
@@ -372,76 +492,110 @@ def render(acumulado: dict, ahora: datetime) -> str:
 # --------------------------------------------------------------------------
 
 def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--solo-render", action="store_true",
-                        help="rehace index.html con lo acumulado, sin llamar a Claude")
-    args = parser.parse_args()
+    config = yaml.safe_load(CONFIG.read_text(encoding="utf-8"))
+    ajustes, fuentes = config["ajustes"], config["fuentes"]
+    compartidos = dominios_compartidos(fuentes)
+    cache = cargar_json(CACHE_FEEDS, {})
+    hoy = datetime.now(TZ).date()
 
-    ajustes = yaml.safe_load(CONFIG.read_text(encoding="utf-8"))["ajustes"]
-    ahora = datetime.now(TZ)
-    acumulado = cargar_acumulado(ahora.date().isoformat())
+    # 1. Lectura directa, en paralelo.
+    crudos: dict[str, list] = {}
+    reporte: dict[str, dict] = {}
+    directas = [(f, modo_de(f, compartidos)) for f in fuentes]
+    with concurrent.futures.ThreadPoolExecutor(max_workers=ajustes["hilos"]) as pool:
+        tareas = {pool.submit(leer_directo, f, m, ajustes, cache): (f, m)
+                  for f, m in directas if m != "google"}
+        for tarea in concurrent.futures.as_completed(tareas):
+            f, m = tareas[tarea]
+            items, error, via = tarea.result()
+            crudos[f["nombre"]] = [dict(it, via=via) for it in items]
+            reporte[f["nombre"]] = {"estado": f["estado"], "modo": m, "via": via,
+                                    "directas": len(items), "google": 0, "error": error}
+    for f, m in directas:
+        if m == "google":
+            crudos[f["nombre"]] = []
+            reporte[f["nombre"]] = {"estado": f["estado"], "modo": m, "via": "google",
+                                    "directas": 0, "google": 0, "error": None}
+    guardar_json(CACHE_FEEDS, cache)
 
-    todo_fallo = None
-    if not args.solo_render:
-        candidatas = json.loads(CANDIDATAS.read_text(encoding="utf-8"))["items"]
-        evaluadas = set(acumulado["evaluadas"])
-        pendientes = [c for c in candidatas if c["id"] not in evaluadas]
-        print(f"Candidatas: {len(candidatas)}; nuevas para evaluar: {len(pendientes)}")
+    # 2. Respaldo por Google Noticias para lo que no trajo nada.
+    if ajustes.get("google_respaldo", True):
+        pendientes = [f for f in fuentes if not crudos[f["nombre"]]]
+        consultas = armar_consultas(pendientes, compartidos, config["google_palabras"],
+                                    ajustes["medios_por_consulta_google"])
+        print(f"Google Noticias: {len(consultas)} consultas para {len(pendientes)} medios")
 
-        if pendientes:
-            if not os.environ.get("ANTHROPIC_API_KEY"):
-                raise SystemExit("Falta el secreto ANTHROPIC_API_KEY (ver README, paso 3).")
-            import anthropic
-            cliente = anthropic.Anthropic(max_retries=3)
-            tam = ajustes["lote_ia"]
-            lotes = [pendientes[i:i + tam] for i in range(0, len(pendientes), tam)]
+        def consultar(url):
+            return items_de_feed(pedir_google(url, ajustes["timeout"]).content, 100)
 
-            nuevas, fallidos, ultimo_error = [], 0, ""
-            tokens_in = tokens_out = 0
-            with concurrent.futures.ThreadPoolExecutor(max_workers=ajustes["hilos_ia"]) as pool:
-                tareas = {pool.submit(curar_lote, cliente, ajustes, lote): lote for lote in lotes}
-                for tarea in concurrent.futures.as_completed(tareas):
-                    lote = tareas[tarea]
-                    try:
-                        notas, uso = tarea.result()
-                    except Exception as e:  # noqa: BLE001
-                        # Ese lote no se marca como evaluado: se reintenta en la próxima corrida.
-                        print(f"[aviso] falló un lote de {len(lote)}: {type(e).__name__}: {e}")
-                        fallidos += 1
-                        ultimo_error = f"{type(e).__name__}: {e}"
-                        continue
-                    tokens_in += uso["entrada"]
-                    tokens_out += uso["salida"]
-                    if uso["cortada"]:
-                        print("[aviso] una respuesta se cortó; baja lote_ia en fuentes.yaml")
-                    nuevas.extend(notas)
-                    evaluadas.update(c["id"] for c in lote)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=ajustes["hilos_google"]) as pool:
+            tareas = {pool.submit(consultar, url): grupo for url, grupo in consultas}
+            for tarea in concurrent.futures.as_completed(tareas):
+                grupo = tareas[tarea]
+                try:
+                    items = tarea.result()
+                except Exception as e:  # noqa: BLE001
+                    for f in grupo:
+                        previo = reporte[f["nombre"]]["error"]
+                        reporte[f["nombre"]]["error"] = (f"{previo}; " if previo else "") + \
+                            f"Google: {type(e).__name__}"
+                    continue
+                for nombre, notas in repartir_google(items, grupo).items():
+                    ya = {it["url"] for it in crudos[nombre]}
+                    nuevas = [dict(it, via="google") for it in notas if it["url"] not in ya]
+                    crudos[nombre] = (crudos[nombre] + nuevas)[:ajustes["max_por_fuente"]]
+                    reporte[nombre]["google"] = len(crudos[nombre])
 
-            agregadas = integrar(acumulado, nuevas, ahora.isoformat(), ajustes["max_por_estado"])
-            acumulado["evaluadas"] = sorted(evaluadas)
-            acumulado["corridas"] += 1
-            costo = tokens_in / 1e6 * 1 + tokens_out / 1e6 * 5  # tarifa de Haiku 4.5, USD
-            print(f"Claude eligió {len(nuevas)} notas de seguridad; nuevas en el panel: "
-                  f"{agregadas}. Tokens: {tokens_in:,} entrada / {tokens_out:,} salida "
-                  f"(~{costo:.3f} USD). Lotes fallidos: {fallidos}")
-            if fallidos == len(lotes):
-                todo_fallo = ultimo_error
+    # 3. Filtros de fecha y de palabras.
+    por_nombre = {f["nombre"]: f for f in fuentes}
+    historial = cargar_json(HISTORIAL, {"urls": {}, "fuentes": []})
+    historial.setdefault("urls", {})
+    historial.setdefault("fuentes", [])
+    pasa = compilar_filtro(config)
 
-    acumulado["actualizado"] = ahora.isoformat()
-    ACUMULADO.parent.mkdir(parents=True, exist_ok=True)
-    ACUMULADO.write_text(json.dumps(acumulado, ensure_ascii=False, indent=1), encoding="utf-8")
-    SALIDA.write_text(render(acumulado, ahora), encoding="utf-8")
+    candidatas: dict[str, list] = {}
+    vistos: set[str] = set()
+    total_hoy = 0
+    for nombre, items in crudos.items():
+        f = por_nombre[nombre]
+        de_hoy = filtrar_fecha(nombre, items, historial, hoy)
+        total_hoy += len(de_hoy)
+        elegidas = []
+        for it in de_hoy:
+            if not (ya_filtrado(f, it["via"]) or pasa(it)):
+                continue
+            it_id = huella(it["url"], it["titulo"])
+            if it_id in vistos:
+                continue
+            vistos.add(it_id)
+            elegidas.append({"id": it_id, "fuente": nombre, "estado_fuente": f["estado"],
+                             "titulo": it["titulo"], "resumen": it.get("resumen", ""),
+                             "url": it["url"], "via": it["via"]})
+        candidatas[nombre] = elegidas
+        reporte[nombre]["candidatas"] = len(elegidas)
 
-    for cat, etiqueta in CATEGORIAS.items():
-        print(f"  {etiqueta}: {sum(1 for n in acumulado['notas'] if n['categoria'] == cat)}")
-    print(f"index.html regenerado: {len(acumulado['notas'])} notas acumuladas hoy.")
-    if todo_fallo:
-        # Sale en rojo para que se note en la pestaña Actions. Los titulares no
-        # se marcaron como evaluados: se reintentan en la siguiente corrida.
-        print("\nERROR: fallaron TODAS las llamadas a Claude, el panel no recibió notas nuevas.")
-        print(f"Motivo: {todo_fallo}")
-        print("Revisa el secreto ANTHROPIC_API_KEY, el saldo y los límites en console.anthropic.com.")
-        return 1
+    # Historial: se guardan las fuentes una sola vez y se olvidan las ligas viejas.
+    limite = (hoy - timedelta(days=ajustes["dias_historial"])).isoformat()
+    historial["urls"] = {u: d for u, d in historial["urls"].items() if d >= limite}
+    historial["fuentes"] = sorted(set(historial["fuentes"]))
+    guardar_json(HISTORIAL, historial)
+
+    lista = intercalar(candidatas)
+    guardar_json(SALIDA, {"generado": datetime.now(TZ).isoformat(),
+                          "fecha": hoy.isoformat(), "items": lista})
+    guardar_json(REPORTE, {"fecha": hoy.isoformat(), "fuentes": reporte})
+
+    # 4. Resumen para el log de GitHub Actions.
+    vivas = [n for n, r in reporte.items() if r["directas"] or r["google"]]
+    muertas = sorted(n for n in reporte if n not in vivas)
+    por_google = sum(1 for r in reporte.values() if r["google"])
+    print(f"\nMedios que respondieron: {len(vivas)} de {len(reporte)} "
+          f"({por_google} por Google Noticias)")
+    print(f"Titulares de hoy: {total_hoy}. Pasaron el filtro de seguridad: {len(lista)}")
+    if muertas:
+        print(f"Sin notas en esta corrida ({len(muertas)}):")
+        for n in muertas:
+            print(f"  ✗ {n} [{reporte[n]['estado']}] {reporte[n]['error'] or 'sin titulares'}")
     return 0
 
 
