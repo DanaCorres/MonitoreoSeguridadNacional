@@ -237,16 +237,18 @@ fuentes:
   - {nombre: La Silla Rota, estado: Nacional, sitio: lasillarota.com, origen: panel-nacional}
   - {nombre: SDPnoticias, estado: Nacional, sitio: sdpnoticias.com, origen: panel-nacional}
   - {nombre: Publimetro, estado: Nacional, sitio: publimetro.com.mx, origen: panel-nacional}
-  - {nombre: El Sol de México, estado: Nacional, sitio: oem.com.mx, oem: elsoldemexico, origen: panel-nacional}
+  # Diarios OEM de Nacional: El Sol de México, La Prensa. Google Noticias los reporta
+  # todos como "El Sol de México", así que no se pueden distinguir entre sí.
+  - {nombre: El Sol de México y La Prensa, estado: Nacional, sitio: oem.com.mx, oem: elsoldemexico, origen: nuevo}
   - {nombre: Reforma, estado: Nacional, sitio: reforma.com, nota: muro-de-pago, origen: panel-nacional}
-  - {nombre: La Prensa, estado: Nacional, sitio: oem.com.mx, oem: la-prensa, origen: nuevo}
   - {nombre: SinEmbargo, estado: Nacional, sitio: sinembargo.mx, origen: nuevo}
   - {nombre: Latinus, estado: Nacional, sitio: latinus.us, origen: nuevo}
   - {nombre: Radio Fórmula, estado: Nacional, sitio: radioformula.com.mx, origen: nuevo}
 
   # ----------------------------- Aguascalientes ---------------------------
   - {nombre: Hidrocálido Digital, estado: Aguascalientes, sitio: hidrocalidodigital.com, origen: nuevo}
-  - {nombre: LJA, estado: Aguascalientes, sitio: lja.mx, origen: nuevo}
+  # FUERA (403 y no está en Google): verificado el 22/09/2026
+  # - {nombre: LJA, estado: Aguascalientes, sitio: lja.mx, origen: nuevo}
   - {nombre: El Heraldo de Aguascalientes, estado: Aguascalientes, sitio: heraldo.mx, origen: nuevo}
   - {nombre: El Sol del Centro, estado: Aguascalientes, sitio: oem.com.mx, oem: elsoldelcentro, origen: nuevo}
 
@@ -263,7 +265,8 @@ fuentes:
   - {nombre: El Imparcial (Tijuana), estado: Baja California, sitio: elimparcial.com, pagina: "https://www.elimparcial.com/tijuana", origen: panel-bc}
   - {nombre: El Imparcial (Ensenada), estado: Baja California, sitio: elimparcial.com, pagina: "https://www.elimparcial.com/tij/ensenada/", origen: panel-bc}
   - {nombre: Milenio (Ensenada), estado: Baja California, sitio: milenio.com, pagina: "https://www.milenio.com/temas/ensenada", origen: panel-bc}
-  - {nombre: Esquina 32, estado: Baja California, sitio: esquina32.com, origen: panel-bc}
+  # FUERA (sin titulares y no está en Google): verificado el 22/09/2026
+  # - {nombre: Esquina 32, estado: Baja California, sitio: esquina32.com, origen: panel-bc}
   - {nombre: Cadena Noticias, estado: Baja California, sitio: cadenanoticias.com, origen: panel-bc}
   - {nombre: Zona Norte, estado: Baja California, sitio: zonanorte.mx, origen: panel-bc}
   - {nombre: El Mexicano, estado: Baja California, sitio: el-mexicano.com.mx, origen: panel-bc}
@@ -272,40 +275,45 @@ fuentes:
   - {nombre: TJ Comunica, estado: Baja California, sitio: tjcomunica.com, feed: "https://tjcomunica.com/feed/", origen: panel-bc}
   - {nombre: Canal 66, estado: Baja California, sitio: canal66.tv, nota: bloqueado-403, origen: panel-bc}
   - {nombre: Ensenada.net, estado: Baja California, sitio: ensenada.net, nota: bloqueado-403, origen: panel-bc}
-  - {nombre: El Sol de Tijuana, estado: Baja California, sitio: oem.com.mx, oem: elsoldetijuana, origen: nuevo}
-  - {nombre: La Voz de la Frontera, estado: Baja California, sitio: oem.com.mx, oem: lavozdelafrontera, origen: nuevo}
+  # Diarios OEM de Baja California: El Sol de Tijuana, La Voz de la Frontera. Google Noticias los reporta
+  # todos como "El Sol de México", así que no se pueden distinguir entre sí.
+  - {nombre: Diarios OEM (Baja California), estado: Baja California, sitio: oem.com.mx, oem: elsoldetijuana, origen: nuevo}
 
   # ----------------------------- Baja California Sur ----------------------
   - {nombre: El Sudcaliforniano, estado: Baja California Sur, sitio: oem.com.mx, oem: elsudcaliforniano, origen: nuevo}
   - {nombre: BCS Noticias, estado: Baja California Sur, sitio: bcsnoticias.mx, origen: nuevo}
   - {nombre: Diario El Independiente, estado: Baja California Sur, sitio: diarioelindependiente.mx, origen: nuevo}
   - {nombre: Tribuna de Los Cabos, estado: Baja California Sur, sitio: tribunadeloscabos.com.mx, origen: nuevo}
-  - {nombre: Colectivo Pericú, estado: Baja California Sur, sitio: colectivopericu.net, origen: nuevo}
+  # FUERA (no conecta y no está en Google): verificado el 22/09/2026
+  # - {nombre: Colectivo Pericú, estado: Baja California Sur, sitio: colectivopericu.net, origen: nuevo}
 
   # ----------------------------- Campeche ---------------------------------
   - {nombre: Tribuna Campeche, estado: Campeche, sitio: tribunacampeche.com, origen: dana}
   - {nombre: Campeche Digital, estado: Campeche, sitio: campechedigital.mx, origen: dana}
   - {nombre: Campeche Hoy, estado: Campeche, sitio: campechehoy.mx, origen: dana}
   - {nombre: El Momento Campeche, estado: Campeche, sitio: elmomentocampeche.mx, origen: dana}
-  - {nombre: Por Esto! (Campeche), estado: Campeche, sitio: poresto.net, origen: nuevo}
+  # FUERA (no está en Google): verificado el 22/09/2026
+  # - {nombre: Por Esto! (Campeche), estado: Campeche, sitio: poresto.net, origen: nuevo}
   - {nombre: La Jornada Maya (Campeche), estado: Campeche, sitio: lajornadamaya.mx, origen: nuevo}
 
   # ----------------------------- Chiapas ----------------------------------
   - {nombre: Cuarto Poder, estado: Chiapas, sitio: cuartopoder.mx, origen: nuevo}
-  - {nombre: Diario del Sur, estado: Chiapas, sitio: oem.com.mx, oem: diariodelsur, origen: nuevo}
-  - {nombre: El Heraldo de Chiapas, estado: Chiapas, sitio: oem.com.mx, oem: elheraldodechiapas, origen: nuevo}
+  # Diarios OEM de Chiapas: Diario del Sur, El Heraldo de Chiapas. Google Noticias los reporta
+  # todos como "El Sol de México", así que no se pueden distinguir entre sí.
+  - {nombre: Diarios OEM (Chiapas), estado: Chiapas, sitio: oem.com.mx, oem: diariodelsur, origen: nuevo}
   - {nombre: Chiapas Paralelo, estado: Chiapas, sitio: chiapasparalelo.com, origen: nuevo}
   - {nombre: Alerta Chiapas, estado: Chiapas, sitio: alertachiapas.com, origen: nuevo}
   - {nombre: Diario de Chiapas, estado: Chiapas, sitio: diariodechiapas.com, origen: nuevo}
 
   # ----------------------------- Chihuahua --------------------------------
   - {nombre: El Diario de Juárez, estado: Chihuahua, sitio: diario.mx, origen: nuevo}
-  - {nombre: El Heraldo de Chihuahua, estado: Chihuahua, sitio: oem.com.mx, oem: elheraldodechihuahua, origen: nuevo}
+  # Diarios OEM de Chihuahua: El Heraldo de Chihuahua, El Sol de Parral. Google Noticias los reporta
+  # todos como "El Sol de México", así que no se pueden distinguir entre sí.
+  - {nombre: Diarios OEM (Chihuahua), estado: Chihuahua, sitio: oem.com.mx, oem: elheraldodechihuahua, origen: nuevo}
   - {nombre: El Diario de Chihuahua, estado: Chihuahua, sitio: eldiariodechihuahua.mx, origen: nuevo}
   - {nombre: Norte Digital, estado: Chihuahua, sitio: nortedigital.mx, origen: nuevo}
   - {nombre: La Verdad Juárez, estado: Chihuahua, sitio: laverdadjuarez.com, origen: nuevo}
   - {nombre: NetNoticias, estado: Chihuahua, sitio: netnoticias.mx, origen: nuevo}
-  - {nombre: El Sol de Parral, estado: Chihuahua, sitio: oem.com.mx, oem: elsoldeparral, origen: nuevo}
 
   # ----------------------------- Ciudad de México -------------------------
   # La cubren sobre todo los nacionales. La Jornada — Capital ya estaba en tu
@@ -321,7 +329,8 @@ fuentes:
   - {nombre: El Heraldo de Saltillo, estado: Coahuila, sitio: elheraldodesaltillo.mx, origen: nuevo}
 
   # ----------------------------- Colima -----------------------------------
-  - {nombre: Diario de Colima, estado: Colima, sitio: diariodecolima.com, origen: nuevo}
+  # FUERA (no responde y no está en Google): verificado el 22/09/2026
+  # - {nombre: Diario de Colima, estado: Colima, sitio: diariodecolima.com, origen: nuevo}
   - {nombre: AF Medios, estado: Colima, sitio: afmedios.com, origen: nuevo}
   - {nombre: El Comentario, estado: Colima, sitio: elcomentario.ucol.mx, origen: nuevo}
   - {nombre: Ecos de la Costa, estado: Colima, sitio: ecosdelacosta.mx, origen: nuevo}
@@ -329,13 +338,15 @@ fuentes:
   # ----------------------------- Durango ----------------------------------
   - {nombre: El Siglo de Durango, estado: Durango, sitio: elsiglodedurango.com.mx, origen: nuevo}
   - {nombre: El Sol de Durango, estado: Durango, sitio: oem.com.mx, oem: elsoldedurango, origen: nuevo}
-  - {nombre: Contacto Hoy, estado: Durango, sitio: contactohoy.com.mx, origen: nuevo}
+  # FUERA (403 y no está en Google): verificado el 22/09/2026
+  # - {nombre: Contacto Hoy, estado: Durango, sitio: contactohoy.com.mx, origen: nuevo}
 
   # ----------------------------- Estado de México -------------------------
   - {nombre: El Sol de Toluca, estado: Estado de México, sitio: oem.com.mx, oem: elsoldetoluca, origen: nuevo}
   - {nombre: Quadratín Edomex, estado: Estado de México, sitio: edomex.quadratin.com.mx, origen: nuevo}
   - {nombre: Milenio Edomex, estado: Estado de México, sitio: milenio.com, origen: nuevo}
-  - {nombre: Impulso, estado: Estado de México, sitio: impulsoedomex.com.mx, origen: nuevo}
+  # FUERA (no responde y no está en Google): verificado el 22/09/2026
+  # - {nombre: Impulso, estado: Estado de México, sitio: impulsoedomex.com.mx, origen: nuevo}
   - {nombre: Así Sucede, estado: Estado de México, sitio: asisucede.com.mx, origen: nuevo}
 
   # ----------------------------- Guanajuato -------------------------------
@@ -343,18 +354,19 @@ fuentes:
   - {nombre: Periódico Correo, estado: Guanajuato, sitio: periodicocorreo.com.mx, origen: nuevo}
   - {nombre: Zona Franca, estado: Guanajuato, sitio: zonafranca.mx, origen: nuevo}
   - {nombre: POPLab, estado: Guanajuato, sitio: poplab.mx, origen: nuevo}
-  - {nombre: El Sol de León, estado: Guanajuato, sitio: oem.com.mx, oem: elsoldeleon, origen: nuevo}
-  - {nombre: El Sol de Irapuato, estado: Guanajuato, sitio: oem.com.mx, oem: elsoldeirapuato, origen: nuevo}
-  - {nombre: El Sol de Salamanca, estado: Guanajuato, sitio: oem.com.mx, oem: elsoldesalamanca, origen: nuevo}
-  - {nombre: El Sol del Bajío, estado: Guanajuato, sitio: oem.com.mx, oem: elsoldelbajio, origen: nuevo}
+  # Diarios OEM de Guanajuato: El Sol de León, El Sol de Irapuato, El Sol de Salamanca, El Sol del Bajío. Google Noticias los reporta
+  # todos como "El Sol de México", así que no se pueden distinguir entre sí.
+  - {nombre: Diarios OEM (Guanajuato), estado: Guanajuato, sitio: oem.com.mx, oem: elsoldeleon, origen: nuevo}
   - {nombre: Milenio León, estado: Guanajuato, sitio: milenio.com, origen: nuevo}
 
   # ----------------------------- Guerrero ---------------------------------
   - {nombre: El Sur de Acapulco, estado: Guerrero, sitio: suracapulco.mx, origen: nuevo}
   - {nombre: El Sol de Acapulco, estado: Guerrero, sitio: oem.com.mx, oem: elsoldeacapulco, origen: nuevo}
   - {nombre: Quadratín Guerrero, estado: Guerrero, sitio: guerrero.quadratin.com.mx, origen: nuevo}
-  - {nombre: Novedades Acapulco, estado: Guerrero, sitio: novedadesaca.mx, origen: nuevo}
-  - {nombre: Bajo Palabra, estado: Guerrero, sitio: bajopalabra.com.mx, origen: nuevo}
+  # FUERA (no conecta y no está en Google): verificado el 22/09/2026
+  # - {nombre: Novedades Acapulco, estado: Guerrero, sitio: novedadesaca.mx, origen: nuevo}
+  # FUERA (sin titulares y no está en Google): verificado el 22/09/2026
+  # - {nombre: Bajo Palabra, estado: Guerrero, sitio: bajopalabra.com.mx, origen: nuevo}
 
   # ----------------------------- Hidalgo ----------------------------------
   - {nombre: Criterio Hidalgo, estado: Hidalgo, sitio: criteriohidalgo.com, origen: nuevo}
@@ -384,8 +396,9 @@ fuentes:
 
   # ----------------------------- Morelos ----------------------------------
   - {nombre: Diario de Morelos, estado: Morelos, sitio: diariodemorelos.com, origen: nuevo}
-  - {nombre: El Sol de Cuernavaca, estado: Morelos, sitio: oem.com.mx, oem: elsoldecuernavaca, origen: nuevo}
-  - {nombre: El Sol de Cuautla, estado: Morelos, sitio: oem.com.mx, oem: elsoldecuautla, origen: nuevo}
+  # Diarios OEM de Morelos: El Sol de Cuernavaca, El Sol de Cuautla. Google Noticias los reporta
+  # todos como "El Sol de México", así que no se pueden distinguir entre sí.
+  - {nombre: Diarios OEM (Morelos), estado: Morelos, sitio: oem.com.mx, oem: elsoldecuernavaca, origen: nuevo}
   - {nombre: La Jornada Morelos, estado: Morelos, sitio: lajornadamorelos.mx, origen: nuevo}
   - {nombre: Zona Centro Noticias, estado: Morelos, sitio: zonacentronoticias.com, origen: nuevo}
 
@@ -416,7 +429,8 @@ fuentes:
   - {nombre: El Sol de México (Monterrey), estado: Nuevo León, sitio: oem.com.mx, pagina: "https://oem.com.mx/elsoldemexico/tags/temas/monterrey", origen: panel-nl}
   - {nombre: El Norte, estado: Nuevo León, sitio: elnorte.com, nota: muro-de-pago, origen: panel-nl}
   - {nombre: Reporte Índigo, estado: Nuevo León, sitio: reporteindigo.com, nota: bloqueado-403, origen: panel-nl}
-  - {nombre: Canal 28 (SRTVNL), estado: Nuevo León, sitio: srtvnl.com, nota: sin-titulares, origen: panel-nl}
+  # FUERA (sin titulares y no está en Google): verificado el 22/09/2026
+  # - {nombre: Canal 28 (SRTVNL), estado: Nuevo León, sitio: srtvnl.com, nota: sin-titulares, origen: panel-nl}
 
   # ----------------------------- Oaxaca -----------------------------------
   - {nombre: NVI Noticias, estado: Oaxaca, sitio: nvinoticias.com, origen: nuevo}
@@ -427,29 +441,35 @@ fuentes:
   # ----------------------------- Puebla -----------------------------------
   - {nombre: El Sol de Puebla, estado: Puebla, sitio: oem.com.mx, oem: elsoldepuebla, origen: nuevo}
   - {nombre: e-consulta, estado: Puebla, sitio: e-consulta.com, origen: nuevo}
-  - {nombre: Diario Cambio, estado: Puebla, sitio: diariocambio.com.mx, origen: nuevo}
+  # FUERA (403 y no está en Google): verificado el 22/09/2026
+  # - {nombre: Diario Cambio, estado: Puebla, sitio: diariocambio.com.mx, origen: nuevo}
   - {nombre: Periódico Central, estado: Puebla, sitio: periodicocentral.mx, origen: nuevo}
   - {nombre: El Popular, estado: Puebla, sitio: elpopular.mx, origen: nuevo}
   - {nombre: Milenio Puebla, estado: Puebla, sitio: milenio.com, origen: nuevo}
-  - {nombre: La Jornada de Oriente, estado: Puebla, sitio: lajornadadeoriente.com.mx, origen: nuevo}
+  # FUERA (403 y no está en Google): verificado el 22/09/2026
+  # - {nombre: La Jornada de Oriente, estado: Puebla, sitio: lajornadadeoriente.com.mx, origen: nuevo}
   - {nombre: Municipios Puebla, estado: Puebla, sitio: municipiospuebla.mx, origen: nuevo}
 
   # ----------------------------- Querétaro --------------------------------
   - {nombre: Diario de Querétaro, estado: Querétaro, sitio: oem.com.mx, oem: diariodequeretaro, origen: nuevo}
   - {nombre: AM Querétaro, estado: Querétaro, sitio: amqueretaro.com, origen: nuevo}
-  - {nombre: El Universal Querétaro, estado: Querétaro, sitio: queretaro.eluniversal.com.mx, origen: nuevo}
-  - {nombre: Códice Informativo, estado: Querétaro, sitio: codiceinformativo.com, origen: nuevo}
+  # FUERA (no conecta y no está en Google): verificado el 22/09/2026
+  # - {nombre: El Universal Querétaro, estado: Querétaro, sitio: queretaro.eluniversal.com.mx, origen: nuevo}
+  # FUERA (403 y no está en Google): verificado el 22/09/2026
+  # - {nombre: Códice Informativo, estado: Querétaro, sitio: codiceinformativo.com, origen: nuevo}
   - {nombre: Plaza de Armas, estado: Querétaro, sitio: plazadearmas.com.mx, origen: nuevo}
   - {nombre: Rotativo, estado: Querétaro, sitio: rotativo.com.mx, origen: nuevo}
 
   # ----------------------------- Quintana Roo -----------------------------
   - {nombre: Novedades Quintana Roo, estado: Quintana Roo, sitio: sipse.com, origen: nuevo}
-  - {nombre: Por Esto! Quintana Roo, estado: Quintana Roo, sitio: poresto.net, origen: nuevo}
+  # FUERA (no está en Google): verificado el 22/09/2026
+  # - {nombre: Por Esto! Quintana Roo, estado: Quintana Roo, sitio: poresto.net, origen: nuevo}
   - {nombre: Noticaribe, estado: Quintana Roo, sitio: noticaribe.com.mx, origen: nuevo}
   - {nombre: Quintana Roo Hoy, estado: Quintana Roo, sitio: quintanaroohoy.com, origen: nuevo}
   - {nombre: La Jornada Maya (Q. Roo), estado: Quintana Roo, sitio: lajornadamaya.mx, origen: nuevo}
   - {nombre: Canal 10, estado: Quintana Roo, sitio: canal10.com.mx, origen: nuevo}
-  - {nombre: Quequi, estado: Quintana Roo, sitio: quequi.com.mx, origen: nuevo}
+  # FUERA (no responde y no está en Google): verificado el 22/09/2026
+  # - {nombre: Quequi, estado: Quintana Roo, sitio: quequi.com.mx, origen: nuevo}
   - {nombre: Luces del Siglo, estado: Quintana Roo, sitio: lucesdelsiglo.com, origen: nuevo}
 
   # ----------------------------- San Luis Potosí --------------------------
@@ -464,9 +484,11 @@ fuentes:
   - {nombre: Noroeste, estado: Sinaloa, sitio: noroeste.com.mx, origen: nuevo}
   - {nombre: Ríodoce, estado: Sinaloa, sitio: riodoce.mx, origen: nuevo}
   - {nombre: Línea Directa, estado: Sinaloa, sitio: lineadirectaportal.com, origen: nuevo}
-  - {nombre: El Sol de Sinaloa, estado: Sinaloa, sitio: oem.com.mx, oem: elsoldesinaloa, origen: nuevo}
-  - {nombre: El Sol de Mazatlán, estado: Sinaloa, sitio: oem.com.mx, oem: elsoldemazatlan, origen: nuevo}
-  - {nombre: Los Noticieristas, estado: Sinaloa, sitio: losnoticieristas.com, origen: nuevo}
+  # Diarios OEM de Sinaloa: El Sol de Sinaloa, El Sol de Mazatlán. Google Noticias los reporta
+  # todos como "El Sol de México", así que no se pueden distinguir entre sí.
+  - {nombre: Diarios OEM (Sinaloa), estado: Sinaloa, sitio: oem.com.mx, oem: elsoldesinaloa, origen: nuevo}
+  # FUERA (403 y no está en Google): verificado el 22/09/2026
+  # - {nombre: Los Noticieristas, estado: Sinaloa, sitio: losnoticieristas.com, origen: nuevo}
   - {nombre: Luz Noticias, estado: Sinaloa, sitio: luznoticias.mx, origen: nuevo}
   # Debate (debate.com.mx) está en Nacionales: es de Culiacán y cubre mucho Sinaloa.
 
@@ -476,13 +498,15 @@ fuentes:
   - {nombre: Expreso, estado: Sonora, sitio: expreso.com.mx, pagina: "https://www.expreso.com.mx/noticias/sonora", origen: panel-sonora}
   - {nombre: Tribuna, estado: Sonora, sitio: tribuna.com.mx, pagina: "https://tribuna.com.mx/seccion/sonora/", origen: panel-sonora}
   - {nombre: Diario del Yaqui, estado: Sonora, sitio: diariodelyaqui.mx, origen: panel-sonora}
-  - {nombre: El Sol de Hermosillo, estado: Sonora, sitio: oem.com.mx, oem: elsoldehermosillo, origen: panel-sonora}
+  # Diarios OEM de Sonora: El Sol de Hermosillo, Tribuna de San Luis. Google Noticias los reporta
+  # todos como "El Sol de México", así que no se pueden distinguir entre sí.
+  - {nombre: Diarios OEM (Sonora), estado: Sonora, sitio: oem.com.mx, oem: elsoldehermosillo, origen: nuevo}
   - {nombre: Radio Sonora, estado: Sonora, sitio: radiosonora.com.mx, origen: panel-sonora}
   - {nombre: El Diario de Sonora, estado: Sonora, sitio: eldiariodesonora.com.mx, origen: panel-sonora}
   - {nombre: Despierta Sonora, estado: Sonora, sitio: despiertasonora.com, origen: panel-sonora}
   - {nombre: Nuevo Día, estado: Sonora, sitio: nuevodia.mx, origen: panel-sonora}
-  - {nombre: Tribuna de San Luis, estado: Sonora, sitio: oem.com.mx, oem: tribunadesanluis, origen: panel-sonora}
-  - {nombre: Telemax, estado: Sonora, sitio: telemax.com.mx, origen: panel-sonora}
+  # FUERA (403 y no está en Google): verificado el 22/09/2026
+  # - {nombre: Telemax, estado: Sonora, sitio: telemax.com.mx, origen: panel-sonora}
   - {nombre: Opinión Sonora, estado: Sonora, sitio: opinionsonora.com, origen: panel-sonora}
   - {nombre: Uniradio Sonora, estado: Sonora, sitio: uniradiosonora.com, origen: panel-sonora}
   - {nombre: Radar Sonora, estado: Sonora, sitio: radarsonora.com, origen: panel-sonora}
@@ -515,23 +539,26 @@ fuentes:
 
   # ----------------------------- Veracruz ---------------------------------
   - {nombre: Al Calor Político, estado: Veracruz, sitio: alcalorpolitico.com, origen: nuevo}
-  - {nombre: Diario de Xalapa, estado: Veracruz, sitio: oem.com.mx, oem: diariodexalapa, origen: nuevo}
-  - {nombre: El Sol de Orizaba, estado: Veracruz, sitio: oem.com.mx, oem: elsoldeorizaba, origen: nuevo}
-  - {nombre: El Sol de Córdoba, estado: Veracruz, sitio: oem.com.mx, oem: elsoldecordoba, origen: nuevo}
+  # Diarios OEM de Veracruz: Diario de Xalapa, El Sol de Orizaba, El Sol de Córdoba. Google Noticias los reporta
+  # todos como "El Sol de México", así que no se pueden distinguir entre sí.
+  - {nombre: Diarios OEM (Veracruz), estado: Veracruz, sitio: oem.com.mx, oem: diariodexalapa, origen: nuevo}
   - {nombre: Imagen del Golfo, estado: Veracruz, sitio: imagendelgolfo.mx, origen: nuevo}
   - {nombre: El Dictamen, estado: Veracruz, sitio: eldictamen.mx, origen: nuevo}
   - {nombre: AVC Noticias, estado: Veracruz, sitio: avcnoticias.com.mx, origen: nuevo}
-  - {nombre: Diario del Istmo, estado: Veracruz, sitio: diariodelistmo.com, origen: nuevo}
+  # FUERA (403 y no está en Google): verificado el 22/09/2026
+  # - {nombre: Diario del Istmo, estado: Veracruz, sitio: diariodelistmo.com, origen: nuevo}
   - {nombre: Plumas Libres, estado: Veracruz, sitio: plumaslibres.com.mx, origen: nuevo}
   - {nombre: La Jornada Veracruz, estado: Veracruz, sitio: jornadaveracruz.com.mx, origen: nuevo}
 
   # ----------------------------- Yucatán ----------------------------------
   - {nombre: Diario de Yucatán, estado: Yucatán, sitio: yucatan.com.mx, origen: nuevo}
-  - {nombre: Por Esto! (Yucatán), estado: Yucatán, sitio: poresto.net, origen: nuevo}
+  # FUERA (no está en Google): verificado el 22/09/2026
+  # - {nombre: Por Esto! (Yucatán), estado: Yucatán, sitio: poresto.net, origen: nuevo}
   - {nombre: La Jornada Maya, estado: Yucatán, sitio: lajornadamaya.mx, origen: nuevo}
   - {nombre: Novedades Yucatán, estado: Yucatán, sitio: sipse.com, origen: nuevo}
   - {nombre: Reporteros Hoy, estado: Yucatán, sitio: reporteroshoy.mx, origen: nuevo}
-  - {nombre: Yucatán Ahora, estado: Yucatán, sitio: yucatanahora.mx, origen: nuevo}
+  # FUERA (403 y no está en Google): verificado el 22/09/2026
+  # - {nombre: Yucatán Ahora, estado: Yucatán, sitio: yucatanahora.mx, origen: nuevo}
 
   # ----------------------------- Zacatecas --------------------------------
   - {nombre: El Sol de Zacatecas, estado: Zacatecas, sitio: oem.com.mx, oem: elsoldezacatecas, origen: nuevo}
