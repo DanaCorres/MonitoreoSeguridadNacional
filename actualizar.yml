@@ -1,0 +1,79 @@
+name: Actualizar panel de seguridad
+
+on:
+  schedule:
+    # Cada 3 horas de 7:00 a 22:00, hora del centro de México (UTC-6).
+    # GitHub usa UTC: 13 = 7:00, 16 = 10:00, 19 = 13:00, 22 = 16:00,
+    # 1 = 19:00 y 4 = 22:00. GitHub puede retrasar unos minutos las corridas.
+    - cron: "0 13,16,19,22 * * *"
+    - cron: "0 1,4 * * *"
+  workflow_dispatch: {}   # botón "Run workflow" para actualizar a mano
+
+permissions:
+  contents: write
+
+# Dos corridas a la vez se pelearían por el mismo data/hoy.json.
+concurrency:
+  group: panel
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    # Límite de tiempo: si la corrida tarda más, GitHub la corta. Con descargas
+    # en paralelo una corrida normal tarda entre 3 y 8 minutos.
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Recolectar titulares
+        run: python scripts/recolectar.py
+
+      - name: Curar con Claude y regenerar index.html
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/curar.py
+
+      - name: Commit y push si hubo cambios
+        run: |
+          git config user.name "panel-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          publicar() {
+            git add index.html data
+            git diff --cached --quiet && return 1
+            git commit -q -m "Actualización automática del panel"
+            return 0
+          }
+
+          if ! publicar; then
+            echo "Sin cambios."
+            exit 0
+          fi
+
+          # Son archivos generados: si otra corrida publicó primero, se rehace
+          # el commit encima de lo último en vez de fusionar.
+          for intento in 1 2 3; do
+            if git push; then
+              echo "Publicado en el intento $intento."
+              exit 0
+            fi
+            echo "Otra corrida publicó primero; rehago el commit encima."
+            git fetch origin ${{ github.ref_name }}
+            git reset --soft origin/${{ github.ref_name }}
+            publicar || { echo "Nada que publicar."; exit 0; }
+          done
+
+          echo "No se pudo publicar tras tres intentos."
+          exit 1

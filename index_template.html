@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de seguridad — México</title>
+<style>
+  :root{
+    --bg:#f6f5f1; --card:#ffffff; --border:#e3e1d8;
+    --text:#1c1c1a; --muted:#6b6a63; --hint:#96958c;
+    --homicidios:#a32d2d; --crimen_organizado:#6e2f63; --delitos:#a8631a;
+    --desaparecidos:#534ab7; --justicia:#185fa5; --politica_seguridad:#3b6d11;
+    --accidentes:#5d6770;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#141412; --card:#1e1e1b; --border:#33322c;
+      --text:#f1efe8; --muted:#b4b2a9; --hint:#888780;
+    }
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:2rem 1rem 4rem; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  .wrap{max-width:800px; margin:0 auto;}
+  header{display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:12px; margin-bottom:1.75rem;}
+  h1{font-size:22px; font-weight:600; margin:0;}
+  .sub{font-size:13px; color:var(--muted); margin:4px 0 0;}
+  .filtro label{display:block; font-size:12.5px; color:var(--muted); margin-bottom:4px;}
+  .filtro select{
+    font:inherit; font-size:14px; color:var(--text); background:var(--card);
+    border:1px solid var(--border); border-radius:6px; padding:6px 10px; min-width:220px;
+  }
+  .filtro select:focus-visible{outline:2px solid var(--justicia); outline-offset:2px;}
+  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:2rem;}
+  .stat{background:var(--card); border:1px solid var(--border); border-radius:10px; padding:1rem;}
+  .stat p:first-child{font-size:12.5px; color:var(--muted); margin:0 0 4px;}
+  .stat p:last-child{font-size:22px; font-weight:600; margin:0;}
+  section{margin-bottom:2rem;}
+  .section-title{display:flex; align-items:center; gap:8px; margin:0 0 10px;}
+  .section-title h2{font-size:16px; font-weight:600; margin:0;}
+  .dot{width:10px; height:10px; border-radius:50%;}
+  .card{background:var(--card); border:1px solid var(--border); border-left-width:3px; border-radius:6px; padding:10px 14px; margin-bottom:8px;}
+  .card[hidden], .vacio[hidden]{display:none;}
+  .card h3{font-size:14.5px; font-weight:600; margin:0 0 4px;}
+  .card h3 a{color:inherit; text-decoration:none;}
+  .card h3 a:hover, .card h3 a:focus-visible{text-decoration:underline;}
+  .card p{font-size:13px; color:var(--muted); margin:0 0 4px; line-height:1.5;}
+  .card .src{font-size:11.5px; color:var(--hint); margin:0;}
+  .alta-tag{font-size:11px; font-weight:500; color:var(--homicidios); margin-left:6px; white-space:nowrap;}
+  .vacio{font-size:13px; color:var(--muted); margin:0;}
+  .homicidios{border-left-color:var(--homicidios);}          .homicidios-bg{background:var(--homicidios);}
+  .crimen_organizado{border-left-color:var(--crimen_organizado);} .crimen_organizado-bg{background:var(--crimen_organizado);}
+  .delitos{border-left-color:var(--delitos);}                .delitos-bg{background:var(--delitos);}
+  .desaparecidos{border-left-color:var(--desaparecidos);}    .desaparecidos-bg{background:var(--desaparecidos);}
+  .justicia{border-left-color:var(--justicia);}              .justicia-bg{background:var(--justicia);}
+  .politica_seguridad{border-left-color:var(--politica_seguridad);} .politica_seguridad-bg{background:var(--politica_seguridad);}
+  .accidentes{border-left-color:var(--accidentes);}          .accidentes-bg{background:var(--accidentes);}
+  footer{font-size:11.5px; color:var(--hint); border-top:1px solid var(--border); padding-top:1rem; margin-top:1rem; line-height:1.5;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <h1>México — panel de seguridad</h1>
+      <p class="sub">Actualizado automáticamente: {{FECHA}}</p>
+    </div>
+    <div class="filtro">
+      <label for="estado">Estado</label>
+      <select id="estado">
+        {{OPCIONES}}
+      </select>
+    </div>
+  </header>
+
+  <div class="stats">
+    {{STATS}}
+  </div>
+
+  {{CARDS}}
+
+  <footer>
+    Se acumulan las notas de seguridad de todo el día (se reinicia a medianoche, hora del
+    centro de México) — cada 3 horas se revisan las fuentes y se agregan solo notas nuevas,
+    sin borrar las anteriores. {{COBERTURA}} Curado con Claude. Este panel se genera por
+    software y puede contener errores o notas fuera de contexto; verifica siempre en la
+    fuente original antes de tomar decisiones basadas en esta información.
+  </footer>
+
+</div>
+<script>
+  // Filtro por estado. La selección queda en la dirección (#estado=Sinaloa),
+  // así se puede compartir la liga ya filtrada.
+  (function(){
+    var sel = document.getElementById('estado');
+    function aplicar(){
+      var v = sel.value;
+      document.querySelectorAll('section[data-cat]').forEach(function(s){
+        var visibles = 0;
+        s.querySelectorAll('.card').forEach(function(c){
+          var ok = !v || c.getAttribute('data-estado') === v;
+          c.hidden = !ok;
+          if (ok) visibles++;
+        });
+        s.querySelector('.vacio').hidden = visibles > 0;
+        var stat = document.querySelector('.stat[data-cat="' + s.getAttribute('data-cat') + '"] .num');
+        if (stat) stat.textContent = visibles;
+      });
+      var h = v ? '#estado=' + encodeURIComponent(v) : ' ';
+      history.replaceState(null, '', h === ' ' ? location.pathname : h);
+    }
+    var m = location.hash.match(/estado=([^&]+)/);
+    if (m) {
+      var v = decodeURIComponent(m[1]);
+      if ([].some.call(sel.options, function(o){ return o.value === v; })) sel.value = v;
+    }
+    sel.addEventListener('change', aplicar);
+    aplicar();
+  })();
+</script>
+</body>
+</html>
