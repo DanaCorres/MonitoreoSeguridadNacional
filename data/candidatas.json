@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-08T00:49:49.572842-06:00",
+ "generado": "2026-10-08T06:39:06.725554-06:00",
  "fecha": "2026-10-08",
  "items": [
   {
@@ -12,12 +12,120 @@
    "via": "home"
   },
   {
-   "id": "5c0f10d23174",
+   "id": "17b5f26f6a37",
+   "fuente": "Milenio",
+   "estado_fuente": "Nacional",
+   "titulo": "¿Cuál fue la cárcel estatal mejor calificada de México en 2025, según CNDH?",
+   "resumen": "",
+   "url": "https://www.milenio.com/policia/cual-fue-la-mejor-carcel-estatal-de-mexico-en-2025",
+   "via": "pagina"
+  },
+  {
+   "id": "efa64d6b69c5",
+   "fuente": "El País México",
+   "estado_fuente": "Nacional",
+   "titulo": "Tragedia en la sala de neonatos de un hospital del IMSS en Guadalajara, Jalisco: “Hubo semanas donde todas las mamás salían sin su bebé”",
+   "resumen": "El primer fallecimiento ocurrió en marzo y el último hace apenas nueve días. Las madres aseguran que todavía hay cuatro bebés infectados",
+   "url": "https://elpais.com/mexico/2026-10-08/tragedia-en-la-sala-de-neonatos-de-un-hospital-del-imss-en-guadalajara-jalisco-hubo-semanas-donde-todas-las-mamas-salian-sin-su-bebe.html",
+   "via": "rss"
+  },
+  {
+   "id": "7ad736abb4b0",
    "fuente": "Uno TV",
    "estado_fuente": "Nacional",
-   "titulo": "Madre afirma que 7 recién nacidos murieron en Hospital Militar de CDMX por posible bacteria Klebsiella",
+   "titulo": "Mauricio Kuri niega fractura con Gobierno federal por academia; asegura cumplir con la ley",
    "resumen": "",
-   "url": "https://www.unotv.com/nacional/madre-afirma-7-recien-nacidos-murieron-hospital-militar-cdmx-bacteria-klebsiella/",
+   "url": "https://www.unotv.com/estados/queretaro/mauricio-kuri-niega-fractura-con-gobierno-federal-por-academia-asegura-cumplir-con-la-ley/",
+   "via": "home"
+  },
+  {
+   "id": "96760f95d56d",
+   "fuente": "Excélsior",
+   "estado_fuente": "Nacional",
+   "titulo": "Día de Muertos en Puebla 2026: eventos, festival y exposición de Botero",
+   "resumen": "",
+   "url": "https://www.excelsior.com.mx/cultura/dia-muertos-puebla-2026-eventos-festival-y-exposicion-botero",
+   "via": "rss"
+  },
+  {
+   "id": "dd1814db4443",
+   "fuente": "El Financiero",
+   "estado_fuente": "Nacional",
+   "titulo": "Aeroméxico patrocina estudio sobre la trata de personas en CDMX, Cancún y Puerto Vallarta",
+   "resumen": "Un estudio de Aeroméxico y UNODC analiza la trata de personas en el turismo y advierte sobre puntos vulnerables en tres destinos de México.",
+   "url": "https://www.elfinanciero.com.mx/opinion/gustavo-armenta/2026/10/08/aeromexico-patrocina-estudio-sobre-la-trata-de-personas-en-cdmx-cancun-y-puerto-vallarta/",
+   "via": "rss"
+  },
+  {
+   "id": "49cf6c1a1897",
+   "fuente": "SinEmbargo",
+   "estado_fuente": "Nacional",
+   "titulo": "Cuando el PNR elegía antes de la elección",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUHg2aENfanY1ejUzTVZOZS1oeGVoQ1lKWDR1ZkNLUU42R1JVS0NURE04NEhyYWFQZS1XZzVMc2YtUE9HVVJOXzlibmpnU210dGZ2alFieFJoQUFTUGFtYzVzUmkzR3JKUVRLaWtWaG5jSGc3aHJSbGo4c3piemZvYV9R?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "ab8243a069ae",
+   "fuente": "Infobae México",
+   "estado_fuente": "Nacional",
+   "titulo": "La noche en que Wisconsin ardió: el infierno olvidado que dejó más muertos que el gran incendio de Chicago",
+   "resumen": "El 8 de octubre de 1871, mientras la ciudad de los vientos ardía y acaparaba las portadas, a 400 kilómetros al norte ocurría algo mucho peor. El cable de telégrafo ya no existía. Nadie pudo contarlo a tiempo",
+   "url": "https://www.infobae.com/estados-unidos/2026/10/08/la-noche-en-que-wisconsin-se-quemo-el-infierno-olvidado-que-dejo-mas-muertos-que-el-gran-incendio-de-chicago/",
+   "via": "rss"
+  },
+  {
+   "id": "533b2c7c7e58",
+   "fuente": "SDPnoticias",
+   "estado_fuente": "Nacional",
+   "titulo": "En Morena anda por ahí un Enric Mas, seguro que sí",
+   "resumen": "Harfuch puede ser ahora mismo el principal favorito, y Ebrard el perseguidor más visible. Pero Morena es demasiado grande para afirmar que no existe alguien más, hombre o mujer, en el pelotón.",
+   "url": "https://www.sdpnoticias.com/opinion/en-morena-anda-por-ahi-un-enric-mas-seguro-que-si/",
+   "via": "rss"
+  },
+  {
+   "id": "299f6b0b1f58",
+   "fuente": "Latinus",
+   "estado_fuente": "Nacional",
+   "titulo": "1 LATAM Policía de Brasil archiva investigación sobre presunta interferencia de EU en elección presidencial",
+   "resumen": "",
+   "url": "https://latinus.us/latam/2026/10/8/policia-de-brasil-archiva-investigacion-sobre-presunta-interferencia-de-eu-en-eleccion-presidencial-186413.html",
+   "via": "home"
+  },
+  {
+   "id": "a3a9096ac5f9",
+   "fuente": "El Heraldo de Aguascalientes",
+   "estado_fuente": "Aguascalientes",
+   "titulo": "Así se imprime El Heraldo de Aguascalientes",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5jQnlIN0g0em9ZWGRfdkZlbXRlSlRzRjAxbTZ2ZHpKQlNTNWg5eVhPMENSZ0NFdjlZdGxTeHVrVThfeXBuNW9EYXdmcmRPdnJsWVZMdk84TnpiaGpUYzZmZXNNN1pLSEdURC1tS0E4QW5lUlk4dVE?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "af80f05997c3",
+   "fuente": "N+",
+   "estado_fuente": "Nacional",
+   "titulo": "Itzel Busca Justicia por Irregularidades en su Proceso; Estuvo Meses en Prisión",
+   "resumen": "",
+   "url": "https://www.nmas.com.mx/ciudad-de-mexico/seguridad/itzel-busca-justicia-por-irregularidades-en-su-proceso-estuvo-meses-en-prision/",
+   "via": "home"
+  },
+  {
+   "id": "3b4f63c9dfbd",
+   "fuente": "La Razón",
+   "estado_fuente": "Nacional",
+   "titulo": "Empujaron y golpearon a policías en Motolinía",
+   "resumen": "",
+   "url": "https://www.razon.com.mx:443/ciudad/2026/10/08/capturan-a-siete-montoneros-por-golpear-a-policias/",
+   "via": "home"
+  },
+  {
+   "id": "156a46789354",
+   "fuente": "El Universal",
+   "estado_fuente": "Nacional",
+   "titulo": "La 4T prefiere capturar a los capos antes de que canten en Estados Unidos",
+   "resumen": "",
+   "url": "https://www.eluniversal.com.mx:443/opinion/luis-cardenas/la-4t-prefiere-capturar-a-los-capos-antes-de-que-canten-en-estados-unidos/",
    "via": "home"
   },
   {
@@ -30,22 +138,58 @@
    "via": "rss"
   },
   {
-   "id": "08311aee9a4e",
-   "fuente": "N+",
+   "id": "449e19f6d729",
+   "fuente": "Publimetro",
    "estado_fuente": "Nacional",
-   "titulo": "Detienen a Uno por Herir a Funcionario de Conagua en Intento de Asalto en Coyoacán",
+   "titulo": "¡Se siente el Día de Muertos! Lanzan nueva colección deportiva inspirada en la tradición azteca",
    "resumen": "",
-   "url": "https://www.nmas.com.mx/ciudad-de-mexico/seguridad/balaceras/herido-copilco-coyoacan-insurgentes-san-angel-detenido-drogas-dinero/",
+   "url": "https://www.publimetro.com.mx:443/deportes/2026/10/08/se-siente-el-dia-de-muertos-lanzan-nueva-coleccion-deportiva-inspirada-en-la-tradicion-azteca/",
    "via": "home"
   },
   {
-   "id": "82e91df1a01e",
-   "fuente": "Publimetro",
-   "estado_fuente": "Nacional",
-   "titulo": "Curiosity cumple 5.000 días en Marte y captura una impresionante postal del planeta rojo",
+   "id": "d4def6f9da10",
+   "fuente": "Argumento Noticias",
+   "estado_fuente": "Baja California",
+   "titulo": "El calvario de una denuncia: Hazel Montaño López",
    "resumen": "",
-   "url": "https://www.publimetro.com.mx:443/noticias/2026/10/08/curiosity-cumple-5000-dias-en-marte-y-captura-una-impresionante-postal-del-planeta-rojo/",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQcGVkOFVSUHlCY0ViZjloNzZSdGNRWHFERkFpNTVCQlB1SThHNTRJNGhnZXp3NmNoSnRpQ2Z0bE9VT003MkVETU92SV83c1Z4ZXd3ZGJYNDk1QmVkWUdGMkk0eHNtbjE4U1BMVXd3dFh5ZDEtU1lBVEpoNnRzQUVwZmRsaGpIMERzX1VFM3o3dWp4WVk?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "4a2f82300803",
+   "fuente": "Reforma",
+   "estado_fuente": "Nacional",
+   "titulo": "Pierde Quintana Roo brillo... y los vuelos",
+   "resumen": "El sargazo, la falta de conectividad y la inseguridad ya le pasaron factura a Quintana Roo, que pierde brillo y visitantes.",
+   "url": "https://www.reforma.com/pierde-quintana-roo-brillo-y-los-vuelos/ar3290555",
+   "via": "rss"
+  },
+  {
+   "id": "c6af87f65042",
+   "fuente": "Milenio (Ensenada)",
+   "estado_fuente": "Baja California",
+   "titulo": "Familia de Ernesto Ruffo lo espera en Ensenada; su hija asegura que no llevará brazalete",
+   "resumen": "",
+   "url": "https://www.milenio.com/estados/hija-de-ernesto-ruffo-lo-espera-en-ensenada-baja-california",
+   "via": "pagina"
+  },
+  {
+   "id": "0cfcbbdadb06",
+   "fuente": "EnsenadaHoy",
+   "estado_fuente": "Baja California",
+   "titulo": "Guardia De Seguridad Sauzal  Cubreturnos Nocturno",
+   "resumen": "",
+   "url": "https://ensenadahoy.com/empleos/ver/60401",
    "via": "home"
+  },
+  {
+   "id": "c6282a0b14dc",
+   "fuente": "Rada Noticias",
+   "estado_fuente": "Baja California",
+   "titulo": "Rescata policía campestre a dos cachorros abandonados en la carretera",
+   "resumen": "Por Redacción Ensenada.- La oportuna intervención de elementos de la Dirección de Seguridad Pública Municipal (DSPM) adscritos a la Policía Campestre, permitió poner a salvo a dos cachorros que fueron localizados a un costado de un camino de terracería en la zona del Valle de Guadalupe, durante un r",
+   "url": "https://radanoticias.info/rescata-policia-campestre-a-dos-cachorros-abandonados-en-la-carretera/",
+   "via": "rss"
   },
   {
    "id": "14a3627ab278",
@@ -57,6 +201,42 @@
    "via": "pagina"
   },
   {
+   "id": "dc68ff13a9ef",
+   "fuente": "Diario de Chiapas",
+   "estado_fuente": "Chiapas",
+   "titulo": "Camioneta vuelca en la tramo Tonalá–Pijijiapan y deja un herido",
+   "resumen": "Diario de Chiapas - La Verdad Impresa Darinel González / Corresponsal Diario del Soconusco Tonalá, Chiapas. Una persona resultó lesionada luego de que una camioneta Ford Ranger, de color rojo, terminara volcada a un costado de la carretera Tonalá–Pijijiapan, presuntamente a consecuencia de una falla",
+   "url": "https://diariodechiapas.com/la-roja/camioneta-vuelca-en-la-tramo-tonala-pijijiapan-y-deja-un-herido/",
+   "via": "rss"
+  },
+  {
+   "id": "1b815a8bc931",
+   "fuente": "La Jornada — Capital",
+   "estado_fuente": "Ciudad de México",
+   "titulo": "Ofrece Brugada diálogo a opositores al plan hídrico en San Gregorio Atlapulco",
+   "resumen": "El plan hídrico para San Gregorio Atlapulco, en Xochimilco, técnicamente, se tiene que concluir, por lo que el Gobierno de la Ciudad de México está abierto al diálogo con quienes se oponen al proyecto e incluso dispuesto a modificar “ciertos puntos” del mismo, señaló la titular del Ejecutivo local, ",
+   "url": "https://www.jornada.com.mx/2026/10/08/capital/027n1cap?partner=rss",
+   "via": "rss"
+  },
+  {
+   "id": "f5a240dcbf7a",
+   "fuente": "El Diario de Chihuahua",
+   "estado_fuente": "Chihuahua",
+   "titulo": "Pierde Quintana Roo brillo... y los vuelos",
+   "resumen": "El sargazo, la falta de conectividad y la inseguridad ya le pasaron factura a Quintana Roo, que pierde brillo y visitantes",
+   "url": "https://eldiariodechihuahua.mx/nacional/2026/oct/08/pierde-quintana-roo-brillo-y-los-vuelos-845473.html",
+   "via": "rss"
+  },
+  {
+   "id": "c431447652ef",
+   "fuente": "Vanguardia",
+   "estado_fuente": "Coahuila",
+   "titulo": "Revelan investigación de Estados Unidos contra Miguel Riquelme",
+   "resumen": "Agencias de Estados Unidos mantienen abierta una presunta investigación en contra del alcalde de Torreón, Miguel Riquelme Solís, por supuestos delitos cometidos durante su gobierno estatal.",
+   "url": "https://vanguardia.com.mx/opinion/revelan-investigacion-de-estados-unidos-contra-miguel-riquelme-BA23986016",
+   "via": "rss"
+  },
+  {
    "id": "e59de1d4c4fe",
    "fuente": "El Mexicano",
    "estado_fuente": "Baja California",
@@ -66,13 +246,13 @@
    "via": "home"
   },
   {
-   "id": "aa55f2438389",
-   "fuente": "Zócalo",
-   "estado_fuente": "Coahuila",
-   "titulo": "Hace 6 minutos Muere segundo joven de accidente sobre la Carretera Nacional",
-   "resumen": "",
-   "url": "https://www.zocalo.com.mx/muere-segundo-joven-de-accidente-sobre-la-carretera-nacional/",
-   "via": "home"
+   "id": "ea419ffc72d8",
+   "fuente": "Así Sucede",
+   "estado_fuente": "Estado de México",
+   "titulo": "Sequía, agua y seguridad destacan en panorama estatal",
+   "resumen": "1.⁠ ⁠México cuenta con 22 millones 922 mil hectáreas dedicadas a actividades agropecuarias, de las cuales el 72 por ciento corresponde a la superficie de siembra de temporal, lo que marca la dependencia que tiene en el campo mexicano de las condiciones climáticas. 2.⁠ ⁠En redes sociales, vecinos de ",
+   "url": "https://asisucede.com.mx/sequia-agua-y-seguridad-destacan-en-panorama-estatal/",
+   "via": "rss"
   },
   {
    "id": "97d4f524a0be",
@@ -84,12 +264,39 @@
    "via": "home"
   },
   {
-   "id": "68c62efb5c2d",
-   "fuente": "El Informador",
-   "estado_fuente": "Jalisco",
-   "titulo": "Choque múltiple en autopista Guadalajara-Zapotlanejo deja un muerto y carga vehicular",
+   "id": "aac94b6e8ad2",
+   "fuente": "Zócalo",
+   "estado_fuente": "Coahuila",
+   "titulo": "Hace 5 segundos Se le rompe cadena a joven ciclista y sufre fuerte accidente en…",
    "resumen": "",
-   "url": "https://www.informador.mx/jalisco/seguridad-en-jalisco-choque-multiple-en-autopista-guadalajara-zapotlanejo-deja-un-muerto-y-gran-carga-vehicular-20261007-0199.html",
+   "url": "https://www.zocalo.com.mx/se-le-rompe-cadena-a-joven-ciclista-y-sufre-fuerte-accidente-en-saltillo/",
+   "via": "home"
+  },
+  {
+   "id": "842699c276b9",
+   "fuente": "El Sur de Acapulco",
+   "estado_fuente": "Guerrero",
+   "titulo": "Asesinan a un hombre en Ometepec, a otro en Olinalá y a una mujer y a otro varón en Tlapa - El Sur Acapulco suracapulco I Noticias Acapulco Guerrero",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOd1h6SFpZM05ObGpIQnMwRC1JQnpkNkZ2NHZrclRRZnlRbTRCZi1pcXNxb1hIcjBRMHFjQmk0V0NlZmg2MmFoSmtabHkySWxzamlvR3RvdGR3eEhhTXBEZHRST1dIVS1ySVgtNGVsd3ljMExiSno5ME5lR3U4TFBWeENnWi1Ba2x3WVRCLWtxZ2pSbVBfbE8tSFJWTUtZdm1JRDZBSWNFaDAxR1pTTlFLSDV3ZVdtLUVVdG9icnBpNA?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "c73c45ddfeaa",
+   "fuente": "Periódico AM",
+   "estado_fuente": "Guanajuato",
+   "titulo": "Falla en kioscos de Guanajuato exhibe vulnerabilidad ante ciberataques y amenaza datos personales",
+   "resumen": "",
+   "url": "https://www.am.com.mx/guanajuato/2026/10/08/falla-en-kioscos-de-guanajuato-exhibe-vulnerabilidad-ante-ciberataques-y-amenaza-datos-personales-1852652.html",
+   "via": "home"
+  },
+  {
+   "id": "04cbc814970a",
+   "fuente": "Zona Franca",
+   "estado_fuente": "Guanajuato",
+   "titulo": "Guanajuato concentra casi el 11% de víctimas mujeres de lesiones dolosas",
+   "resumen": "",
+   "url": "https://zonafranca.mx/politica-sociedad/guanajuato-concentra-casi-el-11-de-victimas-mujeres-de-lesiones-dolosas/",
    "via": "home"
   },
   {
@@ -102,22 +309,22 @@
    "via": "rss"
   },
   {
-   "id": "d6ecac196c9f",
-   "fuente": "Zona Franca",
-   "estado_fuente": "Guanajuato",
-   "titulo": "Muere detenido tras desvanecerse en separos de San Felipe",
+   "id": "d25a1ae60806",
+   "fuente": "El Informador",
+   "estado_fuente": "Jalisco",
+   "titulo": "Ejército abate a dos civiles armados en Chihuahua; aseguran armas y vehículos",
    "resumen": "",
-   "url": "https://zonafranca.mx/seguridad/muere-detenido-tras-desvanecerse-en-separos-de-san-felipe/",
+   "url": "https://www.informador.mx/mexico/chihuahua-asi-fue-el-enfrentamiento-donde-dos-civiles-armados-fueron-abatidos-por-el-ejercito-20261007-0164.html",
    "via": "home"
   },
   {
-   "id": "cba8d389d8c2",
-   "fuente": "Noventa Grados",
-   "estado_fuente": "Michoacán",
-   "titulo": "Policías de Carlos Soto hasta el perro se llevaron tras multihomicidio en bar: Ya son 5 muertos, 4 agentes detenidos y ni una palabra del alcalde de Zamora, Michoacán",
-   "resumen": "",
-   "url": "https://www.noventagrados.com.mx/nacional/policias-de-carlos-soto-hasta-el-perro-se-llevaron-tras-multihomicidio-en-bar-ya-son-5-muertos-4-agentes--detenidos--y-ni-una-palabra-del-alcalde-de-zamora-michoacan.htm",
-   "via": "home"
+   "id": "fbcb19da2bc8",
+   "fuente": "La Jornada Morelos",
+   "estado_fuente": "Morelos",
+   "titulo": "Destruyen más de 260 kilos de narcóticos decomisados",
+   "resumen": "Más de 266 kilogramos de narcóticos asegurados por la Fiscalía General del Estado (FGE) y la Fiscalía General de la República (FGR) fueron destruidos en instalaciones del Tercer Regimiento Blindado de Reconocimiento de la 24 Zona Militar, como parte de los procedimientos relacionados con investigaci",
+   "url": "https://www.lajornadamorelos.mx/seguridad-y-justicia/destruyen-mas-de-260-kilos-de-narcoticos-decomisados/",
+   "via": "rss"
   },
   {
    "id": "a2dba5c79ec8",
@@ -126,6 +333,24 @@
    "titulo": "Declararon vasos de vidrio, pero eran más de 10 millones de cigarrillos; aseguran cargamento en Lázaro Cárdenas",
    "resumen": "",
    "url": "https://mimorelia.com/michoacan/declararon-vasos-vidrio-pero-eran-mas-10-millones-cigarrillos-aseguran-cargamento-lazaro-cardenas-n5594095",
+   "via": "home"
+  },
+  {
+   "id": "f7ab18634964",
+   "fuente": "Diario de Morelos",
+   "estado_fuente": "Morelos",
+   "titulo": "Ordena Margarita González Saravia la casa y gobierna con planeación",
+   "resumen": "Frenan cobros de corralones en Morelos y despliegan operativo de seguridad en Cuautla: los anuncios clave de la gobernadora",
+   "url": "https://www.diariodemorelos.com/noticias/ordena-margarita-gonzalez-saravia-casa-gobierna-con-planeacion",
+   "via": "rss"
+  },
+  {
+   "id": "cba8d389d8c2",
+   "fuente": "Noventa Grados",
+   "estado_fuente": "Michoacán",
+   "titulo": "Policías de Carlos Soto hasta el perro se llevaron tras multihomicidio en bar: Ya son 5 muertos, 4 agentes detenidos y ni una palabra del alcalde de Zamora, Michoacán",
+   "resumen": "",
+   "url": "https://www.noventagrados.com.mx/nacional/policias-de-carlos-soto-hasta-el-perro-se-llevaron-tras-multihomicidio-en-bar-ya-son-5-muertos-4-agentes--detenidos--y-ni-una-palabra-del-alcalde-de-zamora-michoacan.htm",
    "via": "home"
   },
   {
@@ -138,6 +363,15 @@
    "via": "home"
   },
   {
+   "id": "c5ac73a053c5",
+   "fuente": "Meridiano",
+   "estado_fuente": "Nayarit",
+   "titulo": "Edición impresa 08 de octubre de 2026",
+   "resumen": "Sección Política Sección Policiaca Sección Deportes",
+   "url": "https://meridiano.mx/2026/10/08/edicion-impresa-08-de-octubre-de-2026/",
+   "via": "rss"
+  },
+  {
    "id": "6e7832bab6f0",
    "fuente": "Telediario Monterrey",
    "estado_fuente": "Nuevo León",
@@ -147,13 +381,22 @@
    "via": "pagina"
   },
   {
-   "id": "eebbe6f83168",
-   "fuente": "INFO7",
+   "id": "68fb75f0cf90",
+   "fuente": "Milenio Monterrey",
    "estado_fuente": "Nuevo León",
-   "titulo": "Detienen a presuntos integrantes de un grupo criminal en Galeana El primer operativo se realizó en la comunidad Manila, sobre la carretera a 18 de Marzo, donde los agentes localizaron a Aglae “N”, de 33 años",
+   "titulo": "Carambola de vehículos deja cinco lesionados",
    "resumen": "",
-   "url": "https://info7.mx/nuevoleon/detienen-a-presuntos-integrantes-de-un-grupo-criminal-en-galeana/4785065234",
-   "via": "home"
+   "url": "https://www.milenio.com/estados/choque-multiple-deja-cinco-lesionados-en-monterrey",
+   "via": "pagina"
+  },
+  {
+   "id": "9f37fce3c814",
+   "fuente": "El Porvenir (justicia)",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Hallan a hombre calcinado dentro de casa abandonada",
+   "resumen": "",
+   "url": "https://elporvenir.mx/justicia/hallan-a-hombre-calcinado-dentro-de-casa-abandonada/1032480",
+   "via": "pagina"
   },
   {
    "id": "bc244e6c2893",
@@ -165,22 +408,31 @@
    "via": "home"
   },
   {
-   "id": "0d553b794924",
-   "fuente": "El Porvenir (justicia)",
+   "id": "1ad88275189b",
+   "fuente": "El Norte",
    "estado_fuente": "Nuevo León",
-   "titulo": "Localizan a hombre sin vida en arroyo de Cerralvo, Nuevo León",
-   "resumen": "",
-   "url": "https://elporvenir.mx/justicia/encuentran-cadaver-con-golpes-en-el-lecho-de-un-arroyo/1032497",
-   "via": "pagina"
+   "titulo": "Pierde Quintana Roo brillo... y los vuelos",
+   "resumen": "El sargazo, la falta de conectividad y la inseguridad ya le pasaron factura a Quintana Roo, que pierde brillo y visitantes.",
+   "url": "https://www.elnorte.com/pierde-quintana-roo-brillo-y-los-vuelos/ar3290567",
+   "via": "rss"
   },
   {
-   "id": "89a8df902940",
-   "fuente": "NVI Noticias",
+   "id": "d59b254dd6cc",
+   "fuente": "El Imparcial de Oaxaca",
    "estado_fuente": "Oaxaca",
-   "titulo": "Golpe a la ASAEO: caen seis por presunta extorsión y cobro de piso en Xoxocotlán",
+   "titulo": "Detienen a directora de Fomento Cultural capitalino vinculada a ASAEO",
    "resumen": "",
-   "url": "https://www.nvinoticias.com/apps/delitos/golpe-la-asaeo-caen-seis-por-presunta-extorsion-y-cobro-de-piso-en-xoxocotlan/194376",
-   "via": "home"
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSWRHR3pBVGJobkRRUURmbnByRXZ1NzdxbWZJaEtUN2tnM3IyN3Noa20zeHN2OHlWX001akpJZmJoVWpNU0g2YUVaRHN0ckc2akNlMEVBN3RaNjFlUUlVcFVWRkhmNExxUmdYUld0MUQ2RHBhMF9GSlRpeEluejZnWjNvOTVpTGlic2dxUnk4NG8zb0ltaUJJUkt0Y0xvQmhRR3dPd3J2S1RncThy?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "90d93814667f",
+   "fuente": "El Sol de México (Monterrey)",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Detienen al Hijo de Fishman tras muerte del réferi El Búho en Hidalgo",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNC1iOUFzUWd1UjVDMF9LcldIbk9fSk5LaDJvOFZmcExBSjh0TFR2NWpPeWd4ZXg4S1B4OUZiek5CVzJROFZVTVpKWnVtXzdUMFVFakxwR2ZjaTBiQ05zeTVoWG5ITjFBVUVmbXZWOUg4aWhLN0RtNTd1blNJOEFqSlh3Q3EzUHR6MVpFUVZaR0Fmb0Z4Q194V21TNE1rWFUtbzA0UVVGY2E0dGhuUU5TcHRVbmNKVHM?oc=5",
+   "via": "google"
   },
   {
    "id": "59c0ca80f16d",
@@ -192,13 +444,40 @@
    "via": "home"
   },
   {
-   "id": "97a8632cbea6",
-   "fuente": "TV Azteca (Nuevo León)",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Adolescente que sobrevivió al presunto ataque de Cindy Tamez en Nuevo León narra el multihomicidio",
+   "id": "468107043c92",
+   "fuente": "Plaza de Armas",
+   "estado_fuente": "Querétaro",
+   "titulo": "Presentan sus propuestas candidatos a la Rectoría UAQ 2027-2030",
+   "resumen": "La atención a la violencia, las condiciones laborales, la salud mental, el financiamiento, la participación de la comunidad universitaria y el fortalecimiento académico fueron algunos de los temas centrales de las propuestas presentadas por las cuatro personas candidatas a la Rectoría de la Universi",
+   "url": "https://plazadearmas.com.mx/candidatos-rectoria-uaq-2027-2030-propuestas/",
+   "via": "rss"
+  },
+  {
+   "id": "dc5c5854f90e",
+   "fuente": "NVI Noticias",
+   "estado_fuente": "Oaxaca",
+   "titulo": "Capturan en Veracruz a sujeto que ordenó secuestro y asesinato de su expareja en Tuxtepec",
    "resumen": "",
-   "url": "https://www.tvazteca.com/aztecanoticias/adolescente-14-anos-narra-a-fiscalia-el-presunto-ataque-cindy-tamez-en-montemorelos-nuevo-leon/",
-   "via": "pagina"
+   "url": "https://www.nvinoticias.com/roja/capturan-en-veracruz-sujeto-que-ordeno-secuestro-y-asesinato-de-su-expareja-en-tuxtepec/194384",
+   "via": "home"
+  },
+  {
+   "id": "2de4ac59db12",
+   "fuente": "Periódico Central",
+   "estado_fuente": "Puebla",
+   "titulo": "Activistas exigen reconocer el maltrato animal como violencia vicaria contra mujeres en Puebla",
+   "resumen": "Activistas presentaron una iniciativa ante diputadas del Congreso de Puebla que plantea que el maltrato animal, en el que se engloban las amenazas, el ocultamiento, la retención o el daño a una mascota, sea considerado como violencia vicaria cuando exista la intención de controlar, intimidar o causa",
+   "url": "https://www.periodicocentral.mx/alerta-animal/activistas-exigen-reconocer-el-maltrato-animal-como-violencia-vicaria-contra-mujeres-en-puebla/520711/",
+   "via": "rss"
+  },
+  {
+   "id": "6e4117d2eb78",
+   "fuente": "Luces del Siglo",
+   "estado_fuente": "Quintana Roo",
+   "titulo": "La muerte también falla",
+   "resumen": "POR KUKULKAN CHRISTA PIKE tenía que morir el 30 de septiembre. Eso había decidido el Estado de Tennessee después de tres décadas de litigios por el brutal asesinato de Colleen Slemmer, cometido en 1995. Prepararon la cámara, colocaron las agujas y administraron dos dosis de pentobarbital. El pequeño",
+   "url": "https://lucesdelsiglo.com/2026/10/08/la-muerte-tambien-falla-opinion/",
+   "via": "rss"
   },
   {
    "id": "4ef53111c0aa",
@@ -210,606 +489,12 @@
    "via": "home"
   },
   {
-   "id": "6958efb9e69b",
-   "fuente": "El Horizonte",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Yadira Saraí no llevaba 13 años desaparecida, aclara Fiscalía",
-   "resumen": "",
-   "url": "https://www.elhorizonte.mx/coahuila/yadira-sarai-no-llevaba-13-anos-desaparecida-aclara-fiscalia/4703759123",
-   "via": "home"
-  },
-  {
-   "id": "5266fdc55f2a",
-   "fuente": "Noroeste",
-   "estado_fuente": "Sinaloa",
-   "titulo": "Asesinan a un hombre y le dejan cartulina en la colonia 5 de Mayo, en Culiacán",
-   "resumen": "",
-   "url": "https://www.noroeste.com.mx/seguridad/asesinan-a-un-hombre-y-le-dejan-cartulina-en-la-colonia-5-de-mayo-en-culiacan-CG26317454",
-   "via": "home"
-  },
-  {
-   "id": "607b2a0be32e",
-   "fuente": "Diario del Yaqui",
-   "estado_fuente": "Sonora",
-   "titulo": "Condenado a muerte en Texas pide último deseo si su inyección letal falla como con Christa Pike",
-   "resumen": "",
-   "url": "https://diariodelyaqui.mx/internacional/condenado-a-muerte-en-texas-pide-ultimo-deseo-si-su-inyeccion-letal-falla-como-con-christa-pike/145227",
-   "via": "home"
-  },
-  {
-   "id": "eb0d8c885a41",
-   "fuente": "Línea Directa",
-   "estado_fuente": "Sinaloa",
-   "titulo": "Querétaro niega acuerdo con EU para participación de agentes en academia policial",
-   "resumen": "El gobernador aseguró que la presencia del embajador Ronald Johnson en la ceremonia fue únicamente protocolaria y que el proyecto seguirá los procesos federales",
-   "url": "https://lineadirectaportal.com/mexico/queretaro-niega-acuerdo-con-eu-para-participacion-de-agentes-en-academia-policial-2026-10-07__1716268",
-   "via": "rss"
-  },
-  {
-   "id": "b9448fc61b12",
-   "fuente": "XEVT",
-   "estado_fuente": "Tabasco",
-   "titulo": "Por tercera ocasión IEPC sin acuerdo para elegir secretario Ejecutivo",
-   "resumen": "Continúa la tensión entre consejeros por propuesta de la presidenta del órgano electoral, Elizabeth Nava",
-   "url": "https://www.xevt.com/primeraplana/por-tercera-ocasion-iepc-sin-acuerdo-para-elegir-secretario-ejecutivo/445939",
-   "via": "rss"
-  },
-  {
-   "id": "5c22ca24ea14",
-   "fuente": "AVC Noticias",
-   "estado_fuente": "Veracruz",
-   "titulo": "Un lesionado deja choque de dos vehículos en Ávila Camacho",
-   "resumen": "",
-   "url": "https://avcnoticias.com.mx/noticias-veracruz/articulo/383950/un-lesionado-deja-choque-de-dos-veh-culos-en-avila-camacho.html",
-   "via": "home"
-  },
-  {
-   "id": "0b02513bf621",
-   "fuente": "e-tlaxcala",
-   "estado_fuente": "Tlaxcala",
-   "titulo": "Se confirma fallecimiento de persona lesionada tras explosión en Zitlaltepec",
-   "resumen": "",
-   "url": "https://e-tlaxcala.mx/nota/gobierno/se-confirma-fallecimiento-de-persona-lesionada-tras-explosion-en-zitlaltepec",
-   "via": "home"
-  },
-  {
-   "id": "35bacaa6ff32",
-   "fuente": "NTR Zacatecas",
-   "estado_fuente": "Zacatecas",
-   "titulo": "Asaltan mueblería; logran detener a los responsables",
-   "resumen": "",
-   "url": "https://ntrzacatecas.com/2026/10/asaltan-muebleria-logran-detener-a-los-responsables/",
-   "via": "home"
-  },
-  {
-   "id": "b4b3586995ed",
-   "fuente": "La Jornada Morelos",
-   "estado_fuente": "Morelos",
-   "titulo": "Proponen videovigilancia conectada al C5 en escuelas",
-   "resumen": "La diputada Andrea Gordillo Vega hizo un llamado desde la tribuna del Congreso del Estado de Morelos a reforzar las medidas de seguridad en los entornos escolares, ante el riesgo que enfrentan niñas, niños, adolescentes y jóvenes al acudir diariamente a sus centros educativos, con el propósito de ge",
-   "url": "https://www.lajornadamorelos.mx/congreso/proponen-videovigilancia-conectada-al-c5-en-escuelas/",
-   "via": "rss"
-  },
-  {
-   "id": "a04da61e3568",
-   "fuente": "Reporte Índigo",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Otros 157 menores caen en orfandad por feminicidios",
-   "resumen": "",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOd2tUY0hhaFZXQ0FmSjczSlA2cjd2OENBbVVVVzE4LXRYeHIwZnVnRnhKanFlTDdqbUJHdVF1UmFOWjVXZUdWNmlpQWNET21ValhvV0FJaUk1eS1pb09BLTRwRV82dGQxNHo1ZG9QaFpBWjRFMkFOYVNqbi1qdU1OUExfREl6Qk41bmlQQXRjUXVXLWhTdzFXRFp0QzVrYVhNVTBQTjRZbGpJT0p2Z1E?oc=5",
-   "via": "google"
-  },
-  {
-   "id": "6d5febb020f1",
-   "fuente": "Aristegui Noticias",
-   "estado_fuente": "Nacional",
-   "titulo": "Detienen a funcionaria de Oaxaca por presunta extorsión y cobro de piso",
-   "resumen": "",
-   "url": "https://aristeguinoticias.com/0710/mexico/detienen-a-funcionaria-de-oaxaca-por-presunta-extorsion-y-cobro-de-piso/",
-   "via": "home"
-  },
-  {
-   "id": "7ad736abb4b0",
-   "fuente": "Uno TV",
-   "estado_fuente": "Nacional",
-   "titulo": "Mauricio Kuri niega fractura con Gobierno federal por academia; asegura cumplir con la ley",
-   "resumen": "",
-   "url": "https://www.unotv.com/estados/queretaro/mauricio-kuri-niega-fractura-con-gobierno-federal-por-academia-asegura-cumplir-con-la-ley/",
-   "via": "home"
-  },
-  {
-   "id": "4d2e5bf5b18d",
-   "fuente": "AFN Tijuana",
-   "estado_fuente": "Baja California",
-   "titulo": "Transporte de personal chocó contra un poste; ocho personas resultaron heridas",
-   "resumen": "TIJUANA BC 7 DE OCTUBRE DE 2026 (AFN).- Una unidad de transporte de personal se impactó contra al menos seis árboles, un poste de luz y una barda, en ...",
-   "url": "https://www.afntijuana.info/seguridad/182651_transporte_de_personal_choco_contra_un_poste_ocho_personas_resultaron_heridas",
-   "via": "rss"
-  },
-  {
-   "id": "88b64738fba4",
-   "fuente": "N+",
-   "estado_fuente": "Nacional",
-   "titulo": "Tres Sistemas Ciclónicos Amenazan con 'Golpear' Costas de México",
-   "resumen": "",
-   "url": "https://www.nmas.com.mx/guerrero/clima/en-punto-video-tres-sistemas-ciclonicos-amenazan-con-golpear-costas-de-mexico/",
-   "via": "home"
-  },
-  {
-   "id": "449e19f6d729",
-   "fuente": "Publimetro",
-   "estado_fuente": "Nacional",
-   "titulo": "¡Se siente el Día de Muertos! Lanzan nueva colección deportiva inspirada en la tradición azteca",
-   "resumen": "",
-   "url": "https://www.publimetro.com.mx:443/deportes/2026/10/08/se-siente-el-dia-de-muertos-lanzan-nueva-coleccion-deportiva-inspirada-en-la-tradicion-azteca/",
-   "via": "home"
-  },
-  {
-   "id": "4f9e6ab38c9a",
-   "fuente": "El Mexicano",
-   "estado_fuente": "Baja California",
-   "titulo": "Transporte de personal choca contra poste en Santa Fe; reportan cinco lesionados Policiaca | miércoles 07 de octubre",
-   "resumen": "",
-   "url": "https://el-mexicano.com.mx/Noticia/Policiaca/100310/Transporte-de-personal-choca-contra-poste-en-Santa-Fe;-reportan-cinco-lesionados",
-   "via": "home"
-  },
-  {
-   "id": "fc7e3b514210",
-   "fuente": "Zócalo",
-   "estado_fuente": "Coahuila",
-   "titulo": "Hace 37 minutos Suman 138 víctimas de bullying; Salud alerta por más ingresos hospitalarios",
-   "resumen": "",
-   "url": "https://www.zocalo.com.mx/suman-138-victimas-de-bullying-salud-alerta-por-mas-ingresos-hospitalarios/",
-   "via": "home"
-  },
-  {
-   "id": "9fa98a12a94b",
-   "fuente": "El Siglo de Durango",
-   "estado_fuente": "Durango",
-   "titulo": "CICLONES TROPICALES KARLA GONZÁLEZ TREJO Triple amenaza: Todo sobre las 3 tormentas y huracanes activos que podrían impactar México",
-   "resumen": "",
-   "url": "https://www.elsiglodedurango.com.mx/noticia/2026/triple-amenaza-todo-sobre-las-3-tormentas-y-huracanes-activos-que-podrian-impactar-mexico.html",
-   "via": "home"
-  },
-  {
-   "id": "d25a1ae60806",
-   "fuente": "El Informador",
-   "estado_fuente": "Jalisco",
-   "titulo": "Ejército abate a dos civiles armados en Chihuahua; aseguran armas y vehículos",
-   "resumen": "",
-   "url": "https://www.informador.mx/mexico/chihuahua-asi-fue-el-enfrentamiento-donde-dos-civiles-armados-fueron-abatidos-por-el-ejercito-20261007-0164.html",
-   "via": "home"
-  },
-  {
-   "id": "2ca907cf048b",
-   "fuente": "Plaza Juárez",
-   "estado_fuente": "Hidalgo",
-   "titulo": "Se tiró del puente vehicular de Viaducto Río Avenidas y murió",
-   "resumen": "Una tragedia se registró la tarde de este miércoles sobre el Viaducto Río de las Avenidas de Pachuca, donde un hombre por causas desconocidas se habría tirado desde un puente vehicular y ello le costó la existencia, provocando movilización de elementos policíacos y de socorro, además de que la zona ",
-   "url": "https://plazajuarez.mx/se-tiro-del-puente-vehicular-del-viaducto-rio-de-las-avenidas-y-murio/",
-   "via": "rss"
-  },
-  {
-   "id": "837c05026f18",
-   "fuente": "Zona Franca",
-   "estado_fuente": "Guanajuato",
-   "titulo": "Balean a mujer afuera de un domicilio en Las Américas",
-   "resumen": "",
-   "url": "https://zonafranca.mx/seguridad/balean-a-mujer-afuera-de-un-domicilio-en-las-americas/",
-   "via": "home"
-  },
-  {
-   "id": "66c33e71fc23",
-   "fuente": "Noventa Grados",
-   "estado_fuente": "Michoacán",
-   "titulo": "Daniel Manzo pide que un juez federal ordene la entrega de los celulares de Carlos Manzo",
-   "resumen": "",
-   "url": "https://www.noventagrados.com.mx/politica/daniel-manzo-pide-que-un-juez-federal-ordene-la-entrega-de-los-celulares-de-carlos-manzo.htm",
-   "via": "home"
-  },
-  {
-   "id": "825ffd4b0641",
-   "fuente": "El Sol de Nayarit",
-   "estado_fuente": "Nayarit",
-   "titulo": "Tres ciclones amenazan con lluvias intensas en 12 estados 8 de Octubre de 2026",
-   "resumen": "",
-   "url": "https://elsoldenayarit.mx/sociedad/tres-ciclones-amenazan-con-lluvias-intensas-en-12-estados",
-   "via": "home"
-  },
-  {
-   "id": "11b8c846ca66",
-   "fuente": "Telediario Monterrey",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Carambola entre 4 vehículos deja 5 lesionados en Rodrigo Gómez",
-   "resumen": "",
-   "url": "https://www.telediario.mx/policia/monterrey-carambola-en-avenida-rodrigo-gomez-deja-5-lesionados",
-   "via": "pagina"
-  },
-  {
-   "id": "83e36b7353f1",
-   "fuente": "INFO7",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Sacerdote se declara culpable por 109 cargos de abuso en Irlanda Gallagher fue incluido de forma inmediata en el Registro de Delincuentes Sexuales, cuya permanencia definitiva se fijará al dictar condena",
-   "resumen": "",
-   "url": "https://info7.mx/internacional/sacerdote-se-declara-culpable-por-109-cargos-de-abuso-en-irlanda/8246935301",
-   "via": "home"
-  },
-  {
-   "id": "9aa2df71d580",
-   "fuente": "Posta",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Policías de Neza son señalados por agredir a presunto ladrón en Palacio Municipal",
-   "resumen": "",
-   "url": "https://www.posta.com.mx/edomex/agresion-de-policias-en-nezahualcoyotl-video-revela-detencion-violenta/vl2264062",
-   "via": "home"
-  },
-  {
-   "id": "47f2a78302f7",
-   "fuente": "El Porvenir (justicia)",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Fallece hombre al ser atropellado en Monterrey",
-   "resumen": "",
-   "url": "https://elporvenir.mx/justicia/pierde-la-vida-al-intentar-cruzar-avenida-revolucion/1032483",
-   "via": "pagina"
-  },
-  {
-   "id": "30409cc240ee",
-   "fuente": "El Universal San Luis",
+   "id": "87cddd5fb6e7",
+   "fuente": "Pulso",
    "estado_fuente": "San Luis Potosí",
-   "titulo": "Villa Gutiérrez advierte que no habrá tolerancia para bailes callejeros durante las festividades de Día de Muertos en la capital de SLP 11:33",
+   "titulo": "SEGURIDAD Se hizo pasar por agente de la FGR Un hombre que se hizo pasar como supervisor de la Fiscalía General de la República fue detenido por elementos de la policía capita... Por Redacción",
    "resumen": "",
-   "url": "https://sanluis.eluniversal.com.mx/seguridad/villa-gutierrez-advierte-que-no-habra-tolerancia-para-bailes-callejeros-durante-las-festividades-de-dia-de-muertos-en-la-capital-de-slp/",
-   "via": "home"
-  },
-  {
-   "id": "76af75dda5a5",
-   "fuente": "El Horizonte",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Ejecuta Texas a reo tras fallido intento contra Christa Pike",
-   "resumen": "",
-   "url": "https://www.elhorizonte.mx/internacional/ejecuta-texas-a-reo-tras-fallido-intento-contra-christa-pike/5872504279",
-   "via": "home"
-  },
-  {
-   "id": "946a9696d256",
-   "fuente": "Noroeste",
-   "estado_fuente": "Sinaloa",
-   "titulo": "Tragedia en la lucha libre: muere el réferi ‘El Búho’ tras recibir un ‘martinete’",
-   "resumen": "",
-   "url": "https://www.noroeste.com.mx/deportes/mas-deportes/tragedia-en-la-lucha-libre-muere-el-referi-el-buho-tras-recibir-un-martinete-CG26316501",
-   "via": "home"
-  },
-  {
-   "id": "ba47f207a4e5",
-   "fuente": "Diario del Yaqui",
-   "estado_fuente": "Sonora",
-   "titulo": "Arqui Juve informa vinculación a proceso por presunta usurpación de profesión y fraude en obra",
-   "resumen": "",
-   "url": "https://diariodelyaqui.mx/farandula/arqui-juve-informa-vinculacion-a-proceso-por-presunta-usurpacion-de-profesion-y-fraude-en-obra/145244",
-   "via": "home"
-  },
-  {
-   "id": "3109adbf0c45",
-   "fuente": "XEVT",
-   "estado_fuente": "Tabasco",
-   "titulo": "Formaliza la dirigente del PAN Tabasco denuncia ante fiscalía por amenazas",
-   "resumen": "Insiste en no solicitar protección al confiar que el asunto no escalará a más",
-   "url": "https://www.xevt.com/primeraplana/formaliza-la-dirigente-del-pan-tabasco-denuncia-ante-fiscalia-por-amenazas/445920",
-   "via": "rss"
-  },
-  {
-   "id": "b37f42bda7aa",
-   "fuente": "AVC Noticias",
-   "estado_fuente": "Veracruz",
-   "titulo": "Asesinan a padre e hijo mientras pastoreaban ganado en Jalacingo",
-   "resumen": "",
-   "url": "https://avcnoticias.com.mx/noticias-veracruz/articulo/383956/asesinan-a-padre-e-hijo-mientras-pastoreaban-ganado-en-jalacingo.html",
-   "via": "home"
-  },
-  {
-   "id": "758afbd87f75",
-   "fuente": "NTR Zacatecas",
-   "estado_fuente": "Zacatecas",
-   "titulo": "Sentencian a tres por hechos delictivos en Cuauhtémoc",
-   "resumen": "",
-   "url": "https://ntrzacatecas.com/2026/10/sentencian-a-tres-por-hechos-delictivos-en-cuauhtemoc/",
-   "via": "home"
-  },
-  {
-   "id": "d1bda66f8ed6",
-   "fuente": "La Jornada Morelos",
-   "estado_fuente": "Morelos",
-   "titulo": "Congreso aprobó prevenir difusión de contenidos que hagan apología del delito",
-   "resumen": "El Congreso de Morelos aprobó reformar la Ley de Cultura Cívica del Estado de Morelos, en materia de reconstrucción del tejido social y preservación del orden público y la paz social, a través de la cual adicionaron una fracción XVI al artículo 20, para establecer que son infracciones contra la segu",
-   "url": "https://www.lajornadamorelos.mx/congreso/congreso-aprobo-prevenir-difusion-de-contenidos-que-hagan-apologia-del-delito/",
-   "via": "rss"
-  },
-  {
-   "id": "4b912a4309f2",
-   "fuente": "Uno TV",
-   "estado_fuente": "Nacional",
-   "titulo": "Huachicol fiscal en México: calculan negocio de 3.1 billones de pesos",
-   "resumen": "",
-   "url": "https://www.unotv.com/nacional/huachicol-fiscal-en-mexico-calculan-negocio-de-3-1-billones-de-pesos/",
-   "via": "home"
-  },
-  {
-   "id": "8247b01ab84c",
-   "fuente": "AFN Tijuana",
-   "estado_fuente": "Baja California",
-   "titulo": "Detienen a un hombre armado y con chalecos balísticos",
-   "resumen": "TIJUANA BC 7 DE OCTUBRE DE 2026 (AFN).- Agentes de la Policía Municipal detuvieron a un hombre identificado como Eduardo, en posesión de un fusil ...",
-   "url": "https://www.afntijuana.info/seguridad/182650_detienen_a_un_hombre_armado_y_con_chalecos_balisticos",
-   "via": "rss"
-  },
-  {
-   "id": "3c1467c27e31",
-   "fuente": "N+",
-   "estado_fuente": "Nacional",
-   "titulo": "Muere en el Ring el Réferi ‘El Búho’ durante Función de Lucha Libre en Hidalgo",
-   "resumen": "",
-   "url": "https://www.nmas.com.mx/hidalgo/deportes/el-buho-muere-referi-ring-durante-funcion-lucha-libre-esto-paso/",
-   "via": "home"
-  },
-  {
-   "id": "9b462b586de0",
-   "fuente": "Publimetro",
-   "estado_fuente": "Nacional",
-   "titulo": "¡Escándalo en el ring! Detienen a Hijo de Fishman tras matar a réferi con martinete",
-   "resumen": "",
-   "url": "https://www.publimetro.com.mx:443/deportes/2026/10/08/escandalo-en-el-ring-detienen-a-hijo-de-fishman-tras-matar-a-referi-con-martinete/",
-   "via": "home"
-  },
-  {
-   "id": "c834a9ba489d",
-   "fuente": "Zócalo",
-   "estado_fuente": "Coahuila",
-   "titulo": "Hace 38 minutos Pagarían papás por sus ‘Bellacos’; urge Congreso reforma a código penal",
-   "resumen": "",
-   "url": "https://www.zocalo.com.mx/pagarian-papas-por-sus-bellacos-urge-congreso-reforma-a-codigo-penal/",
-   "via": "home"
-  },
-  {
-   "id": "8bf3c31850c1",
-   "fuente": "El Informador",
-   "estado_fuente": "Jalisco",
-   "titulo": "Vinculan a proceso a 'El Cangreburguer', presunto colaborador de La Familia Michoacana",
-   "resumen": "",
-   "url": "https://www.informador.mx/mexico/la-familia-michoacana-vinculan-a-proceso-a-el-cangreburguer-presunto-colaborador-del-grupo-criminal-20261007-0213.html",
-   "via": "home"
-  },
-  {
-   "id": "200256817d2b",
-   "fuente": "Plaza Juárez",
-   "estado_fuente": "Hidalgo",
-   "titulo": "El popular cantautor argentino Piero fallece a los 81 años en Buenos Aires",
-   "resumen": "El cantautor argentino Piero, una de las grandes figuras de la música popular latinoamericana, falleció este miércoles a los 81 años en Buenos Aires, informaron amigos y familiares del reconocido artista, quien vivió en España y Colombia. «Con profundo dolor, comunicamos el fallecimiento de nuestro ",
-   "url": "https://plazajuarez.mx/el-popular-cantautor-argentino-piero-fallece-a-los-81-anos-en-buenos-aires/",
-   "via": "rss"
-  },
-  {
-   "id": "29ea8df6a750",
-   "fuente": "Zona Franca",
-   "estado_fuente": "Guanajuato",
-   "titulo": "Muere uno de los dos hombres atacados a balazos en la colonia Reforma de Silao",
-   "resumen": "",
-   "url": "https://zonafranca.mx/seguridad/muere-uno-de-los-dos-hombres-atacados-a-balazos-en-la-colonia-reforma-de-silao/",
-   "via": "home"
-  },
-  {
-   "id": "02e663512b90",
-   "fuente": "Noventa Grados",
-   "estado_fuente": "Michoacán",
-   "titulo": "Comando ataca a la Guardia Civil en Penjamillo, Michoacán; abren fuego contra autoridades y escapan tras balacera",
-   "resumen": "",
-   "url": "https://www.noventagrados.com.mx/seguridad/comando-ataca-a-la-guardia-civil-en-penjamillo-michoacan-abren-fuego-contra-autoridades-y-escapan-tras-balacera.htm",
-   "via": "home"
-  },
-  {
-   "id": "a7a6fc4d19c7",
-   "fuente": "INFO7",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Fuerza Regia vence a Soles y asegura pase directo a playoffs La quinteta regiomontana comenzará así su camino hacia el bicampeonato con dos partidos en casa, después de cumplir el objetivo de avanzar a los playoffs",
-   "resumen": "",
-   "url": "https://info7.mx/deportes/fuerza-regia-vence-a-soles-y-asegura-pase-directo-a-playoffs/6547886389",
-   "via": "home"
-  },
-  {
-   "id": "6dddbb0063a9",
-   "fuente": "Posta",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Feminicida de Telchac Puerto es sentenciado a pasar 40 años en prisión",
-   "resumen": "",
-   "url": "https://www.posta.com.mx/yucatan/feminicida-de-telchac-puerto-pasara-40-anos-en-prision/vl2263829",
-   "via": "home"
-  },
-  {
-   "id": "9f37fce3c814",
-   "fuente": "El Porvenir (justicia)",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Encuentran a hombre sin vida en incendio de casa en Monterrey",
-   "resumen": "",
-   "url": "https://elporvenir.mx/justicia/hallan-a-hombre-calcinado-dentro-de-casa-abandonada/1032480",
-   "via": "pagina"
-  },
-  {
-   "id": "e620e8e8a5e7",
-   "fuente": "El Horizonte",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Muere hombre tras perder el conocimiento en taller de La Minita",
-   "resumen": "",
-   "url": "https://www.elhorizonte.mx/coahuila/muere-hombre-tras-perder-el-conocimiento-en-taller-de-la-minita/2182626725",
-   "via": "home"
-  },
-  {
-   "id": "c7b9e029f12b",
-   "fuente": "Noroeste",
-   "estado_fuente": "Sinaloa",
-   "titulo": "Dan fuerte golpe a la piratería en Tepito; aseguran 9 mil 018 piezas, con un valor estimado de 1 millón 911 mil 550 pesos",
-   "resumen": "",
-   "url": "https://www.noroeste.com.mx/nacional/dan-fuerte-golpe-a-la-pirateria-en-tepito-aseguran-9-mil-018-piezas-con-un-valor-estimado-de-1-millon-911-mil-550-pesos-JG26316438",
-   "via": "home"
-  },
-  {
-   "id": "1293e4580187",
-   "fuente": "XEVT",
-   "estado_fuente": "Tabasco",
-   "titulo": "Roban en la Parroquia La Sagrada Familia de Indeco",
-   "resumen": "Exhortan a los feligreses a tomar precauciones",
-   "url": "https://www.xevt.com/primeraplana/roban-en-la-parroquia-la-sagrada-familia-de-indeco/445942",
-   "via": "rss"
-  },
-  {
-   "id": "4c163c1408c3",
-   "fuente": "La Jornada Morelos",
-   "estado_fuente": "Morelos",
-   "titulo": "Secretaría Anticorrupción detecta fraude en becas Benito Juárez",
-   "resumen": "Una auditoría de la Secretaría Anticorrupción y Buen Gobierno (SABG) a los programas de becas Benito Juárez detectó pagos por 592.3 millones de pesos a 67 mil 142 estudiantes cuyos datos no se validaron ante el Registro Nacional de Población, en los ejercicios 2024 y 2025. El informe forma parte de ",
-   "url": "https://www.lajornadamorelos.mx/nacional/secretaria-anticorrupcion-detecta-fraude-en-becas-benito-juarez/",
-   "via": "rss"
-  },
-  {
-   "id": "e1069ee9651e",
-   "fuente": "Uno TV",
-   "estado_fuente": "Nacional",
-   "titulo": "Colectivos reconocen apertura en Tamaulipas para búsqueda de desaparecidos",
-   "resumen": "",
-   "url": "https://www.unotv.com/estados/tamaulipas/colectivos-busqueda-desaparecidos-tamaulipas-americo-villarreal/",
-   "via": "home"
-  },
-  {
-   "id": "fe52356afd98",
-   "fuente": "N+",
-   "estado_fuente": "Nacional",
-   "titulo": "Así Fue la Agresión a Policías Durante Operativo contra Motos en el Centro de CDMX",
-   "resumen": "",
-   "url": "https://www.nmas.com.mx/ciudad-de-mexico/seguridad/momento-agresion-policias-operativo-motos-centro-cdmx/",
-   "via": "home"
-  },
-  {
-   "id": "6d2c7f2cabc5",
-   "fuente": "Zócalo",
-   "estado_fuente": "Coahuila",
-   "titulo": "Hace 39 minutos Exigen apoyo para víctimas; colectivos se manifiestan tras feminicidios",
-   "resumen": "",
-   "url": "https://www.zocalo.com.mx/exigen-apoyo-para-victimas-colectivos-se-manifiestan-tras-feminicidios/",
-   "via": "home"
-  },
-  {
-   "id": "0b8416743097",
-   "fuente": "El Informador",
-   "estado_fuente": "Jalisco",
-   "titulo": "Profepa confirma sentencia contra construcción irregular en el mar de San Pancho",
-   "resumen": "",
-   "url": "https://www.informador.mx/mexico/profepa-confirma-sentencia-contra-construccion-irregular-edificada-en-el-mar-de-san-pancho-20261007-0202.html",
-   "via": "home"
-  },
-  {
-   "id": "2703104aadb2",
-   "fuente": "Plaza Juárez",
-   "estado_fuente": "Hidalgo",
-   "titulo": "Apareció una mujer sin vida, en una barranca de Mixquiahuala",
-   "resumen": "Un macabro hallazgo se registró la mañana de este miércoles, ya que en el fondo de una barranca localizada en la colonia de La Peña, perteneciente al municipio de Mixquiahuala, vecinos descubrieron el cuerpo sin vida de una joven mujer, que hasta el momento permanece en calidad de desconocida. Se sa",
-   "url": "https://plazajuarez.mx/aparecio-una-mujer-sin-vida-en-una-barranca-de-mixquiahuala/",
-   "via": "rss"
-  },
-  {
-   "id": "8d072922e123",
-   "fuente": "Noventa Grados",
-   "estado_fuente": "Michoacán",
-   "titulo": "Samuel García asegura que Líneas 4 y 6 del Metro cuentan con todos los permisos",
-   "resumen": "",
-   "url": "https://www.noventagrados.com.mx/politica/samuel-garcia-asegura-que-lineas-4-y-6-del-metro-cuentan-con-todos-los-permisos.htm",
-   "via": "home"
-  },
-  {
-   "id": "0596a07e58b2",
-   "fuente": "INFO7",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Identifican a ejecutados del Cerro de la Campana",
-   "resumen": "",
-   "url": "https://info7.mx/nuevoleon/identifican-a-ejecutados-del-cerro-de-la-campana/4053246644",
-   "via": "home"
-  },
-  {
-   "id": "316130d1a7da",
-   "fuente": "El Porvenir (justicia)",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Muere motociclista tras estrellarse contra barandal en Guadalupe",
-   "resumen": "",
-   "url": "https://elporvenir.mx/justicia/fallece-al-estrellar-su-moto-en-barandal-de-proteccion/1032474",
-   "via": "pagina"
-  },
-  {
-   "id": "63fee5af9a41",
-   "fuente": "El Horizonte",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Gobierno de Querétaro niega acuerdo con EUA de academia policial",
-   "resumen": "",
-   "url": "https://www.elhorizonte.mx/nacional/gobierno-de-queretaro-niega-acuerdo-con-eua-de-academia-policial/5697905954",
-   "via": "home"
-  },
-  {
-   "id": "58d656f5d01e",
-   "fuente": "Noroeste",
-   "estado_fuente": "Sinaloa",
-   "titulo": "Juez otorga prisión domiciliaria a socio de Ruffo en caso de huachicol",
-   "resumen": "",
-   "url": "https://www.noroeste.com.mx/nacional/juez-otorga-prision-domiciliaria-a-socio-de-ruffo-en-caso-de-huachicol-EG26316417",
-   "via": "home"
-  },
-  {
-   "id": "ba4863bb0606",
-   "fuente": "XEVT",
-   "estado_fuente": "Tabasco",
-   "titulo": "Mi respuesta a su envidia y a su coraje es mi vida: Salinas Pliego responde a AMLO",
-   "resumen": "Aseguró que le da gusto saber que lo tiene en sus pensamientos y que sigue sintiendo envidia\"",
-   "url": "https://www.xevt.com/primeraplana/mi-respuesta-a-su-envidia-y-a-su-coraje-es-mi-vida-salinas-pliego-responde-a-amlo/445959",
-   "via": "rss"
-  },
-  {
-   "id": "098b0a03b564",
-   "fuente": "La Jornada Morelos",
-   "estado_fuente": "Morelos",
-   "titulo": "Indagarán autorización del “Coruco» Díaz tras riña en partido amateur",
-   "resumen": "La riña multitudinaria registrada el pasado 3 de octubre durante un partido de futbol amateur en el estadio Agustín \"Coruco\" Díaz, en Zacatepec, abrió una serie de interrogantes sobre las condiciones en que fue autorizado el uso del inmueble y las medidas de seguridad implementadas para un encuentro",
-   "url": "https://www.lajornadamorelos.mx/deportes/indagaran-autorizacion-del-coruco-diaz-tras-rina-en-partido-amateur/",
-   "via": "rss"
-  },
-  {
-   "id": "df1b4b627a60",
-   "fuente": "Zócalo",
-   "estado_fuente": "Coahuila",
-   "titulo": "Hace 42 minutos Cambiarán ruta del Xantolum; acercarán festival de muertos al norte",
-   "resumen": "",
-   "url": "https://www.zocalo.com.mx/cambiaran-ruta-del-xantolum-acercaran-festival-de-muertos-al-norte/",
-   "via": "home"
-  },
-  {
-   "id": "f98a934d0f53",
-   "fuente": "INFO7",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Detienen a tres con más de 100 envoltorios de droga en Juárez Fuerza Civil, AEI y Policía de Juárez capturaron a dos jóvenes y un adulto mayor con sustancias, dinero, celulares y equipo de pesaje en Valle Sur",
-   "resumen": "",
-   "url": "https://info7.mx/nuevoleon/detienen-a-tres-con-mas-de-100-envoltorios-de-droga-en-juarez/8587809492",
-   "via": "home"
-  },
-  {
-   "id": "864589c4b841",
-   "fuente": "El Porvenir (justicia)",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Detienen a \"montachoques\" tras fallida extorsión",
-   "resumen": "",
-   "url": "https://elporvenir.mx/justicia/detienen-a-montachoques-tras-fallida-extorsion/1032618",
-   "via": "pagina"
-  },
-  {
-   "id": "3c1228080934",
-   "fuente": "El Horizonte",
-   "estado_fuente": "Nuevo León",
-   "titulo": "Investiga Aguascalientes presuntas amenazas contra obispo",
-   "resumen": "",
-   "url": "https://www.elhorizonte.mx/nacional/investiga-aguascalientes-presuntas-amenazas-contra-obispo/6911674000",
+   "url": "https://pulsoslp.com.mx/seguridad/se-hizo-pasar-por-agente-de-la-fgr/2093471",
    "via": "home"
   },
   {
@@ -822,31 +507,1057 @@
    "via": "home"
   },
   {
-   "id": "55fc7611c394",
-   "fuente": "Zócalo",
-   "estado_fuente": "Coahuila",
-   "titulo": "Saltillo Vinculan a proceso a arquitecto por caso de la “Casa del Boiler” Hace 2 horas",
+   "id": "607b2a0be32e",
+   "fuente": "Diario del Yaqui",
+   "estado_fuente": "Sonora",
+   "titulo": "Condenado a muerte en Texas pide último deseo si su inyección letal falla como con Christa Pike",
    "resumen": "",
-   "url": "https://www.zocalo.com.mx/vinculan-a-proceso-a-arquitecto-por-caso-de-la-casa-del-boiler/",
+   "url": "https://diariodelyaqui.mx/internacional/condenado-a-muerte-en-texas-pide-ultimo-deseo-si-su-inyeccion-letal-falla-como-con-christa-pike/145227",
    "via": "home"
   },
   {
-   "id": "6c4492dabb4e",
+   "id": "37dab4587657",
+   "fuente": "Proyecto Puente",
+   "estado_fuente": "Sonora",
+   "titulo": "Guarda silencio agencia de cuidadoras ‘Niñerías MX’ tras muerte de bebé María Elisa en San Carlos",
+   "resumen": "Tras la muerte de María Elisa, de un año y medio, Proyecto Puente investigó cómo opera Niñerías MX en Ciudad Obregón y sus protocolos de seguridad. The post Guarda silencio agencia de cuidadoras ‘Niñerías MX’ tras muerte de bebé María Elisa en San Carlos appeared first on Proyecto Puente .",
+   "url": "https://proyectopuente.com.mx/2026/10/08/guardia-silencio-agencia-de-cuidadoras-ninerias-mx-tras-muerte-de-bebe-maria-elisa-en-san-carlos/",
+   "via": "rss"
+  },
+  {
+   "id": "97a8632cbea6",
+   "fuente": "TV Azteca (Nuevo León)",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Adolescente que sobrevivió al presunto ataque de Cindy Tamez en Nuevo León narra el multihomicidio",
+   "resumen": "",
+   "url": "https://www.tvazteca.com/aztecanoticias/adolescente-14-anos-narra-a-fiscalia-el-presunto-ataque-cindy-tamez-en-montemorelos-nuevo-leon/",
+   "via": "pagina"
+  },
+  {
+   "id": "6338362b00c2",
+   "fuente": "Tribuna",
+   "estado_fuente": "Sonora",
+   "titulo": "Rescata la AMIC a joven privado de la libertad en el ejido ‘El Sapo’",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOd25SRTRPVWQzUkx2aG5NaTZzUkZXbDRaZUxzaWg1R3ZsNGlsb3pWVi1XTmxjMlplSnlDLURick90QlJTei1fNWN3bFJlYXQ3UzVIS19PSEt2VjNOd0tNbC1PVm80MTY0cE5tMmVsaTZGbWJuZndmUUE3NnNvSnFDUUZSeTl6ZFMyd1BuUHFBNDNhZkFpVkNMUmZWUWRBRVJvQVUzTW12dk9LMExuYTNoZFFDcm4zUQ?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "017592ec2ecd",
+   "fuente": "Tabasco Hoy",
+   "estado_fuente": "Tabasco",
+   "titulo": "Secuestró, escapó… y lo capturan",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9RMUpLT3FHUkNYby16X1FIU2huOHRGOGl2SEZMM3Nyc2QwNWdVODRaa244TjBqbEpkTUtBeUtKYUZxTWtWSENzSGV2TVdyUkFZbHBVZ1NxY2FDTHl2WmJqc05UY3ZIVVhRbFE?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "b9448fc61b12",
+   "fuente": "XEVT",
+   "estado_fuente": "Tabasco",
+   "titulo": "Por tercera ocasión IEPC sin acuerdo para elegir secretario Ejecutivo",
+   "resumen": "Continúa la tensión entre consejeros por propuesta de la presidenta del órgano electoral, Elizabeth Nava",
+   "url": "https://www.xevt.com/primeraplana/por-tercera-ocasion-iepc-sin-acuerdo-para-elegir-secretario-ejecutivo/445939",
+   "via": "rss"
+  },
+  {
+   "id": "466b6f717a5c",
+   "fuente": "Diario Presente",
+   "estado_fuente": "Tabasco",
+   "titulo": "Detienen a Bebo, presunto operador financiero de Los Metros",
+   "resumen": "La detención de Bebo, vinculado a una red de contrabando de hidrocarburos, revela la lucha contra el mercado ilícito de hidrocarburos y las operaciones financieras del Cártel del Golfo",
+   "url": "https://www.diariopresente.mx/sucesos/detienen-a-bebo-presunto-operador-financiero-de-los-metros/468268",
+   "via": "rss"
+  },
+  {
+   "id": "27d040ac34af",
+   "fuente": "Línea Directa",
+   "estado_fuente": "Sinaloa",
+   "titulo": "Autoridades aseguran 35 mil cigarros de mariguana, precursores químicos y cargadores este miércoles",
+   "resumen": "De acuerdo a los hechos de inseguridad, diez personas fueron asesinadas este miércoles 7 de octubre, entre ellas dos mujeres",
+   "url": "https://lineadirectaportal.com/policiaca/autoridades-aseguran-35-mil-cigarros-de-mariguana-precursores-quimicos-y-cargadores-este-miercoles-2026-10-08__1716278",
+   "via": "rss"
+  },
+  {
+   "id": "561710b436aa",
+   "fuente": "ABC Tlaxcala",
+   "estado_fuente": "Tlaxcala",
+   "titulo": "MANTIENE SSC OPERATIVO PERMANENTE EN TEPEYANCO TRAS DESARTICULACIÓN DE LA BANDA “LOS ZORROS”",
+   "resumen": "El grupo operaba en el anonimato ante la falta de denuncias previas POR: ISABEL POLVO Tras los hechos registrados en",
+   "url": "https://abctlax.com/mantiene-ssc-operativo-permanente-en-tepeyanco-tras-desarticulacion-de-la-banda-los-zorros/",
+   "via": "rss"
+  },
+  {
+   "id": "4323ccd8dc6c",
+   "fuente": "Hoy Tamaulipas",
+   "estado_fuente": "Tamaulipas",
+   "titulo": "Congreso de Tamaulipas busca rastrear datos usados en extorsiones",
+   "resumen": "La Diputación Permanente declaró procedente una propuesta para identificar qué información conocen los extorsionadores y detectar posibles fuentes de obtención",
+   "url": "http://www.hoytamaulipas.net/notas/629229/Congreso-de-Tamaulipas-busca-rastrear-datos-usados-en-extorsiones.html",
+   "via": "rss"
+  },
+  {
+   "id": "63fee5af9a41",
+   "fuente": "El Horizonte",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Gobierno de Querétaro niega acuerdo con EUA de academia policial",
+   "resumen": "",
+   "url": "https://www.elhorizonte.mx/nacional/gobierno-de-queretaro-niega-acuerdo-con-eua-de-academia-policial/5697905954",
+   "via": "home"
+  },
+  {
+   "id": "06dd886ccfec",
+   "fuente": "La Polilla",
+   "estado_fuente": "Tlaxcala",
+   "titulo": "Muere joven de 22 años tras explosión en Zitlaltepec",
+   "resumen": "Un joven de 22 años perdió la vida tras resultar gravemente lesionado en una explosión registrada este miércoles sobre la carretera Ixtenco-Zitlaltepec, en Tlaxcala, confirmó la Secretaría de Salud del Estado. La víctima fue identificada como Juan N., quien sufrió lesiones de gravedad durante el inc",
+   "url": "https://lapolilla.com.mx/2026/10/08/muere-joven-de-22-anos-tras-explosion-en-zitlaltepec/",
+   "via": "rss"
+  },
+  {
+   "id": "5c22ca24ea14",
+   "fuente": "AVC Noticias",
+   "estado_fuente": "Veracruz",
+   "titulo": "Un lesionado deja choque de dos vehículos en Ávila Camacho",
+   "resumen": "",
+   "url": "https://avcnoticias.com.mx/noticias-veracruz/articulo/383950/un-lesionado-deja-choque-de-dos-veh-culos-en-avila-camacho.html",
+   "via": "home"
+  },
+  {
+   "id": "1488cee5d9d3",
+   "fuente": "Diario de Yucatán",
+   "estado_fuente": "Yucatán",
+   "titulo": "La Canaco: No se han alcanzado las ventas esperadas",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZldjMlltV3pTdW53bjE3YWtUc0drNWlONG01Z1JNY09ITlA5SXZ6SmpyazRQdmNrWmlyQS1Md2tlRmU1SVp1ZjlYNEkwUmtvSFFIMWRTTlMyRVRlV2JSb1M4ZmVnOVhsSnlDbHg3ZVVQeXpvN1NKb3BhVWt5TXlPcWJwcV9waU5DZzJUVF9SNW9BMmFfTHZQaTRvOVdXV3NwZkE?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "b3e7edef0e59",
+   "fuente": "La Jornada Zacatecas",
+   "estado_fuente": "Zacatecas",
+   "titulo": "Problemas sociales grandes, clase política diminuta",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQNHkxS2Z6T1IzSXdSbldHOENka3BpZUZGNEw4ZFYtZkRpUkpLR1cxZW9udVE0TU10RGdESmhiWGNMSVlDLTNZSlEtRUNpemZ1c1ZvdjBROFNnOTVzYkdRTjJfSDk5aDM2TnJ6Ul9KdjZxSk93b01TR3BFNDlfdGRDSFZyNA?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "0fb953a1df94",
+   "fuente": "Gente Tlaxcala",
+   "estado_fuente": "Tlaxcala",
+   "titulo": "CRISIS EN CARRETERAS",
+   "resumen": "Por Edgardo Cabrera Desde septiembre se recrudeció la ausencia de patrullas y elementos de la Guardia Nacional división caminos, en Gentetlxhemos documentado con reportes oficiales de los servicios de emergencia y videos, que son policías estatales y municipales quienes han tenido que atender accide",
+   "url": "https://gentetlx.com.mx/2026/10/08/crisis-en-carreteras/",
+   "via": "rss"
+  },
+  {
+   "id": "230e5c367778",
+   "fuente": "Entorno Informativo",
+   "estado_fuente": "Sonora",
+   "titulo": "Cae presunto homicida de adolescente",
+   "resumen": "Anuncia el fiscal de Justicia, Gustavo Rómulo Salas Chávez; Se trata de Christian Rubén, de 21 años, quien fue capturado con otros dos individuos en posesión de un fusil AK47, llamado “cuernos de chivo” y 35 envoltorios con aparente crystal Ivanova de los Reyes Agentes policiacos capturaron a tres p",
+   "url": "https://entornoinformativo.com.mx/cae-presunto-homicida-de-adolescente/",
+   "via": "rss"
+  },
+  {
+   "id": "35bacaa6ff32",
+   "fuente": "NTR Zacatecas",
+   "estado_fuente": "Zacatecas",
+   "titulo": "Asaltan mueblería; logran detener a los responsables",
+   "resumen": "",
+   "url": "https://ntrzacatecas.com/2026/10/asaltan-muebleria-logran-detener-a-los-responsables/",
+   "via": "home"
+  },
+  {
+   "id": "0b02513bf621",
+   "fuente": "e-tlaxcala",
+   "estado_fuente": "Tlaxcala",
+   "titulo": "Se confirma fallecimiento de persona lesionada tras explosión en Zitlaltepec",
+   "resumen": "",
+   "url": "https://e-tlaxcala.mx/nota/gobierno/se-confirma-fallecimiento-de-persona-lesionada-tras-explosion-en-zitlaltepec",
+   "via": "home"
+  },
+  {
+   "id": "83e36b7353f1",
    "fuente": "INFO7",
    "estado_fuente": "Nuevo León",
-   "titulo": "Muere joven tras casi tres meses internado por choque vial",
+   "titulo": "Sacerdote se declara culpable por 109 cargos de abuso en Irlanda Gallagher fue incluido de forma inmediata en el Registro de Delincuentes Sexuales, cuya permanencia definitiva se fijará al dictar condena",
    "resumen": "",
-   "url": "https://info7.mx/nuevoleon/muere-joven-tras-casi-tres-meses-internado-por-choque-vial/9045549987",
+   "url": "https://info7.mx/internacional/sacerdote-se-declara-culpable-por-109-cargos-de-abuso-en-irlanda/8246935301",
    "via": "home"
   },
   {
-   "id": "cc4322c8b097",
+   "id": "5561cd50c772",
+   "fuente": "Ensenada.net",
+   "estado_fuente": "Baja California",
+   "titulo": "Ensenada.Net :: - Ensenada.Net",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE13WWZfSE5wc1VyaERDTGo1ekdObnB1UTNqSnc3WHY4d0lxWW5VdlBxc240OEg5TXd6dE1RejRaVzhDNEdXY0dVUDlyUzUxa2ZabTZQeUJETm9zX01nOHEwUW93VGg?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "cb48a172ef0e",
+   "fuente": "Milenio Jalisco",
+   "estado_fuente": "Jalisco",
+   "titulo": "'El Tanque', principal operador financiero del CJNG desde 2024; red de robo de combustible se extendía a EU",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQdG9iWlFqSF8xVGljTWw2dG8ta2hRdVlrS3ljd051OWliWWdWTXQ2SzgwUDNweGpHU2pPQkR0LWZOQmx2WXY2YjVQbFZBcEFhamh1UzJCYndic2Z2MTRyR0MxS3VBcVVVaG1GT1B3VTlfT3R1YUNpWS0yWHhqNHZBbGZScDN1enVMZzlSWDZlUWRHaE9kREHSAZYBQVVfeXFMUDFGd1pvRDI0aFJDSUlBZjlLVm1PeWwwNkNWQmVMUTVKU296WDJHY2dfcmZoM3gzQnJUUXZrMGxjc0JBZWV4SHVLdGpLYmFwUGE0emlUcEdJZHVERGQ4LWpqcWtyYVBQVGFsSWFzMG5WLXVHb3diXzU4RDNGY1VXZm1VUkhvaVVVYnJ1aHpCNVZDb1BwdUdR?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "a04da61e3568",
+   "fuente": "Reporte Índigo",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Otros 157 menores caen en orfandad por feminicidios",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOd2tUY0hhaFZXQ0FmSjczSlA2cjd2OENBbVVVVzE4LXRYeHIwZnVnRnhKanFlTDdqbUJHdVF1UmFOWjVXZUdWNmlpQWNET21ValhvV0FJaUk1eS1pb09BLTRwRV82dGQxNHo1ZG9QaFpBWjRFMkFOYVNqbi1qdU1OUExfREl6Qk41bmlQQXRjUXVXLWhTdzFXRFp0QzVrYVhNVTBQTjRZbGpJT0p2Z1E?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "f1b56ab95a5d",
+   "fuente": "Aristegui Noticias",
+   "estado_fuente": "Nacional",
+   "titulo": "Infancias capturadas: reclutamiento de menores de edad en Colombia y Ecuador | Especial Connectas",
+   "resumen": "",
+   "url": "https://aristeguinoticias.com/0810/investigaciones-especiales/infancias-capturadas-reclutamiento-de-menores-de-edad-en-colombia-y-ecuador-especial-connectas/",
+   "via": "home"
+  },
+  {
+   "id": "df34ae05b119",
+   "fuente": "Milenio",
+   "estado_fuente": "Nacional",
+   "titulo": "Ratero intenta robar mercancía de camioneta en Iztacalco, pero no puede cargarla y huye",
+   "resumen": "",
+   "url": "https://www.milenio.com/policia/ratero-robar-mercancia-camioneta-iztacalco-huye",
+   "via": "pagina"
+  },
+  {
+   "id": "f0c010f642e8",
+   "fuente": "El País México",
+   "estado_fuente": "Nacional",
+   "titulo": "La primera jueza que suspendió la reforma judicial enfrenta ahora al Tribunal de Disciplina: “Esto sucede si incomodas”",
+   "resumen": "Martha Magaña concedió en 2024 un freno a la votación de la emblemática reforma de López Obrador. Fue ignorada por el Congreso, pero Morena anunció un juicio político, una denuncia penal y un proceso administrativo en su contra",
+   "url": "https://elpais.com/mexico/2026-10-08/la-primera-jueza-que-suspendio-la-reforma-judicial-enfrenta-ahora-al-tribunal-de-disciplina-esto-sucede-si-incomodas.html",
+   "via": "rss"
+  },
+  {
+   "id": "b9957193a04e",
+   "fuente": "Uno TV",
+   "estado_fuente": "Nacional",
+   "titulo": "Detienen al Hijo de Fishman por muerte del referee Búho",
+   "resumen": "",
+   "url": "https://www.unotv.com/deportes/detienen-al-hijo-de-fishman-por-muerte-del-referee-buho/",
+   "via": "home"
+  },
+  {
+   "id": "658a7e35c6e4",
+   "fuente": "Excélsior",
+   "estado_fuente": "Nacional",
+   "titulo": "Oaxaca celebra a Eduardo Mata con música en teatros, museos y espacios públicos",
+   "resumen": "",
+   "url": "https://www.excelsior.com.mx/cultura/oaxaca-celebra-eduardo-mata-musica-teatros-museos-y-espacios-publicos",
+   "via": "rss"
+  },
+  {
+   "id": "5eeca59625d5",
+   "fuente": "El Financiero",
+   "estado_fuente": "Nacional",
+   "titulo": "Confianza en partidos políticos cae de 30 a 18% en 2 años, según Latinobarómetro",
+   "resumen": "Las Fuerzas Armadas, entre las instituciones en las que más confían los mexicanos.",
+   "url": "https://www.elfinanciero.com.mx/nacional/2026/10/08/confianza-en-partidos-politicos-cae-de-30-a-18-en-2-anos-segun-latinobarometro/",
+   "via": "rss"
+  },
+  {
+   "id": "e1aedb1c4588",
+   "fuente": "SinEmbargo",
+   "estado_fuente": "Nacional",
+   "titulo": "Digger - Sin Embargo",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBjMFhMUW1mODQyTXdxbEhacGdvaWxsQjRHeFBCSzJFc0JiOE9CclZwX19TMVVnZkhBaWpYc0oxYjVLY0JWOThRSmxMT1MyemNEcGVj?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "ed77c5dec4aa",
+   "fuente": "Infobae México",
+   "estado_fuente": "Nacional",
+   "titulo": "La candidata al Congreso de Arizona, Bernadette Greene-Placentia, denunció que dos hombres la violaron mientras reparaba sus carteles de campaña",
+   "resumen": "La agresión sexual ocurrió el 14 de agosto en un estacionamiento de Sun City; la víctima radicó su reporte ante el Sheriff del Condado de Maricopa y confirmó que seguirá adelante con su postulación",
+   "url": "https://www.infobae.com/estados-unidos/2026/10/08/la-candidata-al-congreso-de-arizona-bernadette-greene-placentia-denuncio-que-dos-hombres-la-violaron-mientras-reparaba-sus-carteles-de-campana/",
+   "via": "rss"
+  },
+  {
+   "id": "b237265970ed",
+   "fuente": "SDPnoticias",
+   "estado_fuente": "Nacional",
+   "titulo": "La dignidad humana comienza bajo un techo propio",
+   "resumen": "En opinión de Jennifer Islas, tener un hogar es un derecho humano fundamental. La vivienda digna es la base para la seguridad, la salud y el desarrollo de cualquier familia.",
+   "url": "https://www.sdpnoticias.com/opinion/la-dignidad-humana-comienza-bajo-un-techo-propio/",
+   "via": "rss"
+  },
+  {
+   "id": "a34609f2d582",
+   "fuente": "N+",
+   "estado_fuente": "Nacional",
+   "titulo": "Exalumno Mata a Una Persona y Hiere a 2 Más en Escuela en Polonia",
+   "resumen": "",
+   "url": "https://www.nmas.com.mx/internacional/polonia-ataque-cuchillo-heridos-wyszkow-exalumno-mata/",
+   "via": "home"
+  },
+  {
+   "id": "0b455c7882b9",
+   "fuente": "La Razón",
+   "estado_fuente": "Nacional",
+   "titulo": "El narco vive entre nosotros",
+   "resumen": "",
+   "url": "https://www.razon.com.mx:443/opinion/2026/10/08/el-narco-vive-entre-nosotros/",
+   "via": "home"
+  },
+  {
+   "id": "81368ffaf8cf",
+   "fuente": "El Universal",
+   "estado_fuente": "Nacional",
+   "titulo": "El Tribunal de Disciplina contra la jueza Martha Magaña",
+   "resumen": "",
+   "url": "https://www.eluniversal.com.mx:443/opinion/javier-martin/el-tribunal-de-disciplina-contra-la-jueza-martha-magana/",
+   "via": "home"
+  },
+  {
+   "id": "4d2e5bf5b18d",
+   "fuente": "AFN Tijuana",
+   "estado_fuente": "Baja California",
+   "titulo": "Transporte de personal chocó contra un poste; ocho personas resultaron heridas",
+   "resumen": "TIJUANA BC 7 DE OCTUBRE DE 2026 (AFN).- Una unidad de transporte de personal se impactó contra al menos seis árboles, un poste de luz y una barda, en ...",
+   "url": "https://www.afntijuana.info/seguridad/182651_transporte_de_personal_choco_contra_un_poste_ocho_personas_resultaron_heridas",
+   "via": "rss"
+  },
+  {
+   "id": "9b462b586de0",
+   "fuente": "Publimetro",
+   "estado_fuente": "Nacional",
+   "titulo": "¡Escándalo en el ring! Detienen a Hijo de Fishman tras matar a réferi con martinete",
+   "resumen": "",
+   "url": "https://www.publimetro.com.mx:443/deportes/2026/10/08/escandalo-en-el-ring-detienen-a-hijo-de-fishman-tras-matar-a-referi-con-martinete/",
+   "via": "home"
+  },
+  {
+   "id": "c123957634c5",
+   "fuente": "Reforma",
+   "estado_fuente": "Nacional",
+   "titulo": "Amenaza a México recorte de gas de EU",
+   "resumen": "Cenagas dijo que EU dejaría de enviar un 20% de gas natural que se recibe por gasoductos, y que México podría con contingencia sólo 3 días.",
+   "url": "https://www.reforma.com/amenaza-a-mexico-recorte-de-gas-de-eu/ar3290536",
+   "via": "rss"
+  },
+  {
+   "id": "e5b0fec4a61b",
+   "fuente": "Diario de Chiapas",
+   "estado_fuente": "Chiapas",
+   "titulo": "Exigen el fin a violencia contra gremio periodístico",
+   "resumen": "Diario de Chiapas - La Verdad Impresa Jorge Pérez Pólito / Diario del Soconusco La Unión de Periódicos, Revistas Impresas y Medios Digitales de Chiapas (UPRICH) exigió el fin de toda forma de violencia contra el gremio periodístico, el respeto al derecho de informar, las garantías para ejercer nuest",
+   "url": "https://diariodechiapas.com/region/exigen-el-fin-a-violencia-contra-gremio-periodistico-2/",
+   "via": "rss"
+  },
+  {
+   "id": "1b5ba8fabe95",
+   "fuente": "La Jornada — Capital",
+   "estado_fuente": "Ciudad de México",
+   "titulo": "Incumplen comerciantes fijos del STC reglas para venta de productos",
+   "resumen": "Comerciantes de locales en el Metro, en su mayoría de espacios cilíndricos, incumplen con las disposiciones del nuevo Reglamento para la Instalación, Operación, Verificación y Seguridad de Locales y/o Espacios Comerciales Asignados y/o Propiedad del Sistema de Transporte Colectivo, al extender su me",
+   "url": "https://www.jornada.com.mx/2026/10/08/capital/029n2cap?partner=rss",
+   "via": "rss"
+  },
+  {
+   "id": "140b57b2dd58",
+   "fuente": "El Diario de Chihuahua",
+   "estado_fuente": "Chihuahua",
+   "titulo": "Amenaza a México recorte de gas de EU",
+   "resumen": "Cenagas dijo que EU dejaría de enviar Cenagas dijo que EU dejaría de enviar un 20% de gas natural que se recibe por gasoductos, y que México podría con contingencia sólo 3 días",
+   "url": "https://eldiariodechihuahua.mx/nacional/2026/oct/08/amenaza-a-mexico-recorte-de-gas-de-eu-845470.html",
+   "via": "rss"
+  },
+  {
+   "id": "bacaf46d8031",
+   "fuente": "Vanguardia",
+   "estado_fuente": "Coahuila",
+   "titulo": "Drogas e intervención: otra fisura en el régimen",
+   "resumen": "AMLO contra el embajador. Hay una división en la sociedad mexicana. Por un lado, el régimen y sus seguidores abrazan el concepto de soberanía como escudo de impunidad de los suyos (frente al sistema de justicia estadounidense). Y, por otro lado, quienes demandan someter a la ley no sólo a cabezas de",
+   "url": "https://vanguardia.com.mx/opinion/drogas-e-intervencion-otra-fisura-en-el-regimen-NA23987921",
+   "via": "rss"
+  },
+  {
+   "id": "4f9e6ab38c9a",
+   "fuente": "El Mexicano",
+   "estado_fuente": "Baja California",
+   "titulo": "Transporte de personal choca contra poste en Santa Fe; reportan cinco lesionados Policiaca | miércoles 07 de octubre",
+   "resumen": "",
+   "url": "https://el-mexicano.com.mx/Noticia/Policiaca/100310/Transporte-de-personal-choca-contra-poste-en-Santa-Fe;-reportan-cinco-lesionados",
+   "via": "home"
+  },
+  {
+   "id": "9fa98a12a94b",
+   "fuente": "El Siglo de Durango",
+   "estado_fuente": "Durango",
+   "titulo": "CICLONES TROPICALES KARLA GONZÁLEZ TREJO Triple amenaza: Todo sobre las 3 tormentas y huracanes activos que podrían impactar México",
+   "resumen": "",
+   "url": "https://www.elsiglodedurango.com.mx/noticia/2026/triple-amenaza-todo-sobre-las-3-tormentas-y-huracanes-activos-que-podrian-impactar-mexico.html",
+   "via": "home"
+  },
+  {
+   "id": "e88196fe2917",
+   "fuente": "Zócalo",
+   "estado_fuente": "Coahuila",
+   "titulo": "Hace 2 horas Operativo Mochila en 2 primarias de PN",
+   "resumen": "",
+   "url": "https://www.zocalo.com.mx/operativo-mochila-en-2-primarias-de-pn/",
+   "via": "home"
+  },
+  {
+   "id": "282ae412edf2",
+   "fuente": "El Sur de Acapulco",
+   "estado_fuente": "Guerrero",
+   "titulo": "Descartan padres que los 43 llegaran a la funeraria de Rancho del Cura en Iguala - El Sur Acapulco suracapulco I Noticias Acapulco Guerrero",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcDUtekNHaUlfaVZtUm9EZ1NkUTdPX2JZcm9XWGZfOGVWbUc0VnhSeTZ6X2Rjclg5cjVneXk5WGJyQUlzMmxCTmlhSWd4UEI4UzdTQ05kSkEyQ1RrWlNLRTJBYXNqYjE2bGpNVWtaZ0UwZU1WZWs2by11dEtrWkJsYVdYOENESXhVVlJfbjF2cVF5Xy04RGZUcVgxZGY3cDBPS09xV2xsV3hIbTVKek5JTzhla0Y?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "6dc5caa9ff75",
+   "fuente": "Periódico AM",
+   "estado_fuente": "Guanajuato",
+   "titulo": "César Ramos pitó final ligada al crimen organizado y prohíben arbitrar en la talacha",
+   "resumen": "",
+   "url": "https://www.am.com.mx/superdeportivo/2026/10/08/cesar-ramos-pito-final-ligada-al-crimen-organizado-y-prohiben-arbitrar-en-la-talacha-1852557.html",
+   "via": "home"
+  },
+  {
+   "id": "d6ecac196c9f",
+   "fuente": "Zona Franca",
+   "estado_fuente": "Guanajuato",
+   "titulo": "Muere detenido tras desvanecerse en separos de San Felipe",
+   "resumen": "",
+   "url": "https://zonafranca.mx/seguridad/muere-detenido-tras-desvanecerse-en-separos-de-san-felipe/",
+   "via": "home"
+  },
+  {
+   "id": "2ca907cf048b",
+   "fuente": "Plaza Juárez",
+   "estado_fuente": "Hidalgo",
+   "titulo": "Se tiró del puente vehicular de Viaducto Río Avenidas y murió",
+   "resumen": "Una tragedia se registró la tarde de este miércoles sobre el Viaducto Río de las Avenidas de Pachuca, donde un hombre por causas desconocidas se habría tirado desde un puente vehicular y ello le costó la existencia, provocando movilización de elementos policíacos y de socorro, además de que la zona ",
+   "url": "https://plazajuarez.mx/se-tiro-del-puente-vehicular-del-viaducto-rio-de-las-avenidas-y-murio/",
+   "via": "rss"
+  },
+  {
+   "id": "da58090335af",
+   "fuente": "La Jornada Morelos",
+   "estado_fuente": "Morelos",
+   "titulo": "Vinculan a proceso a policía de Cuautla por homicidio culposo",
+   "resumen": "La Fiscalía Especializada en Combate a la Corrupción (FECC) obtuvo un auto de vinculación a proceso en contra de Ramón “N”, policía municipal de Cuautla, por su probable responsabilidad en el delito de homicidio culposo por comisión por omisión, en perjuicio de un ciudadano. Al celebrarse la audienc",
+   "url": "https://www.lajornadamorelos.mx/seguridad-y-justicia/vinculan-a-proceso-a-policia-de-cuautla-por-homicidio-culposo/",
+   "via": "rss"
+  },
+  {
+   "id": "bf4e726559e1",
+   "fuente": "Diario de Morelos",
+   "estado_fuente": "Morelos",
+   "titulo": "FGE indaga pistas en redes y mantas por el homicidio de alumnos de la UAEM",
+   "resumen": "La FGE investiga pistas en redes sociales y mantas por el homicidio de alumnos de la UAEM, ocurrido el 26 de septiembre en Chulavista, mientras analiza todas las líneas posibles.",
+   "url": "https://www.diariodemorelos.com/noticias/fge-indaga-pistas-en-redes-mantas-por-homicidio-alumnos-uaem",
+   "via": "rss"
+  },
+  {
+   "id": "02e663512b90",
+   "fuente": "Noventa Grados",
+   "estado_fuente": "Michoacán",
+   "titulo": "Comando ataca a la Guardia Civil en Penjamillo, Michoacán; abren fuego contra autoridades y escapan tras balacera",
+   "resumen": "",
+   "url": "https://www.noventagrados.com.mx/seguridad/comando-ataca-a-la-guardia-civil-en-penjamillo-michoacan-abren-fuego-contra-autoridades-y-escapan-tras-balacera.htm",
+   "via": "home"
+  },
+  {
+   "id": "825ffd4b0641",
+   "fuente": "El Sol de Nayarit",
+   "estado_fuente": "Nayarit",
+   "titulo": "Tres ciclones amenazan con lluvias intensas en 12 estados 8 de Octubre de 2026",
+   "resumen": "",
+   "url": "https://elsoldenayarit.mx/sociedad/tres-ciclones-amenazan-con-lluvias-intensas-en-12-estados",
+   "via": "home"
+  },
+  {
+   "id": "a5ed50c9e29c",
+   "fuente": "Meridiano",
+   "estado_fuente": "Nayarit",
+   "titulo": "Denuncian más casos de violencia de género",
+   "resumen": "Las peticiones de auxilio de mujeres víctimas de agresiones domésticas aumentaron significativamente en la capital del estado durante los últimos dos meses. Este incremento se refleja en las estadísticas de los centros de atención inmediata, donde el número de casos asistidos cada jornada muestra un",
+   "url": "https://meridiano.mx/2026/10/08/denuncian-mas-casos-de-violencia-de-genero/",
+   "via": "rss"
+  },
+  {
+   "id": "11b8c846ca66",
+   "fuente": "Telediario Monterrey",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Carambola entre 4 vehículos deja 5 lesionados en Rodrigo Gómez",
+   "resumen": "",
+   "url": "https://www.telediario.mx/policia/monterrey-carambola-en-avenida-rodrigo-gomez-deja-5-lesionados",
+   "via": "pagina"
+  },
+  {
+   "id": "316130d1a7da",
    "fuente": "El Porvenir (justicia)",
    "estado_fuente": "Nuevo León",
-   "titulo": "Dispara policía a presunto asaltante tras persecución",
+   "titulo": "Fallece al estrellar su moto en barandal de protección",
    "resumen": "",
-   "url": "https://elporvenir.mx/justicia/dispara-policia-a-presunto-asaltante-tras-persecucion/1032617",
+   "url": "https://elporvenir.mx/justicia/fallece-al-estrellar-su-moto-en-barandal-de-proteccion/1032474",
    "via": "pagina"
+  },
+  {
+   "id": "9aa2df71d580",
+   "fuente": "Posta",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Policías de Neza son señalados por agredir a presunto ladrón en Palacio Municipal",
+   "resumen": "",
+   "url": "https://www.posta.com.mx/edomex/agresion-de-policias-en-nezahualcoyotl-video-revela-detencion-violenta/vl2264062",
+   "via": "home"
+  },
+  {
+   "id": "af9224063f7f",
+   "fuente": "El Imparcial de Oaxaca",
+   "estado_fuente": "Oaxaca",
+   "titulo": "Alerta máxima por colapso en la vía Jalapa de Díaz-Huautla",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPU2d4eWh4c3N6V2UtbEh1d0hCTllxX01sblIwampkeGgwenI3c25ZYjJFb2FPdFFYbS12WDlBSUdZYnJraU9wSnEwLUEtRWZETklwZ2pzamJSUk9EWERpZFkxQzVCbWFJYVMzc21OSjVMaVpTV0U0Nmh6T05vZzgyeXhacGdMdjZ5V3pwX2x0cEdNYThlcXJBQldEdjI?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "df410e5c1eed",
+   "fuente": "El Sol de México (Monterrey)",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Se gradúan 22 agentes del Ministerio Público de maestría en Derecho Penal",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQMW1vVmx3S2x0Z3lUTGRvbTNKcTFmZGlSRzVIUWU3aFQ3ZWJUdzVkWFM1LTRuaDRvOGRaS1hXMFBkb0Vha1p4UzAybks1Wmdua1IxcHpwRVBXdENicVlUb3JWQWlLNnh2SFVBaFJzOGEtSnJRcG42MFZ2Y3FSdGx2VnZXbHFJX0VYQi05NTU2WU9fY0NCZDU4MmhyTTdGRTdsMmp3NHQzakVZUXUzZFM5OHZ5ek42TXlLS3B5ZlZrTkg2em9KSGFuakh3cGkwU21fZmRvZDhVOUptM1N6VHdnSG5GaHBKNnFhbWdJ?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "89a8df902940",
+   "fuente": "NVI Noticias",
+   "estado_fuente": "Oaxaca",
+   "titulo": "Golpe a la ASAEO: caen seis por presunta extorsión y cobro de piso en Xoxocotlán",
+   "resumen": "",
+   "url": "https://www.nvinoticias.com/apps/delitos/golpe-la-asaeo-caen-seis-por-presunta-extorsion-y-cobro-de-piso-en-xoxocotlan/194376",
+   "via": "home"
+  },
+  {
+   "id": "30409cc240ee",
+   "fuente": "El Universal San Luis",
+   "estado_fuente": "San Luis Potosí",
+   "titulo": "Villa Gutiérrez advierte que no habrá tolerancia para bailes callejeros durante las festividades de Día de Muertos en la capital de SLP 11:33",
+   "resumen": "",
+   "url": "https://sanluis.eluniversal.com.mx/seguridad/villa-gutierrez-advierte-que-no-habra-tolerancia-para-bailes-callejeros-durante-las-festividades-de-dia-de-muertos-en-la-capital-de-slp/",
+   "via": "home"
+  },
+  {
+   "id": "9fbdee398078",
+   "fuente": "Pulso",
+   "estado_fuente": "San Luis Potosí",
+   "titulo": "Municipio amplía controversia por obras detenidas SLP Rolando Morales Falta coordinación con el gobierno para desarrollar proyectos, dice el alcalde Enrique Galindo",
+   "resumen": "",
+   "url": "https://pulsoslp.com.mx/slp/obra-publica-sin-coordinacion-afirma-enrique-galindo/2093521",
+   "via": "home"
+  },
+  {
+   "id": "5266fdc55f2a",
+   "fuente": "Noroeste",
+   "estado_fuente": "Sinaloa",
+   "titulo": "El cadáver fue abandonado a un costado del salón del Sindicato de Trabajadores al Servicio del Ayuntamiento de Culiacán. ( Fotos: Noroeste )",
+   "resumen": "",
+   "url": "https://www.noroeste.com.mx/seguridad/asesinan-a-un-hombre-y-le-dejan-cartulina-en-la-colonia-5-de-mayo-en-culiacan-CG26317454",
+   "via": "home"
+  },
+  {
+   "id": "ba47f207a4e5",
+   "fuente": "Diario del Yaqui",
+   "estado_fuente": "Sonora",
+   "titulo": "Arqui Juve informa vinculación a proceso por presunta usurpación de profesión y fraude en obra",
+   "resumen": "",
+   "url": "https://diariodelyaqui.mx/farandula/arqui-juve-informa-vinculacion-a-proceso-por-presunta-usurpacion-de-profesion-y-fraude-en-obra/145244",
+   "via": "home"
+  },
+  {
+   "id": "1ed0a3a79642",
+   "fuente": "Proyecto Puente",
+   "estado_fuente": "Sonora",
+   "titulo": "Persiste desde 2021 preocupación ciudadana por calles, inseguridad y drogadicción en Hermosillo, destaca informe de HCV",
+   "resumen": "Calles, inseguridad y drogadicción persisten desde 2021 entre las principales preocupaciones ciudadanas en Hermosillo, según informe de HCV. The post Persiste desde 2021 preocupación ciudadana por calles, inseguridad y drogadicción en Hermosillo, destaca informe de HCV appeared first on Proyecto Pue",
+   "url": "https://proyectopuente.com.mx/2026/10/08/persiste-desde-2021-preocupacion-ciudadana-por-calles-inseguridad-y-drogadiccion-en-hermosillo-destaca-informe-de-hcv/",
+   "via": "rss"
+  },
+  {
+   "id": "3109adbf0c45",
+   "fuente": "XEVT",
+   "estado_fuente": "Tabasco",
+   "titulo": "Formaliza la dirigente del PAN Tabasco denuncia ante fiscalía por amenazas",
+   "resumen": "Insiste en no solicitar protección al confiar que el asunto no escalará a más",
+   "url": "https://www.xevt.com/primeraplana/formaliza-la-dirigente-del-pan-tabasco-denuncia-ante-fiscalia-por-amenazas/445920",
+   "via": "rss"
+  },
+  {
+   "id": "eb0d8c885a41",
+   "fuente": "Línea Directa",
+   "estado_fuente": "Sinaloa",
+   "titulo": "Querétaro niega acuerdo con EU para participación de agentes en academia policial",
+   "resumen": "El gobernador aseguró que la presencia del embajador Ronald Johnson en la ceremonia fue únicamente protocolaria y que el proyecto seguirá los procesos federales",
+   "url": "https://lineadirectaportal.com/mexico/queretaro-niega-acuerdo-con-eu-para-participacion-de-agentes-en-academia-policial-2026-10-07__1716268",
+   "via": "rss"
+  },
+  {
+   "id": "166068ef4e39",
+   "fuente": "ABC Tlaxcala",
+   "estado_fuente": "Tlaxcala",
+   "titulo": "RESPALDA COPARMEX TLAXCALA RECOMENDACIONES DEL FMI PARA CREAR UN CONSEJO FISCAL E IMPULSAR LA INVERSIÓN",
+   "resumen": "El sindicato patronal coincide con el organismo internacional en que la eficiencia y reorientación del gasto deben sustituir al endeudamiento",
+   "url": "https://abctlax.com/respalda-coparmex-tlaxcala-recomendaciones-del-fmi-para-crear-un-consejo-fiscal-e-impulsar-la-inversion/",
+   "via": "rss"
+  },
+  {
+   "id": "3c1228080934",
+   "fuente": "El Horizonte",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Investiga Aguascalientes presuntas amenazas contra obispo",
+   "resumen": "",
+   "url": "https://www.elhorizonte.mx/nacional/investiga-aguascalientes-presuntas-amenazas-contra-obispo/6911674000",
+   "via": "home"
+  },
+  {
+   "id": "b37f42bda7aa",
+   "fuente": "AVC Noticias",
+   "estado_fuente": "Veracruz",
+   "titulo": "Asesinan a padre e hijo mientras pastoreaban ganado en Jalacingo",
+   "resumen": "",
+   "url": "https://avcnoticias.com.mx/noticias-veracruz/articulo/383956/asesinan-a-padre-e-hijo-mientras-pastoreaban-ganado-en-jalacingo.html",
+   "via": "home"
+  },
+  {
+   "id": "0394875099ab",
+   "fuente": "Entorno Informativo",
+   "estado_fuente": "Sonora",
+   "titulo": "Rescatan a adolescente privado de la libertad en el ejido El Sapo en Hermosillo",
+   "resumen": "El joven, de 17 años, alcanzó a pedir auxilio y dar a conocer su ubicación; sus captores lograron escapar tras el operativo de elementos de la AMIC Ivanova de los Reyes A través del trabajo coordinado de elementos de la Agencia Ministerial de Investigación Criminal (AMIC) y la Célula de",
+   "url": "https://entornoinformativo.com.mx/rescatan-a-adolescente-privado-de-la-libertad-en-el-ejido-el-sapo-en-hermosillo/",
+   "via": "rss"
+  },
+  {
+   "id": "758afbd87f75",
+   "fuente": "NTR Zacatecas",
+   "estado_fuente": "Zacatecas",
+   "titulo": "Sentencian a tres por hechos delictivos en Cuauhtémoc",
+   "resumen": "",
+   "url": "https://ntrzacatecas.com/2026/10/sentencian-a-tres-por-hechos-delictivos-en-cuauhtemoc/",
+   "via": "home"
+  },
+  {
+   "id": "0201fb761c8f",
+   "fuente": "INFO7",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Ataque contra hermanos deja un muerto en El Carmen Los hechos fueron reportados durante la madrugada sobre la calle Golondrinas, entre Gorrión y Tordo, donde fueron localizados los dos hermanos tras la agresión.",
+   "resumen": "",
+   "url": "https://info7.mx/nuevoleon/ataque-contra-hermanos-deja-un-muerto-en-el-carmen/7927211265",
+   "via": "home"
+  },
+  {
+   "id": "6d5febb020f1",
+   "fuente": "Aristegui Noticias",
+   "estado_fuente": "Nacional",
+   "titulo": "Detienen a funcionaria de Oaxaca por presunta extorsión y cobro de piso",
+   "resumen": "",
+   "url": "https://aristeguinoticias.com/0710/mexico/detienen-a-funcionaria-de-oaxaca-por-presunta-extorsion-y-cobro-de-piso/",
+   "via": "home"
+  },
+  {
+   "id": "eaae17d6f6a4",
+   "fuente": "Milenio",
+   "estado_fuente": "Nacional",
+   "titulo": "Explosión de polvorín deja un joven muerto en Tlaxcala",
+   "resumen": "",
+   "url": "https://www.milenio.com/policia/explosion-polvorin-deja-joven-sin-vida-tlaxcala",
+   "via": "pagina"
+  },
+  {
+   "id": "06aaa95a51f1",
+   "fuente": "El País México",
+   "estado_fuente": "Nacional",
+   "titulo": "La Administración que busca deportar niños migrantes será también su abogado",
+   "resumen": "El Departamento de Salud crea un cuerpo federal para representar a miles de menores no acompañados",
+   "url": "https://elpais.com/us/migracion/2026-10-08/la-administracion-que-busca-deportar-ninos-migrantes-sera-tambien-su-abogado.html",
+   "via": "rss"
+  },
+  {
+   "id": "4b912a4309f2",
+   "fuente": "Uno TV",
+   "estado_fuente": "Nacional",
+   "titulo": "Huachicol fiscal en México: calculan negocio de 3.1 billones de pesos",
+   "resumen": "",
+   "url": "https://www.unotv.com/nacional/huachicol-fiscal-en-mexico-calculan-negocio-de-3-1-billones-de-pesos/",
+   "via": "home"
+  },
+  {
+   "id": "b212102b080e",
+   "fuente": "El Financiero",
+   "estado_fuente": "Nacional",
+   "titulo": "Alguien está provocando que se hagan osos en Palacio",
+   "resumen": "Después del choque entre la Federación y el gobierno panista de Chihuahua por la presencia de agentes estadounidenses en un operativo de seguridad, ¿no tendrían que estar varias instancias del gobierno federal atentas a las actividades del representante de Trump en México en los estados?",
+   "url": "https://www.elfinanciero.com.mx/opinion/mario-carbonell/2026/10/08/alguien-esta-provocando-que-se-hagan-osos-en-palacio/",
+   "via": "rss"
+  },
+  {
+   "id": "6c720d805ac0",
+   "fuente": "Infobae México",
+   "estado_fuente": "Nacional",
+   "titulo": "Una familia hispana quedó gravemente herida tras ser atropellada durante una persecución policial en Nueva Jersey",
+   "resumen": "La bebé de tres meses y sus padres fueron atropellados en pleno barrio residencial de Linden mientras otro conductor escapaba de un patrullero. La fiscal general del estado ya abrió una investigación formal",
+   "url": "https://www.infobae.com/estados-unidos/2026/10/08/una-familia-hispana-quedo-gravemente-herida-tras-ser-atropellada-durante-una-persecucion-policial-en-nueva-jersey/",
+   "via": "rss"
+  },
+  {
+   "id": "c907d97aaeb5",
+   "fuente": "SDPnoticias",
+   "estado_fuente": "Nacional",
+   "titulo": "Presidenta, los gobernadores no son sus empleados",
+   "resumen": "Verónica Malo reflexiona sobre la polémica que generó la academia policial de Querétaro, por la que el gobernador Mauricio Kuri y el embajador de EU, Ronald Johnson, colocaron la primera piedra.",
+   "url": "https://www.sdpnoticias.com/opinion/presidenta-los-gobernadores-no-son-sus-empleados/",
+   "via": "rss"
+  },
+  {
+   "id": "f69f0cafad16",
+   "fuente": "El Universal",
+   "estado_fuente": "Nacional",
+   "titulo": "La violencia también se diseña en las redes",
+   "resumen": "",
+   "url": "https://www.eluniversal.com.mx:443/opinion/jorge-nader-kuri/la-violencia-tambien-se-disena-en-las-redes/",
+   "via": "home"
+  },
+  {
+   "id": "8247b01ab84c",
+   "fuente": "AFN Tijuana",
+   "estado_fuente": "Baja California",
+   "titulo": "Detienen a un hombre armado y con chalecos balísticos",
+   "resumen": "TIJUANA BC 7 DE OCTUBRE DE 2026 (AFN).- Agentes de la Policía Municipal detuvieron a un hombre identificado como Eduardo, en posesión de un fusil ...",
+   "url": "https://www.afntijuana.info/seguridad/182650_detienen_a_un_hombre_armado_y_con_chalecos_balisticos",
+   "via": "rss"
+  },
+  {
+   "id": "bf90ca94388d",
+   "fuente": "La Jornada — Capital",
+   "estado_fuente": "Ciudad de México",
+   "titulo": "Decomisa el IMPI en Tepito mercancía ilegal valuada en casi 2 millones de pesos",
+   "resumen": "El Instituto Mexicano de la Propiedad Industrial (IMPI), en coordinación con la Secretaría de Seguridad Ciudadana local y la Secretaría de Marina, realizó un operativo en Tepito, donde aseguró 9 mil 18 piezas de mercancía deportiva apócrifa con valor de un millón 911 mil 550 pesos.",
+   "url": "https://www.jornada.com.mx/2026/10/08/capital/029n3cap?partner=rss",
+   "via": "rss"
+  },
+  {
+   "id": "7f8b2846153e",
+   "fuente": "Zócalo",
+   "estado_fuente": "Coahuila",
+   "titulo": "Hace 2 horas Vinculan a proceso a dos por robo en rancho",
+   "resumen": "",
+   "url": "https://www.zocalo.com.mx/vinculan-a-proceso-a-dos-por-robo-en-rancho/",
+   "via": "home"
+  },
+  {
+   "id": "1b6849b741a0",
+   "fuente": "El Sur de Acapulco",
+   "estado_fuente": "Guerrero",
+   "titulo": "Reforzó la búsqueda de los vecinos de El Balcón secuestrados, dice el gobierno estatal - El Sur Acapulco suracapulco I Noticias Acapulco Guerrero",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQMGx0ei1Lb2ZfWHhTamNJeEI0eGpzTFVXZ1VRU3B6QkM4OW1jWklSTGIzY3FENG1iZWRVYkhZTDZuWDRGeW8yRHpWV1JLXzluQTFwTm5UYWU5YW9BcXZULU56c3lZN2VOV1poTkNlZVJrTFk2UU9kRjhLVXpXel9pdEdPTERoNDNrXzFxdmZlOVJiZWtTcGFHTVhSZi1QdFlKMldCd1BZWmFfRWdsaGg5clBlOFYzU3ZYcUlB?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "837c05026f18",
+   "fuente": "Zona Franca",
+   "estado_fuente": "Guanajuato",
+   "titulo": "Balean a mujer afuera de un domicilio en Las Américas",
+   "resumen": "",
+   "url": "https://zonafranca.mx/seguridad/balean-a-mujer-afuera-de-un-domicilio-en-las-americas/",
+   "via": "home"
+  },
+  {
+   "id": "200256817d2b",
+   "fuente": "Plaza Juárez",
+   "estado_fuente": "Hidalgo",
+   "titulo": "El popular cantautor argentino Piero fallece a los 81 años en Buenos Aires",
+   "resumen": "El cantautor argentino Piero, una de las grandes figuras de la música popular latinoamericana, falleció este miércoles a los 81 años en Buenos Aires, informaron amigos y familiares del reconocido artista, quien vivió en España y Colombia. «Con profundo dolor, comunicamos el fallecimiento de nuestro ",
+   "url": "https://plazajuarez.mx/el-popular-cantautor-argentino-piero-fallece-a-los-81-anos-en-buenos-aires/",
+   "via": "rss"
+  },
+  {
+   "id": "8462af8b0a8c",
+   "fuente": "La Jornada Morelos",
+   "estado_fuente": "Morelos",
+   "titulo": "Adulando a Trump: INTELECTUALES presumen IMBECILIDAD",
+   "resumen": "Un presidente bombardea a lancheros venezolanos en el Mar Caribe. Acusa a Nicolás Maduro de comandar el Cartel de los Soles y, usando esa infamia, lo secuestra junto con su esposa invadiendo y bombardeando ese país. Calumnia a Irán diciendo que fabrica bombas nucleares, así que lanza bombas y mata a",
+   "url": "https://www.lajornadamorelos.mx/opinion/adulando-a-trump-intelectuales-presumen-imbecilidad/",
+   "via": "rss"
+  },
+  {
+   "id": "fde5e8521a7e",
+   "fuente": "Diario de Morelos",
+   "estado_fuente": "Morelos",
+   "titulo": "Víctimas de la explosión en Las Granjas reciben 9.4 mdp tras acuerdos con la empresa y su aseguradora",
+   "resumen": "Los recursos fueron entregados como parte del proceso de reparación acordado con la empresa y la aseguradora.",
+   "url": "https://www.diariodemorelos.com/noticias/victimas-explosion-en-granjas-reciben-94-mdp-acuerdos-con-empresa-su-aseguradora",
+   "via": "rss"
+  },
+  {
+   "id": "66c33e71fc23",
+   "fuente": "Noventa Grados",
+   "estado_fuente": "Michoacán",
+   "titulo": "Daniel Manzo pide que un juez federal ordene la entrega de los celulares de Carlos Manzo",
+   "resumen": "",
+   "url": "https://www.noventagrados.com.mx/politica/daniel-manzo-pide-que-un-juez-federal-ordene-la-entrega-de-los-celulares-de-carlos-manzo.htm",
+   "via": "home"
+  },
+  {
+   "id": "0d553b794924",
+   "fuente": "El Porvenir (justicia)",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Encuentran cadáver con golpes en el lecho de un arroyo",
+   "resumen": "",
+   "url": "https://elporvenir.mx/justicia/encuentran-cadaver-con-golpes-en-el-lecho-de-un-arroyo/1032497",
+   "via": "pagina"
+  },
+  {
+   "id": "7c01927caf11",
+   "fuente": "Posta",
+   "estado_fuente": "Nuevo León",
+   "titulo": "¿Por qué atropellan a más de cuatro personas al día en Nuevo León? Esto dicen las cifras",
+   "resumen": "",
+   "url": "https://www.posta.com.mx/nuevo-leon/por-que-atropellan-a-mas-de-cuatro-personas-al-dia-en-nuevo-leon-esto-dicen-las-cifras-/v-vl2263892",
+   "via": "home"
+  },
+  {
+   "id": "a59111c6d08f",
+   "fuente": "El Imparcial de Oaxaca",
+   "estado_fuente": "Oaxaca",
+   "titulo": "Oaxaca y la urgencia de reconstruir desde lo local",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQX2dzYy0xYTAxUF9tQVVuWVB5UEtTNXJ6UEh2NG04UER2TW1sX3NaZzRjMEJ3MTI4S2tnd1hlUVc3MlhzQ1BOMWgwMGJaQmFhcDdOT2V0T2ZqWW5Lb0xJRnEwOVJIc2xUZzdOU3hzdHpiUmJYQnV4a3ZTNGFINmY3MlB2RHdIeFNnTC1zZ0dXdw?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "e9e0daae4528",
+   "fuente": "Pulso",
+   "estado_fuente": "San Luis Potosí",
+   "titulo": "Denuncian violencia de género en Derecho SLP Ana Paula Vázquez Acusan a la Facultad de la UASLP de encubrir a presuntos acosadores",
+   "resumen": "",
+   "url": "https://pulsoslp.com.mx/slp/protesta-en-uaslp-por-denuncias-en-facultad-derecho/2093523",
+   "via": "home"
+  },
+  {
+   "id": "946a9696d256",
+   "fuente": "Noroeste",
+   "estado_fuente": "Sinaloa",
+   "titulo": "Muere réferi “El Búho” durante función de lucha libre en Mineral de la Reforma, Hidalgo. ( Foto: Especial )",
+   "resumen": "",
+   "url": "https://www.noroeste.com.mx/deportes/mas-deportes/tragedia-en-la-lucha-libre-muere-el-referi-el-buho-tras-recibir-un-martinete-CG26316501",
+   "via": "home"
+  },
+  {
+   "id": "79bbd6cb5ab8",
+   "fuente": "Proyecto Puente",
+   "estado_fuente": "Sonora",
+   "titulo": "Fiscalía de Sonora no está de acuerdo con que niñera lleve proceso en libertad tras ser acusada por ahogamiento de niña",
+   "resumen": "@elalbertomedina 🔴 Van a INVESTIGAR declaraciones de la mamá de la niña que mur*ó ahog*da en #Guaymas bajo el cuidado de una niñera. 🗣️ ¡Es una buena noticia para el caso! La Fiscalía de #Sonora asegura que tomará en cuenta la entrevista que hicimos en #ProyectoPuente ♬ sonido original – Luis Albert",
+   "url": "https://proyectopuente.com.mx/2026/10/08/fiscalia-de-sonora-no-esta-de-acuerdo-con-que-ninera-lleve-proceso-en-libertad-tras-ser-acusada-por-ahogamiento-de-nina/",
+   "via": "rss"
+  },
+  {
+   "id": "1293e4580187",
+   "fuente": "XEVT",
+   "estado_fuente": "Tabasco",
+   "titulo": "Roban en la Parroquia La Sagrada Familia de Indeco",
+   "resumen": "Exhortan a los feligreses a tomar precauciones",
+   "url": "https://www.xevt.com/primeraplana/roban-en-la-parroquia-la-sagrada-familia-de-indeco/445942",
+   "via": "rss"
+  },
+  {
+   "id": "036ed8f0b14d",
+   "fuente": "ABC Tlaxcala",
+   "estado_fuente": "Tlaxcala",
+   "titulo": "PREPARAN TLAXCALA Y VERACRUZ CONVENIO INTERESTATAL PARA BLINDAR CARRETERAS Y COMBATIR BANDAS CRIMINALES",
+   "resumen": "Las gobernadoras de ambas entidades sostendrán una reunión el próximo jueves para formalizar los acuerdos de colaboración en materia de",
+   "url": "https://abctlax.com/preparan-tlaxcala-y-veracruz-convenio-interestatal-para-blindar-carreteras-y-combatir-bandas-criminales/",
+   "via": "rss"
+  },
+  {
+   "id": "76af75dda5a5",
+   "fuente": "El Horizonte",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Ejecuta Texas a reo tras fallido intento contra Christa Pike",
+   "resumen": "",
+   "url": "https://www.elhorizonte.mx/internacional/ejecuta-texas-a-reo-tras-fallido-intento-contra-christa-pike/5872504279",
+   "via": "home"
+  },
+  {
+   "id": "3c2d6c5816c7",
+   "fuente": "Entorno Informativo",
+   "estado_fuente": "Sonora",
+   "titulo": "Fallece motociclista tras choque con tráiler cuando recibía atención médica",
+   "resumen": "El joven fue identificado como Alán, quien era paramédico del Centro Regulador de Urgencias Médicas Redacción Entorno Informativo El motociclista impactado por un tractocamión la noche del martes en el bulevar García Morales, perdió la vida cuando era atendido en un nosocomio, mismo que era paramédi",
+   "url": "https://entornoinformativo.com.mx/fallece-motociclista-tras-choque-con-trailer-cuando-recibia-atencion-medica/",
+   "via": "rss"
+  },
+  {
+   "id": "f98a934d0f53",
+   "fuente": "INFO7",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Detienen a tres con más de 100 envoltorios de droga en Juárez",
+   "resumen": "",
+   "url": "https://info7.mx/nuevoleon/detienen-a-tres-con-mas-de-100-envoltorios-de-droga-en-juarez/8587809492",
+   "via": "home"
+  },
+  {
+   "id": "776cc4501bdb",
+   "fuente": "Milenio",
+   "estado_fuente": "Nacional",
+   "titulo": "Encuentran a hombre sin vida en su casa de Tampico; habría sido golpeado con un block",
+   "resumen": "",
+   "url": "https://www.milenio.com/policia/hallan-hombre-vida-tampico-investigan-homicidio",
+   "via": "pagina"
+  },
+  {
+   "id": "0936d4b0b1eb",
+   "fuente": "El País México",
+   "estado_fuente": "Nacional",
+   "titulo": "De policía a empleado de una tienda: el cambio de vida de un ‘dreamer’ que entregó su placa",
+   "resumen": "Édgar Vázquez Silva, un beneficiario del programa DACA, dejó de ser agente del orden porque le exigieron ser ciudadano estadounidense o residente legal",
+   "url": "https://elpais.com/us/migracion/2026-10-08/de-policia-a-empleado-de-una-tienda-el-cambio-de-vida-de-un-dreamer-que-entrego-su-placa.html",
+   "via": "rss"
+  },
+  {
+   "id": "5c0f10d23174",
+   "fuente": "Uno TV",
+   "estado_fuente": "Nacional",
+   "titulo": "Madre afirma que 7 recién nacidos murieron en Hospital Militar de CDMX por posible bacteria Klebsiella",
+   "resumen": "",
+   "url": "https://www.unotv.com/nacional/madre-afirma-7-recien-nacidos-murieron-hospital-militar-cdmx-bacteria-klebsiella/",
+   "via": "home"
+  },
+  {
+   "id": "c0f746229c0f",
+   "fuente": "Infobae México",
+   "estado_fuente": "Nacional",
+   "titulo": "Un jurado condena a una startup de taxis aéreos a pagar USD 116,9 millones por robo de secretos comerciales",
+   "resumen": "El veredicto, emitido el 2 de octubre en Tampa, determinó que la empresa violó un acuerdo de confidencialidad al usar diseños ajenos para desarrollar componentes propios en solo dos años",
+   "url": "https://www.infobae.com/estados-unidos/2026/10/08/un-jurado-condena-a-una-startup-de-taxis-aereos-a-pagar-usd-1169-millones-por-robo-de-secretos-comerciales/",
+   "via": "rss"
+  },
+  {
+   "id": "106f593f7641",
+   "fuente": "La Jornada — Capital",
+   "estado_fuente": "Ciudad de México",
+   "titulo": "Incierta aún, la causa de la muerte de mujer cerca de una estación del Metro",
+   "resumen": "Luego de la muerte de una mujer de la tercera edad en inmediaciones de la estación Lázaro Cárdenas del Metro, las autoridades determinaron que la víctima no tropezó ni se golpeó en la cabeza, sino que se desvaneció de manera súbita cuando se encontraba en una parada de autobús.",
+   "url": "https://www.jornada.com.mx/2026/10/08/capital/028n2cap?partner=rss",
+   "via": "rss"
+  },
+  {
+   "id": "da12960bab87",
+   "fuente": "Zócalo",
+   "estado_fuente": "Coahuila",
+   "titulo": "Hace 2 horas Blindan la seguridad para el Rodeo Saltillo",
+   "resumen": "",
+   "url": "https://www.zocalo.com.mx/blindan-la-seguridad-para-el-rodeo-saltillo/",
+   "via": "home"
+  },
+  {
+   "id": "29ea8df6a750",
+   "fuente": "Zona Franca",
+   "estado_fuente": "Guanajuato",
+   "titulo": "Muere uno de los dos hombres atacados a balazos en la colonia Reforma de Silao",
+   "resumen": "",
+   "url": "https://zonafranca.mx/seguridad/muere-uno-de-los-dos-hombres-atacados-a-balazos-en-la-colonia-reforma-de-silao/",
+   "via": "home"
+  },
+  {
+   "id": "2703104aadb2",
+   "fuente": "Plaza Juárez",
+   "estado_fuente": "Hidalgo",
+   "titulo": "Apareció una mujer sin vida, en una barranca de Mixquiahuala",
+   "resumen": "Un macabro hallazgo se registró la mañana de este miércoles, ya que en el fondo de una barranca localizada en la colonia de La Peña, perteneciente al municipio de Mixquiahuala, vecinos descubrieron el cuerpo sin vida de una joven mujer, que hasta el momento permanece en calidad de desconocida. Se sa",
+   "url": "https://plazajuarez.mx/aparecio-una-mujer-sin-vida-en-una-barranca-de-mixquiahuala/",
+   "via": "rss"
+  },
+  {
+   "id": "0d9f52cd9a30",
+   "fuente": "La Jornada Morelos",
+   "estado_fuente": "Morelos",
+   "titulo": "Represión arriba, alegría abajo",
+   "resumen": "“Comenzó el proceso electoral, en que un grupo de criminales se disputa el poder político con otros grupos de criminales”. Expresó el subcomandante Moisés, del EZLN, en el CIDECI Unitierra, San Cristóbal de las Casas. Se trata de continuar, ahora vestidos de Verde, sus negocios millonarios, como el ",
+   "url": "https://www.lajornadamorelos.mx/opinion/represion-arriba-alegria-abajo/",
+   "via": "rss"
+  },
+  {
+   "id": "615a97e97779",
+   "fuente": "Diario de Morelos",
+   "estado_fuente": "Morelos",
+   "titulo": "Citarán al fiscal Fernando Blumenkron ante el Congreso de Morelos el 28 de octubre",
+   "resumen": "La fecha se acordó con los coordinadores parlamentarios y el fiscal comparecerá en la última sesión ordinaria de octubre ante el Congreso de Morelos.",
+   "url": "https://www.diariodemorelos.com/noticias/citaran-fiscal-fernando-blumenkron-congreso-morelos-28-octubre",
+   "via": "rss"
+  },
+  {
+   "id": "ad34399e23d6",
+   "fuente": "Noventa Grados",
+   "estado_fuente": "Michoacán",
+   "titulo": "Rescatan a cacomixtle lesionado en estacionamiento de hospital en Álvaro Obregón",
+   "resumen": "",
+   "url": "https://www.noventagrados.com.mx/seguridad/rescatan-a-cacomixtle-lesionado-en-estacionamiento-de-hospital-en-Alvaro-obregon.htm",
+   "via": "home"
+  },
+  {
+   "id": "47f2a78302f7",
+   "fuente": "El Porvenir (justicia)",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Pierde la vida al intentar cruzar Avenida Revolución",
+   "resumen": "",
+   "url": "https://elporvenir.mx/justicia/pierde-la-vida-al-intentar-cruzar-avenida-revolucion/1032483",
+   "via": "pagina"
+  },
+  {
+   "id": "b65d54f09cd2",
+   "fuente": "Posta",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Drogas sintéticas transforman el narcotráfico mexicano y estas son las sustancias que se producen en México",
+   "resumen": "",
+   "url": "https://www.posta.com.mx/mexico/drogas-sinteticas-transforman-el-narcotrafico-mexicano-y-estas-son-las-sustancias-que-se-producen-en-mexico/vl2263978",
+   "via": "home"
+  },
+  {
+   "id": "b8864517bb38",
+   "fuente": "El Imparcial de Oaxaca",
+   "estado_fuente": "Oaxaca",
+   "titulo": "Niega la capital autorización para nuevo supermercado",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVTlUX3AyMEd1Nzc1WmNwRHZpUnB5YkZ5YThQRlU3SHBJYkdoX0x0bDBLa1ptaThRU20yODBkQnYzTnZZZl8tQ0g5WURaMnZIZlNIT0d4ZUFJaU1FSk1wYk9OMHB2UVdRN2dTWTlwX2ZqaWpFaVJmOWNkT2lnTjE4R0dkVVNtazJOdkQtcXQxaE5GZkZucENz?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "c7b9e029f12b",
+   "fuente": "Noroeste",
+   "estado_fuente": "Sinaloa",
+   "titulo": "Dan fuerte golpe a la piratería en Tepito; aseguran 9 mil 018 piezas, con un valor estimado de 1 millón 911 mil 550 pesos",
+   "resumen": "",
+   "url": "https://www.noroeste.com.mx/nacional/dan-fuerte-golpe-a-la-pirateria-en-tepito-aseguran-9-mil-018-piezas-con-un-valor-estimado-de-1-millon-911-mil-550-pesos-JG26316438",
+   "via": "home"
+  },
+  {
+   "id": "ba4863bb0606",
+   "fuente": "XEVT",
+   "estado_fuente": "Tabasco",
+   "titulo": "Mi respuesta a su envidia y a su coraje es mi vida: Salinas Pliego responde a AMLO",
+   "resumen": "Aseguró que le da gusto saber que lo tiene en sus pensamientos y que sigue sintiendo envidia\"",
+   "url": "https://www.xevt.com/primeraplana/mi-respuesta-a-su-envidia-y-a-su-coraje-es-mi-vida-salinas-pliego-responde-a-amlo/445959",
+   "via": "rss"
   },
   {
    "id": "3495cb04476d",
@@ -858,6 +1569,204 @@
    "via": "home"
   },
   {
+   "id": "b58c7ff1a3dc",
+   "fuente": "Entorno Informativo",
+   "estado_fuente": "Sonora",
+   "titulo": "Agentes preventivos Atrapan a cuatro individuos por narcomenudeo",
+   "resumen": "Jaime Martín, apodado “Memín”, de 60 años, Conrado Alberto, de 42; Luis Baltazar, de 25 y Ramón Enrique, de 56, fueron sorprendidos con 18 dosis de crystal y una de mariguana Redacción Entorno Informativo Agentes municipales en distintos operativos efectuados en las últimas horas aseguraron a cuatro",
+   "url": "https://entornoinformativo.com.mx/agentes-preventivos-atrapan-a-cuatro-individuos-por-narcomenudeo/",
+   "via": "rss"
+  },
+  {
+   "id": "6c4492dabb4e",
+   "fuente": "INFO7",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Muere joven tras casi tres meses internado por choque vial",
+   "resumen": "",
+   "url": "https://info7.mx/nuevoleon/muere-joven-tras-casi-tres-meses-internado-por-choque-vial/9045549987",
+   "via": "home"
+  },
+  {
+   "id": "6c58589c7742",
+   "fuente": "Milenio",
+   "estado_fuente": "Nacional",
+   "titulo": "Hallan mujer sin vida al fondo de una barranca en Hidalgo",
+   "resumen": "",
+   "url": "https://www.milenio.com/policia/hallan-mujer-vida-fondo-barranca-hidalgo",
+   "via": "pagina"
+  },
+  {
+   "id": "2f97c1b6dbf1",
+   "fuente": "El País México",
+   "estado_fuente": "Nacional",
+   "titulo": "Rusia mata al menos a 33 personas en un ataque contra la ciudad ucrania de Kramatorsk",
+   "resumen": "La ofensiva, que Kiev califica de ataque deliberado contra civiles, es una de las más mortíferas en lo que va de año",
+   "url": "https://elpais.com/internacional/2026-10-08/rusia-mata-a-decenas-de-personas-en-un-ataque-contra-la-ciudad-ucrania-de-kramatorsk.html",
+   "via": "rss"
+  },
+  {
+   "id": "6897bf71e59b",
+   "fuente": "Uno TV",
+   "estado_fuente": "Nacional",
+   "titulo": "Familiares y ciudadanos exigen justicia en Teziutlán tras feminicidio de Dariana, de 15 años",
+   "resumen": "",
+   "url": "https://www.unotv.com/estados/puebla/familiares-y-ciudadanos-exigen-justicia-en-teziutlan-tras-feminicidio-de-dariana-de-15-anos/",
+   "via": "home"
+  },
+  {
+   "id": "62b13df0381e",
+   "fuente": "Infobae México",
+   "estado_fuente": "Nacional",
+   "titulo": "El exnovio y cómplice de Christa Pike podría quedar libre en 2031 tras el rechazo de su primera audiencia de libertad condicional",
+   "resumen": "Tadaryl Shipp, quien tenía 17 años cuando participó en el brutal asesinato de Colleen Slemmer en Knoxville, tiene una nueva oportunidad de quedar libre en cinco años",
+   "url": "https://www.infobae.com/estados-unidos/2026/10/08/el-exnovio-y-complice-de-christa-pike-podria-quedar-libre-en-2031-tras-el-rechazo-de-su-primera-audiencia-de-libertad-condicional/",
+   "via": "rss"
+  },
+  {
+   "id": "86d5c6e2feb5",
+   "fuente": "La Jornada — Capital",
+   "estado_fuente": "Ciudad de México",
+   "titulo": "Libera un juez a empresario acusado de violar a su esposa",
+   "resumen": "Un juez de control otorgó la libertad al empresario Jorge Enrique Alberts Ponce, presuntamente implicado en redes de huachicol y vinculado al dueño de Miss Universo, Raúl Rocha Cantú, luego de ser detenido por el delito de violación la tarde del martes.",
+   "url": "https://www.jornada.com.mx/2026/10/08/capital/028n1cap?partner=rss",
+   "via": "rss"
+  },
+  {
+   "id": "d2be5800324d",
+   "fuente": "Zócalo",
+   "estado_fuente": "Coahuila",
+   "titulo": "Otro caso policíaco sacude a Torreón Francisco Treviño Granados Hace 2 horas Asesinada por su esposo",
+   "resumen": "",
+   "url": "https://www.zocalo.com.mx/otro-caso-policiaco-sacude-a-torreon/",
+   "via": "home"
+  },
+  {
+   "id": "706552cd882b",
+   "fuente": "La Jornada Morelos",
+   "estado_fuente": "Morelos",
+   "titulo": "Porque amamos, luchamos: La AVG es un llamado a erradicar el feminicidio",
+   "resumen": "Todas las acciones de atención, prevención, investigación y sanción para erradicar el feminicidio y garantizar el acceso de las mujeres a una vida libre de violencia están decretadas en la Alerta de Violencia de Género en Morelos desde hace 11 años, por lo que se requiere aplicarlas sin dilación ni ",
+   "url": "https://www.lajornadamorelos.mx/opinion/porque-amamos-luchamos-la-avg-es-un-llamado-a-erradicar-el-feminicidio/",
+   "via": "rss"
+  },
+  {
+   "id": "8d072922e123",
+   "fuente": "Noventa Grados",
+   "estado_fuente": "Michoacán",
+   "titulo": "Samuel García asegura que Líneas 4 y 6 del Metro cuentan con todos los permisos",
+   "resumen": "",
+   "url": "https://www.noventagrados.com.mx/politica/samuel-garcia-asegura-que-lineas-4-y-6-del-metro-cuentan-con-todos-los-permisos.htm",
+   "via": "home"
+  },
+  {
+   "id": "73ef402921bd",
+   "fuente": "El Porvenir (justicia)",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Suma otro muerto fatal accidente en la Carretera Nacional",
+   "resumen": "",
+   "url": "https://elporvenir.mx/justicia/suma-otro-muerto-fatal-accidente-en-la-carretera-nacional/1032616",
+   "via": "pagina"
+  },
+  {
+   "id": "c26ff6be8d9e",
+   "fuente": "El Imparcial de Oaxaca",
+   "estado_fuente": "Oaxaca",
+   "titulo": "ICJO celebra 16 años de formación de abogados",
+   "resumen": "",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQR2pOeEY1UXRhV1FQakVLY1V1NWtrV0Z0WVN6NzZLOEtRdmRCTUFmQ1A4cEc1M255R1lfRDJhUGE5NHpPU28zZ0swWGdWNWU0WkM1OGNmU2IzMVZqZWJtTXFOV3AxZXlJVndCS2VERUY3UjNBZndWaHFFd1MzZFhkREFvLW1mbm8?oc=5",
+   "via": "google"
+  },
+  {
+   "id": "58d656f5d01e",
+   "fuente": "Noroeste",
+   "estado_fuente": "Sinaloa",
+   "titulo": "Juez otorga prisión domiciliaria a socio de Ruffo en caso de huachicol",
+   "resumen": "",
+   "url": "https://www.noroeste.com.mx/nacional/juez-otorga-prision-domiciliaria-a-socio-de-ruffo-en-caso-de-huachicol-EG26316417",
+   "via": "home"
+  },
+  {
+   "id": "b56a4a2b18cd",
+   "fuente": "Entorno Informativo",
+   "estado_fuente": "Sonora",
+   "titulo": "Arrestan a adolescente de 14 años por pirómano en el fraccionamiento Pueblo Alegre",
+   "resumen": "El joven agresivo discutió con sus hermanos y posteriormente le prendió fuego a su cuarto, por lo que fue presentado ante la autoridad especializada Redacción Entorno Informativo Un jovencito de 14 años fue detenido por agentes preventivos después de incendiar su habitación en una vivienda del fracc",
+   "url": "https://entornoinformativo.com.mx/arrestan-a-adolescente-de-14-anos-por-piromano-en-el-fraccionamiento-pueblo-alegre/",
+   "via": "rss"
+  },
+  {
+   "id": "a7a6fc4d19c7",
+   "fuente": "INFO7",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Fuerza Regia vence a Soles y asegura pase directo a playoffs La quinteta regiomontana comenzará así su camino hacia el bicampeonato con dos partidos en casa, después de cumplir el objetivo de avanzar a los playoffs",
+   "resumen": "",
+   "url": "https://info7.mx/deportes/fuerza-regia-vence-a-soles-y-asegura-pase-directo-a-playoffs/6547886389",
+   "via": "home"
+  },
+  {
+   "id": "dabdcb51dd35",
+   "fuente": "Milenio",
+   "estado_fuente": "Nacional",
+   "titulo": "Detienen a dos presuntos integrantes de grupo delictivo en operativos simultáneos en Galeana",
+   "resumen": "",
+   "url": "https://www.milenio.com/policia/caen-dos-presuntos-integrantes-grupo-delictivo-operativos-galeana-nl",
+   "via": "pagina"
+  },
+  {
+   "id": "f11bd5193478",
+   "fuente": "El País México",
+   "estado_fuente": "Nacional",
+   "titulo": "Muere Margaret Hamilton, la mujer que enseñó al ordenador del Apolo a no perder los nervios sobre la Luna",
+   "resumen": "La informática estadounidense, que dirigió los programas de vuelo de las misiones lunares y popularizó el término “ingeniería de software”, ha fallecido a los 90 años",
+   "url": "https://elpais.com/ciencia/2026-10-08/muere-margaret-hamilton-la-pionera-de-la-informatica-que-hizo-posible-la-llegada-a-la-luna.html",
+   "via": "rss"
+  },
+  {
+   "id": "e1069ee9651e",
+   "fuente": "Uno TV",
+   "estado_fuente": "Nacional",
+   "titulo": "Colectivos reconocen apertura en Tamaulipas para búsqueda de desaparecidos",
+   "resumen": "",
+   "url": "https://www.unotv.com/estados/tamaulipas/colectivos-busqueda-desaparecidos-tamaulipas-americo-villarreal/",
+   "via": "home"
+  },
+  {
+   "id": "1617a1ae6398",
+   "fuente": "La Jornada — Capital",
+   "estado_fuente": "Ciudad de México",
+   "titulo": "Agreden sujetos a policías en el Centro, dos están hospitalizados; hay siete detenidos",
+   "resumen": "Un grupo de sujetos agredió a policías capitalinos en calles del Centro Histórico, en medio de un dispositivo para el retiro de motocicletas estacionadas en calles del primer cuadro, lo que desató una riña con saldo de dos elementos trasladados a un hospital, así como siete personas detenidas.",
+   "url": "https://www.jornada.com.mx/2026/10/08/capital/028n3cap?partner=rss",
+   "via": "rss"
+  },
+  {
+   "id": "fc7e3b514210",
+   "fuente": "Zócalo",
+   "estado_fuente": "Coahuila",
+   "titulo": "Hace 6 horas Suman 138 víctimas de bullying; Salud alerta por más ingresos hospitalarios",
+   "resumen": "",
+   "url": "https://www.zocalo.com.mx/suman-138-victimas-de-bullying-salud-alerta-por-mas-ingresos-hospitalarios/",
+   "via": "home"
+  },
+  {
+   "id": "0844b4d5460c",
+   "fuente": "La Jornada Morelos",
+   "estado_fuente": "Morelos",
+   "titulo": "Personas con discapacidad construyen propuestas para la inclusión",
+   "resumen": "El Sistema para el Desarrollo Integral de la Familia del Estado de Morelos (SEDIF), a través de la Coordinación de Atención a la Discapacidad (CAD), reunió a 70 personas con discapacidad, representantes de los Sistemas DIF Municipales, asociaciones civiles y colectivos en el primer encuentro “Espaci",
+   "url": "https://www.lajornadamorelos.mx/gobierno/personas-con-discapacidad-construyen-propuestas-para-la-inclusion/",
+   "via": "rss"
+  },
+  {
+   "id": "cc4322c8b097",
+   "fuente": "El Porvenir (justicia)",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Dispara policía a presunto asaltante tras persecución",
+   "resumen": "",
+   "url": "https://elporvenir.mx/justicia/dispara-policia-a-presunto-asaltante-tras-persecucion/1032617",
+   "via": "pagina"
+  },
+  {
    "id": "ba62ccf3fcfe",
    "fuente": "Noroeste",
    "estado_fuente": "Sinaloa",
@@ -867,22 +1776,58 @@
    "via": "home"
   },
   {
-   "id": "6dfff8613214",
-   "fuente": "Zócalo",
-   "estado_fuente": "Coahuila",
-   "titulo": "Hace 3 horas Localizan cuerpo en avanzado estado de putrefacción a un costado de la carretera Saltillo-Torreón",
-   "resumen": "",
-   "url": "https://www.zocalo.com.mx/localizan-cuerpo-en-avanzado-estado-de-putrefaccion-a-un-costado-de-la-carretera-saltillo-torreon/",
-   "via": "home"
+   "id": "e57583339928",
+   "fuente": "Entorno Informativo",
+   "estado_fuente": "Sonora",
+   "titulo": "Protagonizan fuerte choque en la colonia Adolfo de la Huerta",
+   "resumen": "La colisión entre una camioneta y un pick up, dejó a una persona con lesiones y daños materiales cuantiosos al derribar un poste de la CFE y dañar una barda, entre otros Redacción Entorno Informativo Una persona resultó lesionada en un fuerte choque registrado la mañana de este miércoles en",
+   "url": "https://entornoinformativo.com.mx/protagonizan-fuerte-choque-en-la-colonia-adolfo-de-la-huerta/",
+   "via": "rss"
   },
   {
    "id": "7e7a5efb327e",
    "fuente": "INFO7",
    "estado_fuente": "Nuevo León",
-   "titulo": "Gobierno de Querétaro niega acuerdo con EUA de academia policial Kuri señaló que la participación del embajador estadounidense, Ronald Johnson, colocando la primera piedra de la academia fue solo un acto protocolario",
+   "titulo": "Gobierno de Querétaro niega acuerdo con EUA de academia policial",
    "resumen": "",
    "url": "https://info7.mx/nacional/gobierno-de-queretaro-niega-acuerdo-con-eua-de-academia-policial/4021156547",
    "via": "home"
+  },
+  {
+   "id": "21de248bf6ec",
+   "fuente": "Milenio",
+   "estado_fuente": "Nacional",
+   "titulo": "Localizan cuerpo dentro de una cisterna en Acayuca, Hidalgo; podría tratarse de hombre con rep...",
+   "resumen": "",
+   "url": "https://www.milenio.com/policia/localizan-cuerpo-dentro-de-una-cisterna-en-acayuca-hidalgo",
+   "via": "pagina"
+  },
+  {
+   "id": "effd2ddb1f0e",
+   "fuente": "El País México",
+   "estado_fuente": "Nacional",
+   "titulo": "¿Qué posibilidades tiene Jair Bolsonaro de quedar libre? ¿y en qué plazo?",
+   "resumen": "Un juez del Supremo pretende que la corte juzgue después de la segunda vuelta si lo excarcelan. Existen otras opciones",
+   "url": "https://elpais.com/america/2026-10-08/que-posibilidades-tiene-jair-bolsonaro-de-quedar-libre-y-en-que-plazo.html",
+   "via": "rss"
+  },
+  {
+   "id": "a0cf770b55be",
+   "fuente": "La Jornada Morelos",
+   "estado_fuente": "Morelos",
+   "titulo": "Tonelhuayo (Nuestras Raíces): El despojo del territorio garífuna",
+   "resumen": "El pasado 17 de septiembre, un juez de San Pedro Sula, Honduras, ordenó desalojar a quienes llamó “ocupantes no autorizados” de Playa Uva, en los Cayos Cochinos de Honduras. Esos ocupantes son comunidades garífunas. Un centenar de policías se desplegó para evitar sus protestas frente al desalojo Las",
+   "url": "https://www.lajornadamorelos.mx/opinion/tonelhuayo-nuestras-raices-el-despojo-del-territorio-garifuna/",
+   "via": "rss"
+  },
+  {
+   "id": "864589c4b841",
+   "fuente": "El Porvenir (justicia)",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Detienen a \"montachoques\" tras fallida extorsión",
+   "resumen": "",
+   "url": "https://elporvenir.mx/justicia/detienen-a-montachoques-tras-fallida-extorsion/1032618",
+   "via": "pagina"
   },
   {
    "id": "d3d6825c01fb",
@@ -903,6 +1848,33 @@
    "via": "home"
   },
   {
+   "id": "4680fb1ede5e",
+   "fuente": "Milenio",
+   "estado_fuente": "Nacional",
+   "titulo": "“No hay arrepentimiento, solo arrogancia”: a un año del feminicidio de Itzel en Tepetlixpa",
+   "resumen": "",
+   "url": "https://www.milenio.com/policia/a-un-ano-feminicidio-de-itzel-tepetlixpa-su-familia-exige-justicia",
+   "via": "pagina"
+  },
+  {
+   "id": "8f2b21c6dbba",
+   "fuente": "La Jornada Morelos",
+   "estado_fuente": "Morelos",
+   "titulo": "Oposición rompe con Morena y aliados en el Congreso",
+   "resumen": "Desde la tribuna del Legislativo, el diputado Daniel Martínez Terrazas, coordinador de la fracción parlamentaria del Partido Acción Nacional, denunció la intervención del Poder Ejecutivo estatal para impedir que los legisladores de oposición de pronunciaran en la sesión anterior, la semana pasada, e",
+   "url": "https://www.lajornadamorelos.mx/congreso/oposicion-rompe-con-morena-y-aliados-en-el-congreso/",
+   "via": "rss"
+  },
+  {
+   "id": "977985535c75",
+   "fuente": "El Porvenir (justicia)",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Fotogalería Policiaca del 08/10/2026 Ver...",
+   "resumen": "",
+   "url": "https://elporvenir.mx/fotogaleria/fotogaleria-policiaca-del-08102026/1032593",
+   "via": "pagina"
+  },
+  {
    "id": "8d57c2ac7e14",
    "fuente": "Noroeste",
    "estado_fuente": "Sinaloa",
@@ -910,6 +1882,33 @@
    "resumen": "",
    "url": "https://www.noroeste.com.mx/nacional/padres-de-ninos-con-cancer-denuncian-a-andy-lopez-beltran-ante-fgr-DG26316261",
    "via": "home"
+  },
+  {
+   "id": "3de1c8f5c42f",
+   "fuente": "Milenio",
+   "estado_fuente": "Nacional",
+   "titulo": "Detienen a presunto 'montachoques' tras extorsionar a 2 adultos mayores en Monterrey",
+   "resumen": "",
+   "url": "https://www.milenio.com/policia/cae-presunto-montachoques-extorsion-dos-adultos-mayores-monterrey",
+   "via": "pagina"
+  },
+  {
+   "id": "b4b3586995ed",
+   "fuente": "La Jornada Morelos",
+   "estado_fuente": "Morelos",
+   "titulo": "Proponen videovigilancia conectada al C5 en escuelas",
+   "resumen": "La diputada Andrea Gordillo Vega hizo un llamado desde la tribuna del Congreso del Estado de Morelos a reforzar las medidas de seguridad en los entornos escolares, ante el riesgo que enfrentan niñas, niños, adolescentes y jóvenes al acudir diariamente a sus centros educativos, con el propósito de ge",
+   "url": "https://www.lajornadamorelos.mx/congreso/proponen-videovigilancia-conectada-al-c5-en-escuelas/",
+   "via": "rss"
+  },
+  {
+   "id": "12091f978d11",
+   "fuente": "El Porvenir (justicia)",
+   "estado_fuente": "Nuevo León",
+   "titulo": "Cae por amenazar con pistola a mujer",
+   "resumen": "",
+   "url": "https://elporvenir.mx/justicia/cae-por-amenazar-con-pistola-a-mujer/1032619",
+   "via": "pagina"
   },
   {
    "id": "1d882124b20e",
@@ -921,48 +1920,21 @@
    "via": "home"
   },
   {
-   "id": "65fad0c7db6f",
-   "fuente": "Noroeste",
-   "estado_fuente": "Sinaloa",
-   "titulo": "Trump atribuyó el traslado de la fabricación de la Tacoma, desde la planta ubicada en Baja California hacia Texas, a las políticas aplicadas por su Administración. ( Foto: Captura de pantalla )",
-   "resumen": "",
-   "url": "https://www.noroeste.com.mx/internacional/trump-presume-en-san-antonio-salida-de-empresa-de-autos-japonesa-de-mexico-CG26316136",
-   "via": "home"
+   "id": "d1bda66f8ed6",
+   "fuente": "La Jornada Morelos",
+   "estado_fuente": "Morelos",
+   "titulo": "Congreso aprobó prevenir difusión de contenidos que hagan apología del delito",
+   "resumen": "El Congreso de Morelos aprobó reformar la Ley de Cultura Cívica del Estado de Morelos, en materia de reconstrucción del tejido social y preservación del orden público y la paz social, a través de la cual adicionaron una fracción XVI al artículo 20, para establecer que son infracciones contra la segu",
+   "url": "https://www.lajornadamorelos.mx/congreso/congreso-aprobo-prevenir-difusion-de-contenidos-que-hagan-apologia-del-delito/",
+   "via": "rss"
   },
   {
-   "id": "70b094045d85",
+   "id": "5bc8308763d6",
    "fuente": "Noroeste",
    "estado_fuente": "Sinaloa",
-   "titulo": "Ernestina Godoy y titulares de las 32 fiscalías estatales del país fueron demandados por madres buscadoras. ( Foto: Captura de video )",
+   "titulo": "Autoridades localizaron a una mujer sin vida y con huellas de violencia bajo puente de La Marina. ( Fotos: Noroeste )",
    "resumen": "",
-   "url": "https://www.noroeste.com.mx/nacional/madres-buscadoras-demandan-a-ernestina-godoy-y-a-32-fiscales-por-omision-forense-IG26316079",
-   "via": "home"
-  },
-  {
-   "id": "6ec6bb780365",
-   "fuente": "Noroeste",
-   "estado_fuente": "Sinaloa",
-   "titulo": "El fallecido quedó tendido frente al acceso principal de una pizzería, a la altura de la Colonia Loma Linda. ( Fotos: Noroeste )",
-   "resumen": "",
-   "url": "https://www.noroeste.com.mx/seguridad/ataque-armado-deja-una-persona-sin-vida-en-una-plaza-comercial-en-loma-linda-culiacan-EG26315818",
-   "via": "home"
-  },
-  {
-   "id": "4f2adea36e0b",
-   "fuente": "Noroeste",
-   "estado_fuente": "Sinaloa",
-   "titulo": "Piero fallece en Buenos Aires. ( Foto: Pierocantautor )",
-   "resumen": "",
-   "url": "https://www.noroeste.com.mx/entretenimiento/espectaculos/fallece-piero-a-los-81-anos-voz-emblematica-de-la-trova-y-la-cancion-protesta-latinoamericana-JG26315419",
-   "via": "home"
-  },
-  {
-   "id": "624bbe81545d",
-   "fuente": "Noroeste",
-   "estado_fuente": "Sinaloa",
-   "titulo": "De acuerdo con información preliminar, se dio a conocer que el fallecido tenía aproximadamente 30 años de edad. ( Fotos: Noroeste )",
-   "resumen": "",
-   "url": "https://www.noroeste.com.mx/seguridad/dejan-cuerpo-maniatado-y-con-huellas-de-violencia-junto-al-tec-de-culiacan-OG26315290",
+   "url": "https://www.noroeste.com.mx/seguridad/hallan-a-mujer-sin-vida-y-con-huellas-de-violencia-bajo-puente-de-la-marina-en-mazatlan-AP26294774",
    "via": "home"
   }
  ]
