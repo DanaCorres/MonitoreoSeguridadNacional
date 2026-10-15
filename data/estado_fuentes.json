@@ -1,6 +1,33 @@
 {
  "fecha": "2026-10-15",
  "fuentes": {
+  "Milenio": {
+   "estado": "Nacional",
+   "modo": "pagina",
+   "via": "pagina",
+   "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 9
+  },
+  "Uno TV": {
+   "estado": "Nacional",
+   "modo": "sitio",
+   "via": "home",
+   "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 5
+  },
+  "Infobae México": {
+   "estado": "Nacional",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 18
+  },
   "Aristegui Noticias": {
    "estado": "Nacional",
    "modo": "sitio",
@@ -8,12 +35,12 @@
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 2
+   "candidatas": 8
   },
-  "Uno TV": {
+  "Excélsior": {
    "estado": "Nacional",
    "modo": "sitio",
-   "via": "home",
+   "via": "rss",
    "directas": 30,
    "google": 0,
    "error": null,
@@ -26,25 +53,7 @@
    "directas": 0,
    "google": 30,
    "error": "HTTP 403",
-   "candidatas": 0
-  },
-  "Milenio": {
-   "estado": "Nacional",
-   "modo": "pagina",
-   "via": "pagina",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 2
-  },
-  "Proceso": {
-   "estado": "Nacional",
-   "modo": "sitio",
-   "via": "sitio",
-   "directas": 0,
-   "google": 7,
-   "error": "HTTP 403",
-   "candidatas": 0
+   "candidatas": 4
   },
   "El Heraldo de México": {
    "estado": "Nacional",
@@ -55,6 +64,33 @@
    "error": "HTTP 403",
    "candidatas": 0
   },
+  "El Financiero": {
+   "estado": "Nacional",
+   "modo": "feed",
+   "via": "rss",
+   "directas": 29,
+   "google": 0,
+   "error": null,
+   "candidatas": 9
+  },
+  "Proceso": {
+   "estado": "Nacional",
+   "modo": "sitio",
+   "via": "sitio",
+   "directas": 0,
+   "google": 7,
+   "error": "HTTP 403",
+   "candidatas": 0
+  },
+  "Reforma": {
+   "estado": "Nacional",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 10,
+   "google": 0,
+   "error": null,
+   "candidatas": 2
+  },
   "Animal Político": {
    "estado": "Nacional",
    "modo": "sitio",
@@ -63,6 +99,15 @@
    "google": 0,
    "error": null,
    "candidatas": 0
+  },
+  "El País México": {
+   "estado": "Nacional",
+   "modo": "feed",
+   "via": "rss",
+   "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 11
   },
   "La Silla Rota": {
    "estado": "Nacional",
@@ -73,43 +118,16 @@
    "error": "HTTP 403",
    "candidatas": 0
   },
-  "Reforma": {
-   "estado": "Nacional",
+  "Hidrocálido Digital": {
+   "estado": "Aguascalientes",
    "modo": "sitio",
    "via": "rss",
-   "directas": 6,
+   "directas": 10,
    "google": 0,
    "error": null,
-   "candidatas": 1
-  },
-  "Latinus": {
-   "estado": "Nacional",
-   "modo": "sitio",
-   "via": "sitio",
-   "directas": 0,
-   "google": 2,
-   "error": "HTTP 403",
    "candidatas": 0
   },
-  "SinEmbargo": {
-   "estado": "Nacional",
-   "modo": "sitio",
-   "via": "sitio",
-   "directas": 0,
-   "google": 30,
-   "error": "HTTP 403",
-   "candidatas": 1
-  },
-  "El País México": {
-   "estado": "Nacional",
-   "modo": "feed",
-   "via": "rss",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 4
-  },
-  "Infobae México": {
+  "SDPnoticias": {
    "estado": "Nacional",
    "modo": "sitio",
    "via": "rss",
@@ -118,38 +136,38 @@
    "error": null,
    "candidatas": 6
   },
-  "ZETA Tijuana": {
-   "estado": "Baja California",
-   "modo": "feed",
-   "via": "rss",
-   "directas": 10,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "Excélsior": {
-   "estado": "Nacional",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
   "El Heraldo de Aguascalientes": {
    "estado": "Aguascalientes",
    "modo": "sitio",
-   "via": "home",
+   "via": "sitio",
    "directas": 0,
-   "google": 15,
-   "error": null,
+   "google": 13,
+   "error": "HTTP 403",
    "candidatas": 1
   },
-  "AFN Tijuana": {
-   "estado": "Baja California",
-   "modo": "feed",
-   "via": "rss",
-   "directas": 20,
+  "La Razón": {
+   "estado": "Nacional",
+   "modo": "sitio",
+   "via": "home",
+   "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 5
+  },
+  "N+": {
+   "estado": "Nacional",
+   "modo": "sitio",
+   "via": "home",
+   "directas": 29,
+   "google": 0,
+   "error": null,
+   "candidatas": 8
+  },
+  "El Universal": {
+   "estado": "Nacional",
+   "modo": "sitio",
+   "via": "home",
+   "directas": 30,
    "google": 0,
    "error": null,
    "candidatas": 0
@@ -161,6 +179,24 @@
    "directas": 15,
    "google": 0,
    "error": null,
+   "candidatas": 0
+  },
+  "SinEmbargo": {
+   "estado": "Nacional",
+   "modo": "sitio",
+   "via": "sitio",
+   "directas": 0,
+   "google": 30,
+   "error": "HTTP 403",
+   "candidatas": 1
+  },
+  "Latinus": {
+   "estado": "Nacional",
+   "modo": "sitio",
+   "via": "sitio",
+   "directas": 0,
+   "google": 5,
+   "error": "HTTP 403",
    "candidatas": 0
   },
   "AGP Noticias": {
@@ -177,72 +213,36 @@
    "modo": "feed",
    "via": "feed",
    "directas": 0,
-   "google": 5,
+   "google": 7,
    "error": "HTTP 429",
    "candidatas": 1
   },
-  "El Financiero": {
-   "estado": "Nacional",
-   "modo": "feed",
-   "via": "rss",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 3
-  },
-  "Rada Noticias": {
+  "ZETA Tijuana": {
    "estado": "Baja California",
    "modo": "feed",
    "via": "rss",
    "directas": 10,
    "google": 0,
    "error": null,
-   "candidatas": 0
-  },
-  "EnsenadaHoy": {
-   "estado": "Baja California",
-   "modo": "sitio",
-   "via": "home",
-   "directas": 23,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "SDPnoticias": {
-   "estado": "Nacional",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "La Razón": {
-   "estado": "Nacional",
-   "modo": "sitio",
-   "via": "home",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 5
-  },
-  "El Universal": {
-   "estado": "Nacional",
-   "modo": "sitio",
-   "via": "home",
-   "directas": 30,
-   "google": 0,
-   "error": null,
    "candidatas": 1
   },
-  "N+": {
-   "estado": "Nacional",
+  "Cadena Noticias": {
+   "estado": "Baja California",
    "modo": "sitio",
-   "via": "home",
-   "directas": 25,
+   "via": "rss",
+   "directas": 9,
    "google": 0,
    "error": null,
-   "candidatas": 2
+   "candidatas": 0
+  },
+  "AFN Tijuana": {
+   "estado": "Baja California",
+   "modo": "feed",
+   "via": "rss",
+   "directas": 19,
+   "google": 0,
+   "error": null,
+   "candidatas": 4
   },
   "Milenio (Ensenada)": {
    "estado": "Baja California",
@@ -262,6 +262,15 @@
    "error": null,
    "candidatas": 0
   },
+  "EnsenadaHoy": {
+   "estado": "Baja California",
+   "modo": "sitio",
+   "via": "home",
+   "directas": 22,
+   "google": 0,
+   "error": null,
+   "candidatas": 0
+  },
   "Publimetro": {
    "estado": "Nacional",
    "modo": "sitio",
@@ -269,52 +278,7 @@
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 2
-  },
-  "Cadena Noticias": {
-   "estado": "Baja California",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 9,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "BCS Noticias": {
-   "estado": "Baja California Sur",
-   "modo": "sitio",
-   "via": "sitio",
-   "directas": 0,
-   "google": 18,
-   "error": "HTTP 403",
-   "candidatas": 0
-  },
-  "E1 Noticias": {
-   "estado": "Baja California",
-   "modo": "feed",
-   "via": "rss",
-   "directas": 10,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "El Imparcial (Tijuana)": {
-   "estado": "Baja California",
-   "modo": "pagina",
-   "via": "pagina",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "En Línea BC": {
-   "estado": "Baja California",
-   "modo": "feed",
-   "via": "rss",
-   "directas": 10,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
+   "candidatas": 3
   },
   "Zona Norte": {
    "estado": "Baja California",
@@ -323,13 +287,13 @@
    "directas": 0,
    "google": 30,
    "error": null,
-   "candidatas": 0
+   "candidatas": 3
   },
-  "TJ Comunica": {
+  "El Imparcial (Tijuana)": {
    "estado": "Baja California",
-   "modo": "feed",
-   "via": "rss",
-   "directas": 10,
+   "modo": "pagina",
+   "via": "pagina",
+   "directas": 30,
    "google": 0,
    "error": null,
    "candidatas": 0
@@ -343,6 +307,42 @@
    "error": null,
    "candidatas": 0
   },
+  "TJ Comunica": {
+   "estado": "Baja California",
+   "modo": "feed",
+   "via": "rss",
+   "directas": 10,
+   "google": 0,
+   "error": null,
+   "candidatas": 0
+  },
+  "Rada Noticias": {
+   "estado": "Baja California",
+   "modo": "feed",
+   "via": "rss",
+   "directas": 10,
+   "google": 0,
+   "error": null,
+   "candidatas": 0
+  },
+  "E1 Noticias": {
+   "estado": "Baja California",
+   "modo": "feed",
+   "via": "rss",
+   "directas": 10,
+   "google": 0,
+   "error": null,
+   "candidatas": 0
+  },
+  "BCS Noticias": {
+   "estado": "Baja California Sur",
+   "modo": "sitio",
+   "via": "sitio",
+   "directas": 0,
+   "google": 17,
+   "error": "HTTP 403",
+   "candidatas": 0
+  },
   "Tribuna de Los Cabos": {
    "estado": "Baja California Sur",
    "modo": "sitio",
@@ -350,7 +350,16 @@
    "directas": 20,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 4
+  },
+  "Campeche Digital": {
+   "estado": "Campeche",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 10,
+   "google": 0,
+   "error": null,
+   "candidatas": 2
   },
   "Tribuna Campeche": {
    "estado": "Campeche",
@@ -361,20 +370,11 @@
    "error": "HTTP 403",
    "candidatas": 0
   },
-  "Cuarto Poder": {
-   "estado": "Chiapas",
-   "modo": "sitio",
+  "En Línea BC": {
+   "estado": "Baja California",
+   "modo": "feed",
    "via": "rss",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "Alerta Chiapas": {
-   "estado": "Chiapas",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 20,
+   "directas": 10,
    "google": 0,
    "error": null,
    "candidatas": 0
@@ -388,26 +388,8 @@
    "error": null,
    "candidatas": 0
   },
-  "Campeche Digital": {
-   "estado": "Campeche",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 10,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "Diario de Chiapas": {
+  "Cuarto Poder": {
    "estado": "Chiapas",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 12,
-   "google": 0,
-   "error": null,
-   "candidatas": 2
-  },
-  "El Diario de Juárez": {
-   "estado": "Chihuahua",
    "modo": "sitio",
    "via": "rss",
    "directas": 30,
@@ -422,16 +404,7 @@
    "directas": 10,
    "google": 0,
    "error": null,
-   "candidatas": 0
-  },
-  "Hidrocálido Digital": {
-   "estado": "Aguascalientes",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 10,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
+   "candidatas": 1
   },
   "Norte Digital": {
    "estado": "Chihuahua",
@@ -440,25 +413,61 @@
    "directas": 7,
    "google": 0,
    "error": null,
+   "candidatas": 4
+  },
+  "Alerta Chiapas": {
+   "estado": "Chiapas",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 20,
+   "google": 0,
+   "error": null,
    "candidatas": 0
   },
-  "El Siglo de Torreón": {
-   "estado": "Coahuila",
+  "El Mexicano": {
+   "estado": "Baja California",
    "modo": "sitio",
-   "via": "sitio",
-   "directas": 0,
-   "google": 19,
-   "error": "HTTP 403",
-   "candidatas": 1
+   "via": "home",
+   "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 2
+  },
+  "Diario de Chiapas": {
+   "estado": "Chiapas",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 12,
+   "google": 0,
+   "error": null,
+   "candidatas": 2
   },
   "NetNoticias": {
    "estado": "Chihuahua",
    "modo": "sitio",
    "via": "sitio",
    "directas": 0,
-   "google": 27,
+   "google": 26,
    "error": "HTTP 403",
    "candidatas": 0
+  },
+  "La Verdad Juárez": {
+   "estado": "Chihuahua",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 10,
+   "google": 0,
+   "error": null,
+   "candidatas": 1
+  },
+  "El Siglo de Torreón": {
+   "estado": "Coahuila",
+   "modo": "sitio",
+   "via": "sitio",
+   "directas": 0,
+   "google": 17,
+   "error": "HTTP 403",
+   "candidatas": 1
   },
   "La Jornada — Capital": {
    "estado": "Ciudad de México",
@@ -469,17 +478,8 @@
    "error": null,
    "candidatas": 3
   },
-  "El Mexicano": {
-   "estado": "Baja California",
-   "modo": "sitio",
-   "via": "home",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "El Diario de Chihuahua": {
-   "estado": "Chihuahua",
+  "Campeche Hoy": {
+   "estado": "Campeche",
    "modo": "sitio",
    "via": "rss",
    "directas": 30,
@@ -487,17 +487,26 @@
    "error": null,
    "candidatas": 0
   },
-  "AF Medios": {
-   "estado": "Colima",
+  "El Diario de Juárez": {
+   "estado": "Chihuahua",
    "modo": "sitio",
    "via": "rss",
-   "directas": 20,
+   "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 10
   },
-  "La Verdad Juárez": {
-   "estado": "Chihuahua",
+  "Vanguardia": {
+   "estado": "Coahuila",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 6
+  },
+  "Chiapas Paralelo": {
+   "estado": "Chiapas",
    "modo": "sitio",
    "via": "rss",
    "directas": 10,
@@ -512,25 +521,52 @@
    "directas": 0,
    "google": 30,
    "error": "HTTP 468",
-   "candidatas": 0
+   "candidatas": 1
   },
-  "Campeche Hoy": {
-   "estado": "Campeche",
+  "AF Medios": {
+   "estado": "Colima",
    "modo": "sitio",
    "via": "rss",
-   "directas": 30,
+   "directas": 20,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 3
   },
-  "Vanguardia": {
+  "Periódico AM": {
+   "estado": "Guanajuato",
+   "modo": "sitio",
+   "via": "sitio",
+   "directas": 0,
+   "google": 30,
+   "error": "HTTP 429",
+   "candidatas": 2
+  },
+  "El Heraldo de Saltillo": {
    "estado": "Coahuila",
    "modo": "sitio",
    "via": "rss",
+   "directas": 29,
+   "google": 0,
+   "error": null,
+   "candidatas": 2
+  },
+  "Así Sucede": {
+   "estado": "Estado de México",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 9,
+   "google": 0,
+   "error": null,
+   "candidatas": 5
+  },
+  "El Diario de Chihuahua": {
+   "estado": "Chihuahua",
+   "modo": "sitio",
+   "via": "rss",
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 1
+   "candidatas": 8
   },
   "Zócalo": {
    "estado": "Coahuila",
@@ -539,25 +575,34 @@
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 5
+   "candidatas": 12
   },
-  "El Siglo de Durango": {
-   "estado": "Durango",
-   "modo": "sitio",
-   "via": "home",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "Así Sucede": {
+  "Quadratín Edomex": {
    "estado": "Estado de México",
    "modo": "sitio",
    "via": "rss",
    "directas": 10,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 3
+  },
+  "Zona Franca": {
+   "estado": "Guanajuato",
+   "modo": "sitio",
+   "via": "home",
+   "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 6
+  },
+  "Quadratín Guerrero": {
+   "estado": "Guerrero",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 10,
+   "google": 0,
+   "error": null,
+   "candidatas": 3
   },
   "El Sur de Acapulco": {
    "estado": "Guerrero",
@@ -568,38 +613,29 @@
    "error": "HTTP 403",
    "candidatas": 6
   },
-  "Chiapas Paralelo": {
-   "estado": "Chiapas",
+  "El Siglo de Durango": {
+   "estado": "Durango",
    "modo": "sitio",
-   "via": "rss",
-   "directas": 10,
+   "via": "home",
+   "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 1
+   "candidatas": 3
   },
   "Criterio Hidalgo": {
    "estado": "Hidalgo",
    "modo": "sitio",
    "via": "sitio",
    "directas": 0,
-   "google": 4,
+   "google": 11,
    "error": "HTTP 403",
    "candidatas": 0
   },
-  "Quadratín Edomex": {
-   "estado": "Estado de México",
+  "Diario El Independiente": {
+   "estado": "Baja California Sur",
    "modo": "sitio",
    "via": "rss",
-   "directas": 10,
-   "google": 0,
-   "error": null,
-   "candidatas": 2
-  },
-  "Quadratín Guerrero": {
-   "estado": "Guerrero",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 10,
+   "directas": 30,
    "google": 0,
    "error": null,
    "candidatas": 0
@@ -613,14 +649,14 @@
    "error": null,
    "candidatas": 0
   },
-  "Periódico AM": {
-   "estado": "Guanajuato",
+  "Partidero": {
+   "estado": "Jalisco",
    "modo": "sitio",
-   "via": "home",
-   "directas": 30,
+   "via": "rss",
+   "directas": 9,
    "google": 0,
    "error": null,
-   "candidatas": 3
+   "candidatas": 4
   },
   "Plaza Juárez": {
    "estado": "Hidalgo",
@@ -638,22 +674,13 @@
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 2
   },
-  "UDG TV": {
-   "estado": "Jalisco",
+  "El Independiente de Hidalgo": {
+   "estado": "Hidalgo",
    "modo": "sitio",
    "via": "rss",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "El Heraldo de Saltillo": {
-   "estado": "Coahuila",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 29,
+   "directas": 10,
    "google": 0,
    "error": null,
    "candidatas": 0
@@ -665,40 +692,22 @@
    "directas": 10,
    "google": 0,
    "error": null,
-   "candidatas": 0
-  },
-  "Partidero": {
-   "estado": "Jalisco",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 10,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "Cambio de Michoacán": {
-   "estado": "Michoacán",
-   "modo": "sitio",
-   "via": "sitio",
-   "directas": 0,
-   "google": 1,
-   "error": "HTTP 403",
-   "candidatas": 0
-  },
-  "Diario El Independiente": {
-   "estado": "Baja California Sur",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
+   "candidatas": 3
   },
   "La Voz de Michoacán": {
    "estado": "Michoacán",
    "modo": "sitio",
    "via": "rss",
    "directas": 5,
+   "google": 0,
+   "error": null,
+   "candidatas": 3
+  },
+  "ZonaDocs": {
+   "estado": "Jalisco",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 10,
    "google": 0,
    "error": null,
    "candidatas": 0
@@ -710,43 +719,52 @@
    "directas": 10,
    "google": 0,
    "error": null,
+   "candidatas": 2
+  },
+  "Cambio de Michoacán": {
+   "estado": "Michoacán",
+   "modo": "sitio",
+   "via": "sitio",
+   "directas": 0,
+   "google": 30,
+   "error": "HTTP 403",
    "candidatas": 0
   },
-  "El Independiente de Hidalgo": {
-   "estado": "Hidalgo",
+  "Periódico Correo": {
+   "estado": "Guanajuato",
    "modo": "sitio",
    "via": "rss",
-   "directas": 10,
+   "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 4
   },
-  "ZonaDocs": {
+  "UDG TV": {
    "estado": "Jalisco",
    "modo": "sitio",
    "via": "rss",
-   "directas": 10,
+   "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 7
+  },
+  "Noventa Grados": {
+   "estado": "Michoacán",
+   "modo": "sitio",
+   "via": "home",
+   "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 3
   },
   "Monitor Expresso": {
    "estado": "Michoacán",
    "modo": "sitio",
    "via": "sitio",
    "directas": 0,
-   "google": 6,
+   "google": 9,
    "error": "HTTP 403",
    "candidatas": 0
-  },
-  "Zona Franca": {
-   "estado": "Guanajuato",
-   "modo": "sitio",
-   "via": "home",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 2
   },
   "MiMorelia": {
    "estado": "Michoacán",
@@ -755,16 +773,7 @@
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 0
-  },
-  "POPLab": {
-   "estado": "Guanajuato",
-   "modo": "sitio",
-   "via": "home",
-   "directas": 5,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
+   "candidatas": 2
   },
   "NTV": {
    "estado": "Nayarit",
@@ -775,14 +784,41 @@
    "error": null,
    "candidatas": 0
   },
-  "Noventa Grados": {
-   "estado": "Michoacán",
+  "POPLab": {
+   "estado": "Guanajuato",
    "modo": "sitio",
    "via": "home",
-   "directas": 30,
+   "directas": 6,
    "google": 0,
    "error": null,
-   "candidatas": 2
+   "candidatas": 0
+  },
+  "Diario de Morelos": {
+   "estado": "Morelos",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 29,
+   "google": 0,
+   "error": null,
+   "candidatas": 9
+  },
+  "Mural": {
+   "estado": "Jalisco",
+   "modo": "sitio",
+   "via": "home",
+   "directas": 2,
+   "google": 0,
+   "error": null,
+   "candidatas": 0
+  },
+  "Código Magenta": {
+   "estado": "Nuevo León",
+   "modo": "feed",
+   "via": "rss",
+   "directas": 10,
+   "google": 0,
+   "error": null,
+   "candidatas": 0
   },
   "Crítica Digital Noticias": {
    "estado": "Nayarit",
@@ -802,20 +838,38 @@
    "error": "HTTP 403",
    "candidatas": 0
   },
-  "Diario de Morelos": {
-   "estado": "Morelos",
+  "Meridiano": {
+   "estado": "Nayarit",
    "modo": "sitio",
    "via": "rss",
-   "directas": 30,
+   "directas": 10,
    "google": 0,
    "error": null,
-   "candidatas": 2
+   "candidatas": 1
   },
   "Express Nayarit": {
    "estado": "Nayarit",
    "modo": "sitio",
    "via": "home",
    "directas": 2,
+   "google": 0,
+   "error": null,
+   "candidatas": 1
+  },
+  "Milenio Monterrey": {
+   "estado": "Nuevo León",
+   "modo": "pagina",
+   "via": "pagina",
+   "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 4
+  },
+  "La Política Online (NL)": {
+   "estado": "Nuevo León",
+   "modo": "pagina",
+   "via": "pagina",
+   "directas": 10,
    "google": 0,
    "error": null,
    "candidatas": 0
@@ -827,34 +881,7 @@
    "directas": 5,
    "google": 0,
    "error": null,
-   "candidatas": 0
-  },
-  "Código Magenta": {
-   "estado": "Nuevo León",
-   "modo": "feed",
-   "via": "rss",
-   "directas": 10,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "Periódico Correo": {
-   "estado": "Guanajuato",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 2
-  },
-  "Mural": {
-   "estado": "Jalisco",
-   "modo": "sitio",
-   "via": "home",
-   "directas": 2,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
+   "candidatas": 1
   },
   "NNC": {
    "estado": "Nayarit",
@@ -865,50 +892,23 @@
    "error": null,
    "candidatas": 0
   },
-  "Informe Regio": {
-   "estado": "Nuevo León",
-   "modo": "feed",
-   "via": "rss",
-   "directas": 12,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
   "ABC Noticias": {
    "estado": "Nuevo León",
    "modo": "sitio",
    "via": "sitio",
    "directas": 0,
-   "google": 26,
-   "error": "HTTP 403",
-   "candidatas": 0
-  },
-  "Hora Cero": {
-   "estado": "Nuevo León",
-   "modo": "feed",
-   "via": "feed",
-   "directas": 0,
    "google": 30,
    "error": "HTTP 403",
-   "candidatas": 0
+   "candidatas": 1
   },
-  "La Política Online (NL)": {
-   "estado": "Nuevo León",
-   "modo": "pagina",
-   "via": "pagina",
-   "directas": 10,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "Milenio Monterrey": {
+  "Telediario Monterrey": {
    "estado": "Nuevo León",
    "modo": "pagina",
    "via": "pagina",
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 2
   },
   "Radio Fórmula Monterrey": {
    "estado": "Nuevo León",
@@ -919,38 +919,29 @@
    "error": "HTTP 403",
    "candidatas": 0
   },
-  "El Porvenir (justicia)": {
-   "estado": "Nuevo León",
-   "modo": "pagina",
-   "via": "pagina",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 10
-  },
-  "Posta": {
+  "INFO7": {
    "estado": "Nuevo León",
    "modo": "sitio",
    "via": "home",
-   "directas": 30,
+   "directas": 24,
    "google": 0,
    "error": null,
-   "candidatas": 2
+   "candidatas": 6
   },
-  "El Sol de México (Monterrey)": {
+  "Hora Cero": {
    "estado": "Nuevo León",
-   "modo": "pagina",
-   "via": "pagina",
+   "modo": "feed",
+   "via": "feed",
    "directas": 0,
-   "google": 30,
+   "google": 3,
    "error": "HTTP 403",
-   "candidatas": 2
+   "candidatas": 0
   },
-  "Telediario Monterrey": {
+  "Informe Regio": {
    "estado": "Nuevo León",
-   "modo": "pagina",
-   "via": "pagina",
-   "directas": 30,
+   "modo": "feed",
+   "via": "rss",
+   "directas": 12,
    "google": 0,
    "error": null,
    "candidatas": 0
@@ -964,41 +955,32 @@
    "error": null,
    "candidatas": 1
   },
-  "El Imparcial de Oaxaca": {
-   "estado": "Oaxaca",
-   "modo": "sitio",
-   "via": "sitio",
+  "El Sol de México (Monterrey)": {
+   "estado": "Nuevo León",
+   "modo": "pagina",
+   "via": "pagina",
    "directas": 0,
-   "google": 2,
+   "google": 30,
    "error": "HTTP 403",
-   "candidatas": 0
+   "candidatas": 2
   },
-  "e-consulta": {
-   "estado": "Puebla",
-   "modo": "sitio",
-   "via": "sitio",
-   "directas": 0,
-   "google": 18,
-   "error": "HTTP 403",
-   "candidatas": 0
-  },
-  "Periódico Central": {
-   "estado": "Puebla",
-   "modo": "sitio",
-   "via": "sitio",
-   "directas": 0,
-   "google": 7,
-   "error": "HTTP 403",
-   "candidatas": 0
-  },
-  "NVI Noticias": {
-   "estado": "Oaxaca",
-   "modo": "sitio",
-   "via": "home",
+  "El Porvenir (justicia)": {
+   "estado": "Nuevo León",
+   "modo": "pagina",
+   "via": "pagina",
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 2
+   "candidatas": 14
+  },
+  "El Universal Oaxaca": {
+   "estado": "Oaxaca",
+   "modo": "sitio",
+   "via": "home",
+   "directas": 21,
+   "google": 0,
+   "error": null,
+   "candidatas": 0
   },
   "Quadratín Oaxaca": {
    "estado": "Oaxaca",
@@ -1007,24 +989,60 @@
    "directas": 10,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 4
   },
-  "El Universal Oaxaca": {
+  "El Imparcial de Oaxaca": {
    "estado": "Oaxaca",
    "modo": "sitio",
-   "via": "home",
-   "directas": 20,
+   "via": "sitio",
+   "directas": 0,
+   "google": 14,
+   "error": "HTTP 403",
+   "candidatas": 7
+  },
+  "EIT Media (local)": {
+   "estado": "Nuevo León",
+   "modo": "feed",
+   "via": "rss",
+   "directas": 10,
    "google": 0,
    "error": null,
    "candidatas": 0
   },
-  "Municipios Puebla": {
+  "e-consulta": {
    "estado": "Puebla",
    "modo": "sitio",
    "via": "sitio",
    "directas": 0,
-   "google": 30,
+   "google": 3,
    "error": "HTTP 403",
+   "candidatas": 3
+  },
+  "Periódico Central": {
+   "estado": "Puebla",
+   "modo": "sitio",
+   "via": "sitio",
+   "directas": 0,
+   "google": 18,
+   "error": "HTTP 403",
+   "candidatas": 0
+  },
+  "Rotativo": {
+   "estado": "Querétaro",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 2
+  },
+  "Plaza de Armas": {
+   "estado": "Querétaro",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 10,
+   "google": 0,
+   "error": null,
    "candidatas": 0
   },
   "El Popular": {
@@ -1036,49 +1054,40 @@
    "error": null,
    "candidatas": 0
   },
+  "NVI Noticias": {
+   "estado": "Oaxaca",
+   "modo": "sitio",
+   "via": "home",
+   "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 3
+  },
+  "Municipios Puebla": {
+   "estado": "Puebla",
+   "modo": "sitio",
+   "via": "sitio",
+   "directas": 0,
+   "google": 30,
+   "error": "HTTP 403",
+   "candidatas": 0
+  },
   "AM Querétaro": {
    "estado": "Querétaro",
    "modo": "sitio",
    "via": "sitio",
    "directas": 0,
-   "google": 21,
+   "google": 30,
    "error": "HTTP 403",
-   "candidatas": 0
-  },
-  "EIT Media (local)": {
-   "estado": "Nuevo León",
-   "modo": "feed",
-   "via": "rss",
-   "directas": 10,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
+   "candidatas": 3
   },
   "Noticaribe": {
    "estado": "Quintana Roo",
    "modo": "sitio",
    "via": "sitio",
    "directas": 0,
-   "google": 17,
+   "google": 19,
    "error": "HTTP 403",
-   "candidatas": 0
-  },
-  "Rotativo": {
-   "estado": "Querétaro",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "Plaza de Armas": {
-   "estado": "Querétaro",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 10,
-   "google": 0,
-   "error": null,
    "candidatas": 0
   },
   "Luces del Siglo": {
@@ -1088,16 +1097,7 @@
    "directas": 10,
    "google": 0,
    "error": null,
-   "candidatas": 1
-  },
-  "Canal 10": {
-   "estado": "Quintana Roo",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 9,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
+   "candidatas": 4
   },
   "Plano Informativo": {
    "estado": "San Luis Potosí",
@@ -1115,13 +1115,31 @@
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 4
+   "candidatas": 2
+  },
+  "El Universal San Luis": {
+   "estado": "San Luis Potosí",
+   "modo": "sitio",
+   "via": "home",
+   "directas": 22,
+   "google": 0,
+   "error": null,
+   "candidatas": 0
   },
   "Quintana Roo Hoy": {
    "estado": "Quintana Roo",
    "modo": "sitio",
    "via": "rss",
    "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 2
+  },
+  "TV Azteca (Nuevo León)": {
+   "estado": "Nuevo León",
+   "modo": "pagina",
+   "via": "pagina",
+   "directas": 14,
    "google": 0,
    "error": null,
    "candidatas": 0
@@ -1135,38 +1153,29 @@
    "error": null,
    "candidatas": 0
   },
-  "El Universal San Luis": {
-   "estado": "San Luis Potosí",
-   "modo": "sitio",
-   "via": "home",
-   "directas": 22,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "Zona Centro Noticias": {
-   "estado": "Morelos",
-   "modo": "sitio",
-   "via": "home",
-   "directas": 27,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "Ríodoce": {
-   "estado": "Sinaloa",
+  "Posta": {
+   "estado": "Nuevo León",
    "modo": "sitio",
    "via": "home",
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 5
   },
-  "Luz Noticias": {
-   "estado": "Sinaloa",
+  "El Imparcial (Sonora)": {
+   "estado": "Sonora",
+   "modo": "pagina",
+   "via": "pagina",
+   "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 1
+  },
+  "Canal 10": {
+   "estado": "Quintana Roo",
    "modo": "sitio",
    "via": "rss",
-   "directas": 30,
+   "directas": 9,
    "google": 0,
    "error": null,
    "candidatas": 0
@@ -1178,21 +1187,21 @@
    "directas": 10,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 2
   },
-  "TV Azteca (Nuevo León)": {
-   "estado": "Nuevo León",
-   "modo": "pagina",
-   "via": "pagina",
-   "directas": 14,
+  "Astrolabio": {
+   "estado": "San Luis Potosí",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 10,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 2
   },
-  "Noroeste": {
+  "Luz Noticias": {
    "estado": "Sinaloa",
    "modo": "sitio",
-   "via": "home",
+   "via": "rss",
    "directas": 30,
    "google": 0,
    "error": null,
@@ -1207,21 +1216,30 @@
    "error": null,
    "candidatas": 0
   },
-  "Astrolabio": {
-   "estado": "San Luis Potosí",
+  "El Horizonte": {
+   "estado": "Nuevo León",
    "modo": "sitio",
-   "via": "rss",
-   "directas": 10,
+   "via": "home",
+   "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 7
+  },
+  "Ríodoce": {
+   "estado": "Sinaloa",
+   "modo": "sitio",
+   "via": "home",
+   "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 2
   },
   "Tribuna": {
    "estado": "Sonora",
    "modo": "pagina",
    "via": "pagina",
    "directas": 0,
-   "google": 21,
+   "google": 6,
    "error": null,
    "candidatas": 0
   },
@@ -1232,22 +1250,31 @@
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 2
+  },
+  "Radio Sonora": {
+   "estado": "Sonora",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 16,
+   "google": 0,
+   "error": null,
+   "candidatas": 2
+  },
+  "Noroeste": {
+   "estado": "Sinaloa",
+   "modo": "sitio",
+   "via": "home",
+   "directas": 28,
+   "google": 0,
+   "error": null,
+   "candidatas": 4
   },
   "Opinión Sonora": {
    "estado": "Sonora",
    "modo": "sitio",
    "via": "rss",
    "directas": 15,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "El Imparcial (Sonora)": {
-   "estado": "Sonora",
-   "modo": "pagina",
-   "via": "pagina",
-   "directas": 30,
    "google": 0,
    "error": null,
    "candidatas": 0
@@ -1259,6 +1286,24 @@
    "directas": 30,
    "google": 0,
    "error": null,
+   "candidatas": 2
+  },
+  "Radar Sonora": {
+   "estado": "Sonora",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 10,
+   "google": 0,
+   "error": null,
+   "candidatas": 0
+  },
+  "Sonora Presente": {
+   "estado": "Sonora",
+   "modo": "pagina",
+   "via": "pagina",
+   "directas": 23,
+   "google": 0,
+   "error": null,
    "candidatas": 0
   },
   "El Diario de Sonora": {
@@ -1266,6 +1311,24 @@
    "modo": "sitio",
    "via": "home",
    "directas": 30,
+   "google": 0,
+   "error": null,
+   "candidatas": 4
+  },
+  "Zona Centro Noticias": {
+   "estado": "Morelos",
+   "modo": "sitio",
+   "via": "home",
+   "directas": 27,
+   "google": 0,
+   "error": null,
+   "candidatas": 5
+  },
+  "Expreso (Tamaulipas)": {
+   "estado": "Tamaulipas",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 10,
    "google": 0,
    "error": null,
    "candidatas": 0
@@ -1279,6 +1342,15 @@
    "error": null,
    "candidatas": 0
   },
+  "Hoy Tamaulipas": {
+   "estado": "Tamaulipas",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 10,
+   "google": 0,
+   "error": null,
+   "candidatas": 5
+  },
   "Tabasco Hoy": {
    "estado": "Tabasco",
    "modo": "sitio",
@@ -1286,52 +1358,16 @@
    "directas": 0,
    "google": 30,
    "error": "HTTP 403",
-   "candidatas": 2
+   "candidatas": 5
   },
-  "Sonora Presente": {
+  "Medios OBSON": {
    "estado": "Sonora",
-   "modo": "pagina",
-   "via": "pagina",
-   "directas": 24,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "Meridiano": {
-   "estado": "Nayarit",
    "modo": "sitio",
    "via": "rss",
    "directas": 10,
    "google": 0,
    "error": null,
-   "candidatas": 1
-  },
-  "Radio Sonora": {
-   "estado": "Sonora",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 16,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "El Horizonte": {
-   "estado": "Nuevo León",
-   "modo": "sitio",
-   "via": "home",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 2
-  },
-  "Expreso (Tamaulipas)": {
-   "estado": "Tamaulipas",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 10,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
+   "candidatas": 4
   },
   "XEVT": {
    "estado": "Tabasco",
@@ -1342,14 +1378,14 @@
    "error": null,
    "candidatas": 0
   },
-  "Radar Sonora": {
-   "estado": "Sonora",
+  "Línea Directa": {
+   "estado": "Sinaloa",
    "modo": "sitio",
    "via": "rss",
-   "directas": 10,
+   "directas": 12,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 7
   },
   "El Mañana": {
    "estado": "Tamaulipas",
@@ -1358,43 +1394,16 @@
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 1
+   "candidatas": 6
   },
-  "Medios OBSON": {
-   "estado": "Sonora",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 8,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "ABC Tlaxcala": {
+  "La Polilla": {
    "estado": "Tlaxcala",
    "modo": "sitio",
    "via": "rss",
-   "directas": 10,
+   "directas": 20,
    "google": 0,
    "error": null,
-   "candidatas": 1
-  },
-  "Línea Directa": {
-   "estado": "Sinaloa",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 12,
-   "google": 0,
-   "error": null,
-   "candidatas": 3
-  },
-  "Hoy Tamaulipas": {
-   "estado": "Tamaulipas",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 9,
-   "google": 0,
-   "error": null,
-   "candidatas": 4
+   "candidatas": 0
   },
   "Diario Presente": {
    "estado": "Tabasco",
@@ -1410,9 +1419,18 @@
    "modo": "sitio",
    "via": "sitio",
    "directas": 0,
-   "google": 1,
+   "google": 30,
    "error": "HTTP 403",
-   "candidatas": 0
+   "candidatas": 4
+  },
+  "ABC Tlaxcala": {
+   "estado": "Tlaxcala",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 10,
+   "google": 0,
+   "error": null,
+   "candidatas": 3
   },
   "El Dictamen": {
    "estado": "Veracruz",
@@ -1423,14 +1441,23 @@
    "error": "HTTP 403",
    "candidatas": 0
   },
-  "La Polilla": {
-   "estado": "Tlaxcala",
+  "Despierta Sonora": {
+   "estado": "Sonora",
    "modo": "sitio",
    "via": "rss",
-   "directas": 20,
+   "directas": 10,
    "google": 0,
    "error": null,
    "candidatas": 0
+  },
+  "La Prensa de Tlaxcala": {
+   "estado": "Tlaxcala",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 5,
+   "google": 0,
+   "error": null,
+   "candidatas": 1
   },
   "Plumas Libres": {
    "estado": "Veracruz",
@@ -1446,36 +1473,45 @@
    "modo": "sitio",
    "via": "sitio",
    "directas": 0,
-   "google": 30,
+   "google": 12,
    "error": "HTTP 403",
    "candidatas": 0
   },
   "Diario de Yucatán": {
    "estado": "Yucatán",
    "modo": "sitio",
-   "via": "home",
-   "directas": 30,
+   "via": "sitio",
+   "directas": 0,
+   "google": 30,
+   "error": "HTTP 429",
+   "candidatas": 1
+  },
+  "Entorno Informativo": {
+   "estado": "Sonora",
+   "modo": "sitio",
+   "via": "rss",
+   "directas": 10,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 3
   },
-  "La Prensa de Tlaxcala": {
+  "Gente Tlaxcala": {
    "estado": "Tlaxcala",
    "modo": "sitio",
    "via": "rss",
-   "directas": 5,
+   "directas": 9,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 1
   },
   "AVC Noticias": {
    "estado": "Veracruz",
    "modo": "sitio",
    "via": "home",
-   "directas": 27,
+   "directas": 20,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 4
   },
   "Reporteros Hoy": {
    "estado": "Yucatán",
@@ -1486,24 +1522,6 @@
    "error": null,
    "candidatas": 0
   },
-  "Despierta Sonora": {
-   "estado": "Sonora",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 10,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "La Jornada Zacatecas": {
-   "estado": "Zacatecas",
-   "modo": "sitio",
-   "via": "sitio",
-   "directas": 0,
-   "google": 30,
-   "error": "HTTP 403",
-   "candidatas": 0
-  },
   "Imagen Zacatecas": {
    "estado": "Zacatecas",
    "modo": "sitio",
@@ -1511,7 +1529,16 @@
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 4
+  },
+  "La Jornada Zacatecas": {
+   "estado": "Zacatecas",
+   "modo": "sitio",
+   "via": "sitio",
+   "directas": 0,
+   "google": 15,
+   "error": "HTTP 403",
+   "candidatas": 11
   },
   "Al Calor Político": {
    "estado": "Veracruz",
@@ -1520,16 +1547,16 @@
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 3
   },
-  "Gente Tlaxcala": {
+  "SN Digital": {
    "estado": "Tlaxcala",
    "modo": "sitio",
-   "via": "rss",
-   "directas": 9,
+   "via": "home",
+   "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 1
   },
   "NTR Zacatecas": {
    "estado": "Zacatecas",
@@ -1538,13 +1565,13 @@
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 0
+   "candidatas": 4
   },
-  "Entorno Informativo": {
-   "estado": "Sonora",
+  "La Jornada Morelos": {
+   "estado": "Morelos",
    "modo": "sitio",
    "via": "rss",
-   "directas": 10,
+   "directas": 25,
    "google": 0,
    "error": null,
    "candidatas": 6
@@ -1556,34 +1583,7 @@
    "directas": 30,
    "google": 0,
    "error": null,
-   "candidatas": 0
-  },
-  "SN Digital": {
-   "estado": "Tlaxcala",
-   "modo": "sitio",
-   "via": "home",
-   "directas": 30,
-   "google": 0,
-   "error": null,
-   "candidatas": 0
-  },
-  "INFO7": {
-   "estado": "Nuevo León",
-   "modo": "sitio",
-   "via": "home",
-   "directas": 23,
-   "google": 0,
-   "error": null,
    "candidatas": 1
-  },
-  "La Jornada Morelos": {
-   "estado": "Morelos",
-   "modo": "sitio",
-   "via": "rss",
-   "directas": 25,
-   "google": 0,
-   "error": null,
-   "candidatas": 6
   },
   "La Jornada": {
    "estado": "Nacional",
@@ -1592,7 +1592,7 @@
    "directas": 0,
    "google": 30,
    "error": null,
-   "candidatas": 2
+   "candidatas": 4
   },
   "Azteca Noticias": {
    "estado": "Nacional",
@@ -1619,7 +1619,7 @@
    "directas": 0,
    "google": 30,
    "error": null,
-   "candidatas": 0
+   "candidatas": 1
   },
   "El Sol del Centro": {
    "estado": "Aguascalientes",
@@ -1646,7 +1646,7 @@
    "directas": 0,
    "google": 30,
    "error": null,
-   "candidatas": 1
+   "candidatas": 3
   },
   "Diarios OEM (Baja California)": {
    "estado": "Baja California",
@@ -1691,7 +1691,7 @@
    "directas": 0,
    "google": 30,
    "error": null,
-   "candidatas": 0
+   "candidatas": 1
   },
   "El Sol de la Laguna": {
    "estado": "Coahuila",
@@ -1736,7 +1736,7 @@
    "directas": 0,
    "google": 30,
    "error": null,
-   "candidatas": 0
+   "candidatas": 1
   },
   "Diarios OEM (Guanajuato)": {
    "estado": "Guanajuato",
@@ -1754,7 +1754,7 @@
    "directas": 0,
    "google": 30,
    "error": null,
-   "candidatas": 1
+   "candidatas": 3
   },
   "El Sol de Acapulco": {
    "estado": "Guerrero",
@@ -1826,7 +1826,7 @@
    "directas": 0,
    "google": 30,
    "error": null,
-   "candidatas": 1
+   "candidatas": 2
   },
   "El Sol de Puebla": {
    "estado": "Puebla",
@@ -1925,7 +1925,7 @@
    "directas": 0,
    "google": 30,
    "error": null,
-   "candidatas": 0
+   "candidatas": 1
   },
   "El Sol de Tlaxcala": {
    "estado": "Tlaxcala",
